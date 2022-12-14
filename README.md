@@ -1,5 +1,5 @@
-# eleventy-template
-Base project for eleventy websites
+# Antares Programming - The Website
+The official website of Antares Programming for Filipino web developers
 
 ## Configuration
 
