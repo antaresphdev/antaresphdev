@@ -1,0 +1,22 @@
+.button {
+  background-color: hsl(var(--fg-contrast) / 5%);
+  border-radius   : var(--radius-2);
+  color           : hsl(var(--primary-900));
+  display         : inline-flex;
+  font-family     : var(--font-sans);
+  font-size       : var(--type-size-6);
+  font-weight     : bold;
+  outline         : 3px solid hsl(var(--primary-700) / 0);
+  padding         : var(--space-xs) var(--space-m);
+  text-transform  : uppercase;
+  transition      : outline 200ms, outline-offset 200ms, background-color 200ms;
+
+  &:hover {
+    background-color: hsl(var(--fg-contrast) / 20%);
+  }
+
+  &:focus-visible {
+    outline-color : hsl(var(--primary-700) / 1);
+    outline-offset: var(--radius-1);
+  }
+}

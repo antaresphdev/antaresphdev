@@ -1,0 +1,13 @@
+.skip-link {
+  @extend .button;
+
+  left      : 50%;
+  position  : fixed;
+  top       : 0;
+  transition: translate 200ms;
+  translate : -50% -120%;
+
+  &:focus-visible {
+    translate: -50% var(--space-l);
+  }
+}

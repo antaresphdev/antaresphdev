@@ -4,7 +4,9 @@
 @import "base/config";
 @import "base/themes";
 
+@import "components/button.scss";
 @import "components/links.scss";
+@import "components/skip-link.scss";
 
 body {
   font-family     : var(--font-sans);
