@@ -1,6 +1,21 @@
 :root {
-  --font-sans: "Figtree", sans-serif;
-  --font-serif: "Fraunces", serif;
+  --font-code     : var(--font-monospace);
   --font-monospace: "Source Code Pro", monospace;
-  --font-code: var(--font-monospace);
+  --font-sans     : "Figtree", sans-serif;
+  --font-serif    : "Fraunces", serif;
+}
+
+:root {
+  --type-size  : 1rem;
+  --type-size-1: 4.209rem;
+  --type-size-2: 3.157rem;
+  --type-size-3: 2.369rem;
+  --type-size-4: 1.777rem;
+  --type-size-5: 1.333rem;
+  --type-size-6: 1rem;
+  --type-size-7: 0.75rem;
+  --type-size-8: 0.563rem;
+  --type-size-9: 0.422rem;
+
+  --content-width: 65ch;
 }
