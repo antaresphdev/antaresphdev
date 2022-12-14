@@ -1,11 +1,19 @@
 @import "base/reset";
 @import "base/webfonts";
 @import "base/config";
+@import "base/themes";
+
+@import "components/links.scss";
 
 body {
-  font-family: var(--font-sans);
+  font-family     : var(--font-sans);
+  background-color: hsl(var(--bg-default));
+  color           : hsl(var(--fg-default));
 }
 
-pre, code, samp, var {
+pre,
+code,
+samp,
+var {
   font-family: var(--font-code);
 }
