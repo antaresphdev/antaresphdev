@@ -1,0 +1,9 @@
+@function inner-radius($outerRadius, $parentPadding) {
+  $radius: calc(#{$outerRadius} - #{$parentPadding});
+  @return $radius;
+}
+
+@function outer-radius($innerRadius, $parentPadding) {
+  $radius: calc(#{$innerRadius} + #{$parentPadding});
+  @return $radius;
+}
