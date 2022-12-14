@@ -1,1 +1,11 @@
 @import "base/reset";
+@import "base/webfonts";
+@import "base/config";
+
+body {
+  font-family: var(--font-sans);
+}
+
+pre, code, samp, var {
+  font-family: var(--font-code);
+}
