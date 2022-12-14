@@ -53,3 +53,18 @@
   --radius-4: 10px;
   --radius-5: 12px;
 }
+
+:root {
+  --space-none: 0;
+  --space-auto: auto;
+  --space-xxxl: 4rem;
+  --space-xxl : 3rem;
+  --space-xl  : 2rem;
+  --space-l   : 1.5rem;
+  --space     : 1rem;
+  --space-m   : var(--space);
+  --space-s   : 0.75rem;
+  --space-xs  : 0.5rem;
+  --space-xxs : 0.25rem;
+  --space-xxxs: 0.1rem;
+}
