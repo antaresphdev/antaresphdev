@@ -19,3 +19,15 @@
 
   --content-width: 65ch;
 }
+
+:root {
+  --d-contrast     : 0 0% 10%;
+  --d-default      : 0 0% 30%;
+  --d-subtle       : 0 0% 60%;
+  --d-non-essential: 0 0% 70%;
+
+  --l-contrast     : 0 0% 100%;
+  --l-default      : 0 0% 90%;
+  --l-subtle       : 0 0% 70%;
+  --l-non-essential: 0 0% 50%;
+}
