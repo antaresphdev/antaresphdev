@@ -3,3 +3,9 @@ title: 'Antares Programming'
 permalink: /
 ---
 {{ title }}
+
+<ol>
+  {% for item in collections.posts %}
+    <li><a href="{{ item.url }}">{{ item.data.title | safe }}</a></li>
+  {% endfor %}
+</ol>
