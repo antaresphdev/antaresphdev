@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Figtree";
+  font-weight: 100 900;
+  src        : url("/assets/fonts/Figtree-var.ttf") format("truetype");
+}
+
+@font-face {
+  font-family            : "Fraunces";
+  font-variation-settings: "SOFT" 100, "WONK" 0, "wght" 350;
+  font-weight            : 100 900;
+  src                    : url("/assets/fonts/Fraunces-var.ttf") format("truetype");
+}
+
+@font-face {
+  font-family            : "Fraunces";
+  font-style             : italic;
+  font-variation-settings: "SOFT" 100, "WONK" 0, "wght" 350;
+  font-weight            : 100 900;
+  src                    : url("/assets/fonts/Fraunces-ital-var.ttf") format("truetype");
+}
