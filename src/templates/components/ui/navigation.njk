@@ -1,15 +1,19 @@
 <nav class="navigation" aria-label="Primary navigation">
-  <div class="navigation__logo">
+  <button class="navigation__menu">
+    {{ "menu" | icon | safe }}
+    <span class="sr-only">Navigation menu</span>
+  </button>
+  <a href="/" class="navigation__logo">
     {% include "ui/logo.njk" %}
-  </div>
-  <ul class="navigation__list">
+  </a>
+  <ul class="navigation__list navigation__list--main">
     {% for item in navigation %}
       <li class="navigation__list-item">
         <a href="{{ item.url }}" class="navigation__link">{{item.text}}</a>
       </li>
     {% endfor %}
   </ul>
-  <ul class="navigation__list" style="margin-inline-start: auto">
+  <ul class="navigation__list navigation__list--supplementary">
     <li>
       <button class="navigation__link">
         {{ "search" | icon | safe }}

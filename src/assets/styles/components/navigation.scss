@@ -16,6 +16,7 @@ body {
   transition      : box-shadow 200ms;
   max-width       : var(--page-width);
   margin-inline   : auto;
+  width           : 90%;
   transition      : max-width 300ms, box-shadow 200ms;
 
   &.attached {
@@ -34,14 +35,23 @@ body {
     display: flex;
     gap    : 0;
     margin : 0;
+
+    &--supplementary {
+      margin-inline-start: auto
+    }
   }
 
+  &__menu,
   &__link {
     @extend .button;
 
     color           : hsl(var(--primary-700));
     background-color: transparent;
     height          : 100%;
+  }
+
+  &__menu {
+    display: none;
   }
 }
 
@@ -68,6 +78,72 @@ body {
       .navigation {
         background-color: hsl(var(--secondary-100)/50%);
       }
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .navigation {
+    padding-inline: var(--space-xxs);
+    border-radius : var(--radius-3);
+
+    &__menu {
+      display: flex
+    }
+
+    &__list {
+      &--main {
+        display: none;
+      }
+
+      &--supplementary {
+        margin-inline-start: 0;
+      }
+    }
+
+    &__logo {
+      margin-inline: auto;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .navigation {
+    gap: 0.5ch;
+
+    &__logo {
+      margin-inline: 0;
+    }
+
+    &__list {
+      &--supplementary {
+        margin-inline-start: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .navigation {
+    gap: 0.5ch;
+
+    &__logo {
+      margin-inline: 0;
+
+      .logo {
+        &> :not(.logo__image) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 260px) {
+  .navigation {
+    &__list--supplementary {
+      display: none;
     }
   }
 }
