@@ -29,6 +29,16 @@ body {
       0 32px 32px hsl(var(--d-contrast) / 0.075),
       0 64px 64px hsl(var(--d-contrast) / 0.075);
     max-width: min(var(--content-width), 100%);
+
+    .navigation {
+      &__logo {
+        .logo {
+          &> :not(.logo__image) {
+            display: none;
+          }
+        }
+      }
+    }
   }
 
   &__list {
