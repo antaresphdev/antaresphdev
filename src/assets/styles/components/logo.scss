@@ -10,16 +10,21 @@
   }
 
   &__type {
+    display                : flex;
     font-family            : var(--font-sans);
     font-size              : var(--type-size-6);
     font-variant-alternates: styleset(alt-a);
-    display                : flex;
-    align-items            : last baseline;
 
-    &::after {
-      content    : '.';
-      font-size  : var(--type-size-3);
-      line-height: 1rem;
+    span {
+      align-items: last baseline;
+      display    : flex;
+      height     : 1em;
+
+      &:last-child::after {
+        content    : '.';
+        font-size  : var(--type-size-3);
+        line-height: 1rem;
+      }
     }
   }
 
