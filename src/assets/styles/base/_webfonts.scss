@@ -4,6 +4,16 @@
   src        : url("/assets/fonts/Figtree-var.ttf") format("truetype");
 }
 
+@font-feature-values "Figtree" {
+  @styleset {
+    alt-a: 1;
+  }
+
+  @stylistic {
+    alternates: 1;
+  }
+}
+
 @font-face {
   font-family            : "Fraunces";
   font-variation-settings: "SOFT" 100, "WONK" 0, "wght" 350;

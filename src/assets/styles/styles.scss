@@ -6,7 +6,11 @@
 
 @import "components/button.scss";
 @import "components/links.scss";
+@import "components/logo.scss";
+@import "components/navigation.scss";
 @import "components/skip-link.scss";
+
+@import "utils/fonts.scss";
 
 body {
   font-family     : var(--font-sans);
@@ -19,4 +23,8 @@ code,
 samp,
 var {
   font-family: var(--font-code);
+}
+
+::selection {
+  background-color: hsl(var(--primary-100));
 }
