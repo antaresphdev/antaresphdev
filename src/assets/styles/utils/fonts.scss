@@ -1,0 +1,60 @@
+/* #region CASES */
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+/* #endregion */
+
+/* #region ALIGNMENT */
+$alignments: left,
+right,
+center,
+justify,
+start,
+end;
+
+.text {
+  @each $a in $alignments {
+    &-#{$a},
+    &--#{$a} {
+      text-align: $a;
+    }
+  }
+}
+
+/* #endregion */
+
+/* #region WEIGHTS */
+$weights: 100,
+200,
+300,
+400,
+500,
+600,
+700,
+800,
+900;
+
+.weight {
+  @each $weight in $weights {
+    &-#{$weight},
+    &--#{$weight} {
+      font-weight            : $weight;
+      font-variation-settings: 'wght'$weight;
+    }
+  }
+
+  .weight-bold {
+    font-weight: bold;
+  }
+
+  .weight-normal {
+    font-weight: normal;
+  }
+}
+
+/* #endregion */

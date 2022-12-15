@@ -1,0 +1,73 @@
+body {
+  height: 1000vh
+}
+
+.navigation {
+  align-items     : center;
+  background-color: hsl(var(--secondary-100));
+  border-radius   : var(--radius-2);
+  display         : flex;
+  gap             : var(--space);
+  margin-block    : 2ch;
+  padding-block   : var(--space-xxs);
+  padding-inline  : var(--space);
+  position        : sticky;
+  top             : 1ch;
+  transition      : box-shadow 200ms;
+  max-width       : var(--page-width);
+  margin-inline   : auto;
+  transition      : max-width 300ms, box-shadow 200ms;
+
+  &.attached {
+    box-shadow:
+      0 1px 1px hsl(var(--d-contrast) / 0.05),
+      0 2px 2px hsl(var(--d-contrast) / 0.05),
+      0 4px 4px hsl(var(--d-contrast) / 0.05),
+      0 8px 8px hsl(var(--d-contrast) / 0.05),
+      0 16px 16px hsl(var(--d-contrast) / 0.075),
+      0 32px 32px hsl(var(--d-contrast) / 0.075),
+      0 64px 64px hsl(var(--d-contrast) / 0.075);
+    max-width: min(var(--content-width), 100%);
+  }
+
+  &__list {
+    display: flex;
+    gap    : 0;
+    margin : 0;
+  }
+
+  &__link {
+    @extend .button;
+
+    color           : hsl(var(--primary-700));
+    background-color: transparent;
+    height          : 100%;
+  }
+}
+
+@supports (backdrop-filter: blur(10px)) {
+  .navigation {
+    backdrop-filter: blur(10px);
+  }
+
+  .theme-dark {
+    .navigation {
+      background-color: hsl(var(--secondary-100)/50%);
+    }
+  }
+
+  .theme-light,
+  .theme-default {
+    .navigation {
+      background-color: hsl(var(--secondary-300)/50%);
+    }
+  }
+
+  .theme-default {
+    @media (prefers-color-scheme: dark) {
+      .navigation {
+        background-color: hsl(var(--secondary-100)/50%);
+      }
+    }
+  }
+}

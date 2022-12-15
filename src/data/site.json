@@ -62,5 +62,19 @@
   "api": {
     "email": "",
     "siteData": "/api/v1/site-data.json"
-  }
+  },
+  "feeds": [
+    {
+      "text": "Articles",
+      "url": "/rss-articles.xml"
+    },
+    {
+      "text": "Infographics",
+      "url": "/rss-infographics.xml"
+    },
+    {
+      "text": "Videos",
+      "url": "/rss-videos.xml"
+    }
+  ]
 }

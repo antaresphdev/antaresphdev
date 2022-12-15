@@ -17,7 +17,8 @@
   --type-size-8: 0.563rem;
   --type-size-9: 0.422rem;
 
-  --content-width: 65ch;
+  --content-width: 75ch;
+  --page-width: 130ch;
 }
 
 :root {
@@ -33,17 +34,29 @@
 }
 
 :root {
-  --l-primary-100: 335 100% 94%;
-  --l-primary-300: 335 100% 84%;
-  --l-primary-500: 335 100% 54%;
-  --l-primary-700: 335 100% 34%;
-  --l-primary-900: 335 100% 24%;
+  --l-primary-100: 335 70% 94%;
+  --l-primary-300: 335 70% 84%;
+  --l-primary-500: 335 70% 54%;
+  --l-primary-700: 335 70% 44%;
+  --l-primary-900: 335 70% 24%;
 
-  --d-primary-900: 335 100% 94%;
-  --d-primary-700: 335 100% 84%;
-  --d-primary-500: 335 100% 54%;
-  --d-primary-300: 335 100% 34%;
-  --d-primary-100: 335 100% 24%;
+  --d-primary-900: 335 90% 94%;
+  --d-primary-700: 335 90% 84%;
+  --d-primary-500: 335 90% 54%;
+  --d-primary-300: 335 90% 34%;
+  --d-primary-100: 335 90% 24%;
+
+  --l-secondary-100: 38 90% 94%;
+  --l-secondary-300: 38 90% 84%;
+  --l-secondary-500: 38 90% 54%;
+  --l-secondary-700: 38 90% 44%;
+  --l-secondary-900: 38 90% 24%;
+
+  --d-secondary-900: 38 90% 94%;
+  --d-secondary-700: 38 90% 84%;
+  --d-secondary-500: 38 90% 54%;
+  --d-secondary-300: 38 90% 34%;
+  --d-secondary-100: 38 90% 24%;
 }
 
 :root {

@@ -1,3 +1,7 @@
 [
-  { "text": "Writing", "url": "/writing/" }
+  { "text": "Frontpage", "url": "/" },
+  { "text": "Articles", "url": "/articles/" },
+  { "text": "Infographics", "url": "/slidesets/" },
+  { "text": "Videos", "url": "/videos/" },
+  { "text": "About", "url": "/about/", "hidden": true }
 ]

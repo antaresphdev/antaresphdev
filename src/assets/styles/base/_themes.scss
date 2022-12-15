@@ -14,6 +14,13 @@
   --primary-500: var(--l-primary-500);
   --primary-700: var(--l-primary-700);
   --primary-900: var(--l-primary-900);
+
+
+  --secondary-100: var(--l-secondary-100);
+  --secondary-300: var(--l-secondary-300);
+  --secondary-500: var(--l-secondary-500);
+  --secondary-700: var(--l-secondary-700);
+  --secondary-900: var(--l-secondary-900);
 }
 
 @mixin dark-scheme() {
@@ -32,6 +39,12 @@
   --primary-500: var(--d-primary-500);
   --primary-700: var(--d-primary-700);
   --primary-900: var(--d-primary-900);
+
+  --secondary-100: var(--d-secondary-100);
+  --secondary-300: var(--d-secondary-300);
+  --secondary-500: var(--d-secondary-500);
+  --secondary-700: var(--d-secondary-700);
+  --secondary-900: var(--d-secondary-900);
 }
 
 .theme-default,

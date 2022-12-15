@@ -1,5 +1,6 @@
 .skip-link {
   @extend .button;
+  @extend .primary;
 
   left      : 50%;
   position  : fixed;
