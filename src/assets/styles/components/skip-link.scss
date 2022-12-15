@@ -6,6 +6,7 @@
   top       : 0;
   transition: translate 200ms;
   translate : -50% -120%;
+  z-index   : 9999;
 
   &:focus-visible {
     translate: -50% var(--space-l);
