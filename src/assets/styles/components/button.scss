@@ -22,6 +22,11 @@
   &:focus-visible {
     outline-color : hsl(var(--primary-700) / 1);
     outline-offset: var(--radius-1);
+
+    &:active {
+      outline-offset: 0;
+      transition    : outline 200ms, outline-offset 50ms, background-color 200ms;
+    }
   }
 
   &.primary {

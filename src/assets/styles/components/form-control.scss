@@ -59,6 +59,7 @@
             height          : var(--size);
             outline         : 2px solid hsl(var(--fg-default));
             width           : var(--size);
+            transition      : outline-offset 300ms;
           }
         }
 
@@ -68,6 +69,12 @@
             background-image: radial-gradient(circle at center, hsl(var(--primary-700)) 75%, transparent 75%);
             outline-color   : hsl(var(--primary-700));
             outline-offset  : 2px;
+          }
+        }
+
+        &:focus-visible+label {
+          &::before {
+            outline-offset: 5px;
           }
         }
       }
