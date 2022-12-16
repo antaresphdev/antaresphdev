@@ -65,15 +65,15 @@
   },
   "feeds": [
     {
-      "text": "Articles",
+      "text": "Articles.xml",
       "url": "/rss-articles.xml"
     },
     {
-      "text": "Infographics",
+      "text": "Infographics.xml",
       "url": "/rss-infographics.xml"
     },
     {
-      "text": "Videos",
+      "text": "Videos.xml",
       "url": "/rss-videos.xml"
     }
   ]
