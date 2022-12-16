@@ -1,6 +1,7 @@
 class Toggle {
   #element;
   #toggler;
+  #events;
 
   constructor(toggler) {
     this.#toggler = toggler
@@ -14,13 +15,28 @@ class Toggle {
     })
 
     this.hidden = true
+
+    if (this.#element.matches('form[data-toggle-on-submit]')) {
+      this.#element.addEventListener('submit', e => this.toggle())
+    }
+
+    this.#events = {
+      show: [],
+      hide: [],
+    }
+  }
+
+  addEventListener(eventKey, eventHandler) {
+    this.#events[eventKey].push(eventHandler)
   }
 
   set hidden(value) {
     if (value) {
       this.#element.setAttribute('hidden', '')
+      this.#events.hide.forEach(fn => fn(this))
     } else {
       this.#element.removeAttribute('hidden')
+      this.#events.show.forEach(fn => fn(this))
     }
   }
 
