@@ -30,7 +30,7 @@ body {
       0 64px 64px hsl(var(--d-contrast) / 0.075);
 
     @media (prefers-reduced-motion: no-preference) {
-      max-width: min(var(--content-width), 100%);
+      max-width: min(calc((var(--page-width) / 4) * 3), 100%);
 
       .navigation {
         &__logo {
