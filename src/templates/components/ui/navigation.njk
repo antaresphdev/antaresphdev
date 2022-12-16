@@ -21,11 +21,11 @@
       </button>
     </li>
     <li class="navigation__list-item">
-      <button class="navigation__link">
+      <button class="navigation__link" data-toggle="form-color-scheme">
         {{ "moon" | icon | safe }}
         <span class="sr-only">Select theme</span>
       </button>
-      <form action="#!" name="color-scheme" class="navigation__popup form">
+      <form action="#!" name="color-scheme" id="form-color-scheme" class="navigation__popup form" hidden>
         <fieldset class="fieldset fieldset--inline">
           <legend>Select color scheme</legend>
           <div class="form-control">

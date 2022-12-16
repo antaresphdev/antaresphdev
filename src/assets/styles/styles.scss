@@ -30,3 +30,7 @@ var {
 ::selection {
   background-color: hsl(var(--primary-100));
 }
+
+:is([hidden]) {
+  display: none;
+}
