@@ -1,5 +1,1 @@
-class Console {
-  constructor() {
-    console.log("Hello, World!")
-  }
-}
+import "./animations/navigation-bar"
