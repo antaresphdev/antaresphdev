@@ -2,21 +2,21 @@ import { $, $$ } from '../utils/dom'
 const navbars = $$('[data-navbar-animations]')
 const popovers = $$('[data-navbar-popover-animations]')
 const main = $('[data-navbar-attach-trigger]')
-const observer = new IntersectionObserver(observationCallback, { threshold: 0 })
+const observer = new IntersectionObserver(observationCallback, { threshold: [0, 1] })
 observer.observe(main)
 
 function observationCallback(entries) {
   entries.forEach(entry => {
     console.log(entry)
     if (entry.isIntersecting) {
-      changeNavbarAttachment(false)
+      attachNavbar(false)
     } else {
-      changeNavbarAttachment(true)
+      attachNavbar(true)
     }
   })
 }
 
-function changeNavbarAttachment(isAttached = false) {
+function attachNavbar(isAttached = false) {
   navbars.forEach(navbar => {
     if (isAttached) {
       navbar.classList.add('attached')
