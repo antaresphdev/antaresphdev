@@ -4,10 +4,11 @@
   <body class="no-js theme-default">
     {% include "ui/skip-link.njk" %}
     {% include "ui/navigation.njk" %}
-    <main id="main">
+    <main id="main" data-navbar-attach-trigger>
       {% block content %}
         {{ content | safe }}
       {% endblock %}
     </main>
+    {% include "head/scripts.njk" %}
   </body>
 </html>
