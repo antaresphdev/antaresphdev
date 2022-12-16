@@ -1,0 +1,76 @@
+.form {
+  fieldset.fieldset {
+    border : none;
+    padding: 0;
+    margin : 0;
+
+    &--inline {
+      display: flex;
+      gap    : 2ch;
+    }
+
+    legend {
+      display    : flex;
+      font-weight: bold;
+      color      : hsl(var(--fg-contrast));
+    }
+  }
+
+  &-control {
+    display       : flex;
+    gap           : 1ch;
+    padding-inline: var(--space-xxs);
+
+    input {
+      accent-color: hsl(var(--primary-500));
+
+      @at-root :is(.theme-default, .theme-light) & {
+        color-scheme: light;
+      }
+
+      @at-root .theme-dark & {
+        color-scheme: dark;
+      }
+
+      @at-root .theme-default & {
+        @media (prefers-color-scheme: dark) {
+          color-scheme: dark;
+        }
+      }
+
+      &:where([type="radio"], [type="checkbox"], [type="button"]),
+      &:where([type="radio"], [type="checkbox"], [type="button"])+label {
+        cursor: pointer;
+      }
+
+      &[type="radio"] {
+        @extend .sr-only;
+
+        &+label {
+          align-items: center;
+          display    : flex;
+          gap        : 1ch;
+
+          &::before {
+            content         : "";
+            --size          : 1ch;
+            background-color: hsl(var(--fg-default) / 20%);
+            border-radius   : 100%;
+            height          : var(--size);
+            outline         : 2px solid hsl(var(--fg-default));
+            width           : var(--size);
+          }
+        }
+
+        &:checked+label {
+          &::before {
+            background-color: transparent;
+            background-image: radial-gradient(circle at center, hsl(var(--primary-700)) 75%, transparent 75%);
+            outline-color   : hsl(var(--primary-700));
+            outline-offset  : 2px;
+          }
+        }
+      }
+    }
+  }
+}

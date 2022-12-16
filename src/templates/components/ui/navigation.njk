@@ -25,8 +25,8 @@
         {{ "moon" | icon | safe }}
         <span class="sr-only">Select theme</span>
       </button>
-      <form action="#!" name="color-scheme" class="navigation__popup">
-        <fieldset>
+      <form action="#!" name="color-scheme" class="navigation__popup form">
+        <fieldset class="fieldset fieldset--inline">
           <legend>Select color scheme</legend>
           <div class="form-control">
             <input type="radio" name="color-scheme" id="theme-light">
@@ -37,7 +37,7 @@
             <label for="theme-dark">Dark</label>
           </div>
           <div class="form-control">
-            <input type="radio" name="color-scheme" id="theme-default">
+            <input type="radio" name="color-scheme" id="theme-default" checked>
             <label for="theme-default">Follow system theme</label>
           </div>
         </fieldset>
