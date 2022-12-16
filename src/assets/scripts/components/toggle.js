@@ -6,6 +6,11 @@ class Toggle {
   constructor(toggler) {
     this.#toggler = toggler
 
+    this.#events = {
+      show: [],
+      hide: [],
+    }
+
     const id = this.#toggler.dataset.toggle
     this.#element = document.getElementById(id)
 
@@ -19,15 +24,32 @@ class Toggle {
     if (this.#element.matches('form[data-toggle-on-submit]')) {
       this.#element.addEventListener('submit', e => this.toggle())
     }
-
-    this.#events = {
-      show: [],
-      hide: [],
-    }
   }
 
   addEventListener(eventKey, eventHandler) {
     this.#events[eventKey].push(eventHandler)
+  }
+
+  /**
+   * @description the button that toggles this component
+   * @author Francis Rubio
+   * @readonly
+   * @returns {HTMLButtonElement}
+   * @memberof Toggle
+   */
+  get toggleButton() {
+    return this.#toggler
+  }
+
+  /**
+   * @description the popup that shows and hides when this component is toggled
+   * @author Francis Rubio
+   * @readonly
+   * @returns {HTMLElement}
+   * @memberof Toggle
+   */
+  get popup() {
+    return this.#element
   }
 
   set hidden(value) {
@@ -42,6 +64,10 @@ class Toggle {
 
   get hidden() {
     return this.#element.hasAttribute('hidden')
+  }
+
+  get shown() {
+    return !this.hidden
   }
 
   toggle() {
