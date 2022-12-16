@@ -50,7 +50,8 @@ class Script {
         output: { path: outputPath },
         module: { rules },
         plugins: [envPlugin, vars],
-        target: 'web'
+        target: 'web',
+        devtool: 'source-map'
       }
     }
   }
@@ -70,9 +71,22 @@ class Script {
         }
 
         const outputFile = `${webpackConfig.output.path}/${bundleName}.js`
+        const outputSourceMap = `${webpackConfig.output.path}/${bundleName}.js.map`
         const charset = 'utf-8'
 
-        console.log('[Webpack] Compiling:', this.inputFiles[bundleName])
+        console.log('[Webpack] Compiling sourcemap:', this.inputFiles[bundleName])
+        // mfs.readFile(outputSourceMap, charset, (err, data) => {
+        //   if (err) console.error("[WEBPACK] Sourcemap:", err)
+        //   else console.log("[WEBPACK] Sourcemap:", data)
+        // })
+
+        mfs.readdir(webpackConfig.output.path, (err, files) => {
+          if (err) console.error("[WEBPACK] Sourcemap:", err)
+          else {
+            files.forEach(file => console.log("[WEBPACK] memfs file:", file))
+          }
+        })
+
         mfs.readFile(outputFile, charset, (err, data) => {
           if (err) reject(err)
           else resolve(data)
