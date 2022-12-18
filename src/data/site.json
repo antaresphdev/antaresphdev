@@ -2,7 +2,7 @@
   "title": "eleventy-template",
   "description": "Base project for eleventy websites",
   "baseUrl": "http://localhost:8080",
-  "owner":"teacherbuknoy",
+  "owner": "teacherbuknoy",
   "seo": {
     "og": {
       "src": ""
@@ -56,18 +56,18 @@
     "email": "",
     "siteData": "/api/v1/site-data.json"
   },
-  "feeds": [
-    {
+  "feeds": {
+    "articles": {
       "text": "Articles.xml",
       "url": "/rss-articles.xml"
     },
-    {
+    "infographics": {
       "text": "Infographics.xml",
       "url": "/rss-infographics.xml"
     },
-    {
+    "videos": {
       "text": "Videos.xml",
       "url": "/rss-videos.xml"
     }
-  ]
+  }
 }

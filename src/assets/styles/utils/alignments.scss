@@ -1,0 +1,119 @@
+$directions: start,
+center,
+end,
+space-between,
+space-around,
+space-evenly,
+stretch;
+
+.align {
+  @each $d in $directions {
+    &-items {
+
+      &--#{$d},
+      &-#{$d} {
+        align-items: $d;
+      }
+    }
+
+    &-content {
+
+      &--#{$d},
+      &-#{$d} {
+        align-content: $d;
+      }
+    }
+
+    &-self {
+
+      &--#{$d},
+      &-#{$d} {
+        align-self: $d;
+      }
+    }
+  }
+}
+
+.a {
+  @each $d in $directions {
+    &i {
+
+      &--#{$d},
+      &-#{$d} {
+        align-items: $d;
+      }
+    }
+
+    &c {
+
+      &--#{$d},
+      &-#{$d} {
+        align-content: $d;
+      }
+    }
+
+    &s {
+
+      &--#{$d},
+      &-#{$d} {
+        align-self: $d;
+      }
+    }
+  }
+}
+
+.justify {
+  @each $d in $directions {
+    &-items {
+
+      &--#{$d},
+      &-#{$d} {
+        justify-items: $d;
+      }
+    }
+
+    &-content {
+
+      &--#{$d},
+      &-#{$d} {
+        justify-content: $d;
+      }
+    }
+
+    &-self {
+
+      &--#{$d},
+      &-#{$d} {
+        justify-self: $d;
+      }
+    }
+  }
+}
+
+.j {
+  @each $d in $directions {
+    &i {
+
+      &--#{$d},
+      &-#{$d} {
+        justify-items: $d;
+      }
+    }
+
+    &c {
+
+      &--#{$d},
+      &-#{$d} {
+        justify-content: $d;
+      }
+    }
+
+    &s {
+
+      &--#{$d},
+      &-#{$d} {
+        justify-self: $d;
+      }
+    }
+  }
+}

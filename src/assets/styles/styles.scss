@@ -8,6 +8,7 @@
 @import "layouts/code.scss";
 @import "layouts/footer.scss";
 @import "layouts/section.scss";
+@import "layouts/cluster.scss";
 
 @import "components/author.scss";
 @import "components/button.scss";
@@ -20,6 +21,7 @@
 @import "components/navigation.scss";
 @import "components/skip-link.scss";
 
+@import "utils/alignments.scss";
 @import "utils/fonts.scss";
 @import "utils/space.scss";
 @import "utils/visibility.scss";

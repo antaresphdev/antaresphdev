@@ -50,7 +50,7 @@
         <span class="sr-only">RSS feeds</span>
       </button>
       <ul class="navigation__popup navigation__list" id="form-rss-feeds" style="flex-direction: row">
-        {% for rss in site.feeds %}
+        {% for rss in site.feeds | values %}
           <li class="navigation__list-item">
             <a href="{{ rss.url }}" class="navigation__link">{{ rss.text }}</a>
           </li>

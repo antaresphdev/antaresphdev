@@ -1,0 +1,9 @@
+.cluster {
+  display  : flex;
+  gap      : var(--cluster-gap, 1ch);
+  flex-wrap: wrap;
+
+  &.no-wrap {
+    flex-wrap: nowrap;
+  }
+}

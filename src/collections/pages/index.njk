@@ -4,10 +4,10 @@ permalink: /
 ---
 <h1 class="sr-only">{{ title | safe }}</h1>
 
-<section class="section">
+<section class="section h-feed" aria-labelledby="section--articles">
   <header class="section__header">
     <hgroup role="group">
-      <h2 class="section__title">Articles</h2>
+      <h2 class="section__title p-name" id="section--articles">Articles</h2>
       <p class="section__subtitle">Magbasa.</p>
       <p class="section__description">Mga bagong technology. Mga balita. Mga tutorial. Maraming iba pa.</p>
     </hgroup>
@@ -22,5 +22,14 @@ permalink: /
         {% endif %}
       {% endfor %}
     </ol>
+  </div>
+  <div class="section__footer">
+    <div class="cluster jc--center">
+      <a href="/articles/" class="primary button">Tingnan lahat ng articles</a>
+      <a href="{{ site.feed }}" class="button">
+        {{ "rss" | icon | safe }}
+        <span class="sr-only">RSS feed ng lahat ng articles</span>
+      </a>
+    </div>
   </div>
 </section>
