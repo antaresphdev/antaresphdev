@@ -7,6 +7,19 @@
     <main id="main" class="article h-entry">
       <header class="article__header">
         <img src="{{ image.src }}" alt="" class="article__image">
+        <nav class="breadcrumb" aria-label="Breadcrumbs">
+          <ol class="breadcrumb__list">
+            <li class="breadcrumb__list-item">
+              <a href="/" class="breadcrumb__link">Frontpage</a>
+            </li>
+            <li class="breadcrumb__list-item">
+              <a href="/articles/" class="breadcrumb__link">Articles</a>
+            </li>
+            <li class="breadcrumb__list-item">
+              <a aria-current="location" class="breadcrumb__link">This page</a>
+            </li>
+          </ol>
+        </nav>
         <hgroup role="group">
           <h1 class="article__title p-name">{{ title | safe }}</h1>
           <p class="article__subtitle p-summary">{{ description | safe }}</p>

@@ -1,0 +1,36 @@
+.breadcrumb {
+  &__list {
+    margin    : 0;
+    padding   : 0;
+    list-style: none;
+    display   : flex;
+    gap       : 1ch;
+
+    &-item {
+      display    : flex;
+      gap        : inherit;
+      align-items: center;
+
+      &:not(:last-child)::after {
+        content          : "";
+        --chevron-size   : 0.5ch;
+        border           : var(--chevron-size) solid transparent;
+        border-left-color: currentColor;
+        border-right     : 0;
+      }
+    }
+  }
+
+  &__link {
+    &:not([href]) {
+      font-weight: bold;
+    }
+
+    &[href] {
+      @extend .button;
+
+      padding         : var(--space-xxxs) var(--space-xs);
+      background-color: transparent;
+    }
+  }
+}

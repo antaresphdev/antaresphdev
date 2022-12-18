@@ -169,6 +169,6 @@ By default, pare-parehas ang styling ng `<i>`, `<em>`, at `<address>`. Pero tand
 
 ## References
 
-- [`<address>`: The Contact Address element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/addresss)
+- [`<address>`: The Contact Address element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address)
 - [HTML Standard](https://html.spec.whatwg.org/multipage/sections.html#the-address-element)
 - [HTML 5.2: 4.4. Grouping Content](https://www.w3.org/TR/html52/grouping-content.html#the-address-element)

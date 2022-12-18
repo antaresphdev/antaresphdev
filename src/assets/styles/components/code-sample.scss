@@ -33,6 +33,7 @@
     background-color: hsl(var(--l-default));
     display         : flex;
     flex-direction  : column;
+    border          : 0;
 
     &.resizable {
       resize   : both;
