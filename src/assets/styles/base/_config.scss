@@ -18,7 +18,7 @@
   --type-size-9: 0.422rem;
 
   --content-width: 75ch;
-  --page-width: 130ch;
+  --page-width   : 130ch;
 }
 
 :root {
@@ -34,29 +34,65 @@
 }
 
 :root {
-  --l-primary-100  : 335 70% 94%;
-  --l-primary-300  : 335 70% 84%;
-  --l-primary-500  : 335 70% 54%;
-  --l-primary-700  : 335 70% 44%;
-  --l-primary-900  : 335 70% 24%;
+  --l-primary-100: 335 70% 94%;
+  --l-primary-300: 335 70% 84%;
+  --l-primary-500: 335 70% 54%;
+  --l-primary-700: 335 70% 44%;
+  --l-primary-900: 335 70% 24%;
 
-  --d-primary-900  : 335 70% 94%;
-  --d-primary-700  : 335 70% 84%;
-  --d-primary-500  : 335 70% 54%;
-  --d-primary-300  : 335 70% 34%;
-  --d-primary-100  : 335 70% 24%;
+  --d-primary-900: 335 70% 94%;
+  --d-primary-700: 335 70% 84%;
+  --d-primary-500: 335 70% 54%;
+  --d-primary-300: 335 70% 34%;
+  --d-primary-100: 335 70% 24%;
 
   --l-secondary-100: 38 90% 94%;
   --l-secondary-300: 38 90% 84%;
   --l-secondary-500: 38 90% 54%;
   --l-secondary-700: 38 90% 44%;
   --l-secondary-900: 38 90% 24%;
-  
+
   --d-secondary-900: 38 70% 94%;
   --d-secondary-700: 38 90% 84%;
   --d-secondary-500: 38 90% 54%;
   --d-secondary-300: 38 90% 34%;
   --d-secondary-100: 38 50% 24%;
+
+  --l-error-100: 5 100% 75%;
+  --l-error-300: 0 81% 63%;
+  --l-error-500: 357 68% 46%;
+  --l-error-700: 1 94% 33%;
+  --l-error-900: 0 100% 24%;
+
+  --l-success-100: 82 100% 75%;
+  --l-success-300: 87 66% 58%;
+  --l-success-500: 92 68% 43%;
+  --l-success-700: 97 95% 29%;
+  --l-success-900: 102 100% 21%;
+
+  --l-warning-100: 32 100% 75%;
+  --l-warning-300: 27 100% 66%;
+  --l-warning-500: 22 89% 56%;
+  --l-warning-700: 17 98% 40%;
+  --l-warning-900: 12 100% 33%;
+
+  --d-error-900: 5 100% 75%;
+  --d-error-700: 0 81% 63%;
+  --d-error-500: 357 68% 46%;
+  --d-error-300: 1 94% 33%;
+  --d-error-100: 0 100% 24%;
+
+  --d-success-900: 82 100% 75%;
+  --d-success-700: 87 66% 58%;
+  --d-success-500: 92 68% 43%;
+  --d-success-300: 97 95% 29%;
+  --d-success-100: 102 100% 21%;
+
+  --d-warning-900: 32 100% 75%;
+  --d-warning-700: 27 100% 66%;
+  --d-warning-500: 22 89% 56%;
+  --d-warning-300: 17 98% 40%;
+  --d-warning-100: 12 100% 33%;
 }
 
 :root {

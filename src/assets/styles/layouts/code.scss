@@ -1,0 +1,67 @@
+code:not([class]) {
+  background-color: hsl(var(--bg-contrast) / 50%);
+  padding-inline  : 0.25ch;
+  border-radius   : var(--radius-1);
+  font-size       : 90%;
+}
+
+pre[class^=language] {
+  background-color: hsl(var(--bg-contrast) / 50%);
+  border-radius   : var(--radius-3);
+  display         : flex;
+  flex-direction  : column;
+  gap             : 1ch;
+  padding         : var(--space);
+  font-size       : var(--type-size);
+
+  &::before {
+    content         : var(--pre-language, "");
+    background-color: hsl(var(--secondary-300));
+    border-radius   : var(--radius-2);
+    font-family     : var(--font-sans);
+    font-size       : var(--type-size-6);
+    font-weight     : bold;
+    padding         : var(--space-xxs) var(--space-s);
+    text-transform  : uppercase;
+    width           : fit-content;
+  }
+
+  &.language-css {
+    --pre-language: "CSS"
+  }
+
+  &.language-html {
+    --pre-language: "HTML"
+  }
+
+  &.language-js,
+  &.language-javascript {
+    --pre-language: "JavaScript"
+  }
+
+  .token {
+
+    &.selector,
+    &.tag>*:not(.special-attr) {
+      color      : hsl(var(--primary-700));
+      font-weight: bold;
+    }
+
+    &.punctuation {
+      color: hsl(var(--fg-subtle));
+    }
+
+    &.property {
+      color      : hsl(var(--success-700));
+      font-weight: bold;
+    }
+
+    &.important {
+      color: hsl(var(--error-700));
+    }
+
+    &.special-attr {
+      color: hsl(var(--warning-700));
+    }
+  }
+}

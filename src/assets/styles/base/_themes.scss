@@ -15,12 +15,29 @@
   --primary-700: var(--l-primary-700);
   --primary-900: var(--l-primary-900);
 
-
   --secondary-100: var(--l-secondary-100);
   --secondary-300: var(--l-secondary-300);
   --secondary-500: var(--l-secondary-500);
   --secondary-700: var(--l-secondary-700);
   --secondary-900: var(--l-secondary-900);
+
+  --success-100: var(--l-success-100);
+  --success-300: var(--l-success-300);
+  --success-500: var(--l-success-500);
+  --success-700: var(--l-success-700);
+  --success-900: var(--l-success-900);
+
+  --warning-100: var(--l-warning-100);
+  --warning-300: var(--l-warning-300);
+  --warning-500: var(--l-warning-500);
+  --warning-700: var(--l-warning-700);
+  --warning-900: var(--l-warning-900);
+
+  --error-100: var(--l-error-100);
+  --error-300: var(--l-error-300);
+  --error-500: var(--l-error-500);
+  --error-700: var(--l-error-700);
+  --error-900: var(--l-error-900);
 }
 
 @mixin dark-scheme() {
@@ -45,6 +62,24 @@
   --secondary-500: var(--d-secondary-500);
   --secondary-700: var(--d-secondary-700);
   --secondary-900: var(--d-secondary-900);
+
+  --success-100: var(--d-success-100);
+  --success-300: var(--d-success-300);
+  --success-500: var(--d-success-500);
+  --success-700: var(--d-success-700);
+  --success-900: var(--d-success-900);
+
+  --warning-100: var(--d-warning-100);
+  --warning-300: var(--d-warning-300);
+  --warning-500: var(--d-warning-500);
+  --warning-700: var(--d-warning-700);
+  --warning-900: var(--d-warning-900);
+
+  --error-100: var(--d-error-100);
+  --error-300: var(--d-error-300);
+  --error-500: var(--d-error-500);
+  --error-700: var(--d-error-700);
+  --error-900: var(--d-error-900);
 }
 
 .theme-default,
@@ -59,5 +94,15 @@
 .theme-default {
   @media (prefers-color-scheme: dark) {
     @include dark-scheme();
+  }
+}
+
+.invert-on-dark {
+  @media (prefers-color-scheme: dark) {
+    filter: invert(1);
+  }
+
+  @at-root .theme-dark & {
+    filter: invert(1);
   }
 }

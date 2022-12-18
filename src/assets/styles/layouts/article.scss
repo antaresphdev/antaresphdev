@@ -1,7 +1,7 @@
 .article {
   display       : flex;
   flex-direction: column;
-  gap           : var(--space-l);
+  gap           : var(--space-xxl);
 
   &__header {
     hgroup {
@@ -52,19 +52,21 @@
   }
 
   &__tags {
-    list-style : none;
+    align-items: center;
     display    : flex;
+    gap        : 0.5ch;
+    list-style : none;
     margin     : 0;
     padding    : 0;
-    align-items: center;
   }
 
   &__tag-link {
-    border-radius   : var(--radius-1);
     background-color: hsl(var(--bg-subtle) / 25%);
+    border-radius   : var(--radius-1);
+    color           : hsl(var(--primary-700));
+    display         : flex;
     padding-block   : var(--space-xxxs);
     padding-inline  : var(--space-xs);
-    display         : flex;
     text-transform  : uppercase;
   }
 
@@ -85,7 +87,7 @@
     text-align: right;
     float     : right;
     padding   : var(--space);
-    width     : 50%;
+    width     : 100%;
 
     @media (min-width: 944px) {
       border-right : 2px solid hsl(var(--fg-non-essential));
@@ -157,6 +159,27 @@
     @each $size in $sizes {
       h#{$size} {
         font-size: var(--type-size-#{$size});
+      }
+    }
+  }
+
+  .footnotes {
+    font-size  : var(--type-size-6);
+    font-family: var(--font-sans);
+
+    &-list {
+      padding: 0;
+    }
+
+    &-sep {
+      margin-block-start : var(--space-l);
+      margin-inline-start: 0;
+      width              : 25%;
+    }
+
+    .footnote {
+      &-item>* {
+        margin: 0;
       }
     }
   }
