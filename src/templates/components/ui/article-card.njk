@@ -3,7 +3,9 @@
     <img src="{{ post.data.image.src }}" alt="">
   </div>
   <div class="card__header">
-    <h3 class="card__title" id="card--{{ post.data.title | slugify }}"><a class="card__title-link" href="{{ post.url }}">{{ post.data.title | safe }}</a></h3>
+    <h{{ headingLevel if headingLevel != null else 3 }} class="card__title" id="card--{{ post.data.title | slugify }}">
+      <a class="card__title-link" href="{{ post.url }}">{{ post.data.title | safe }}</a>
+    </h{{headingLevel if headingLevel != null else 3}}>
     <p class="card__subtitle">{{ post.data.description | safe }}</p>
     <div class="card__metadata">
       <time class="card__pubdate">{{ post.date | humanReadableDate }}</time>
