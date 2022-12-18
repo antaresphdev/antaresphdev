@@ -49,6 +49,11 @@
     {
       "name": "Netlify",
       "domain": "https://antaresph.dev",
+      "isPreferred": false
+    },
+    {
+      "name": "Netlify Redesign",
+      "domain": "https://redesign.antaresph.dev",
       "isPreferred": true
     }
   ],
