@@ -6,6 +6,7 @@
 
 @import "layouts/article.scss";
 @import "layouts/code.scss";
+@import "layouts/footer.scss";
 @import "layouts/section.scss";
 
 @import "components/author.scss";
@@ -56,4 +57,18 @@ cite {
 
 abbr {
   cursor: help;
+}
+
+body {
+  display       : flex;
+  flex-direction: column;
+  min-height    : 100vh;
+
+  main {
+    flex: 1;
+  }
+
+  p {
+    margin: 0;
+  }
 }

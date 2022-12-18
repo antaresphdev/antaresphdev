@@ -2,6 +2,7 @@
   "title": "eleventy-template",
   "description": "Base project for eleventy websites",
   "baseUrl": "http://localhost:8080",
+  "owner":"teacherbuknoy",
   "seo": {
     "og": {
       "src": ""
@@ -11,45 +12,37 @@
     }
   },
   "contact": {
-    "phone": {
-      "name": "Contact Number",
-      "identifier": "+63 912 345 6789",
-      "url":"tel:+639123456789"
-    },
     "email": {
-      "name": "",
-      "identifier": "",
-      "url": ""
-    },
-    "linkedin": {
-      "name": "",
-      "identifier": "",
-      "url": ""
+      "name": "Email",
+      "identifier": "info@antaresph.dev",
+      "url": "mailto:info@antaresph.dev"
     },
     "instagram": {
-      "name": "",
-      "identifier": "",
-      "url": ""
+      "name": "Instagram",
+      "identifier": "antaresphdev",
+      "url": "https://www.instagram.com/antaresphdev/"
     },
     "twitter": {
-      "name": "",
-      "identifier": "",
-      "url": ""
+      "name": "Twitter",
+      "identifier": "antaresphdev",
+      "url": "https://twitter.com/antaresphdev"
     },
     "github": {
-      "name": "",
-      "identifier": "",
-      "url": ""
+      "name": "Github",
+      "identifier": "antaresphdev",
+      "url": "https://github.com/antaresphdev"
     },
     "mastodon": {
       "name": "",
       "identifier": "",
-      "url": ""
+      "url": "",
+      "hidden": true
     },
     "youtube": {
       "name": "",
       "identifier": "",
-      "url": ""
+      "url": "",
+      "hidden": true
     }
   },
   "domains": [

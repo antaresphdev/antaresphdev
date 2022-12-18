@@ -12,7 +12,7 @@
   outline         : 3px solid hsl(var(--primary-700) / 0);
   padding         : var(--space-xs) var(--space-m);
   text-align      : center;
-  text-decoration : none;
+  text-decoration : none !important;
   text-transform  : lowercase;
   transition      : outline 200ms, outline-offset 200ms, background-color 200ms;
 
@@ -39,4 +39,13 @@
       color           : hsl(var(--primary-100));
     }
   }
+}
+
+.button-list {
+  margin    : 0;
+  padding   : 0;
+  list-style: none;
+  display   : flex;
+  gap       : 1ch;
+  flex-wrap : wrap;
 }

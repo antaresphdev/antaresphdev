@@ -9,6 +9,16 @@
   --bg-subtle       : var(--l-subtle);
   --bg-non-essential: var(--l-non-essential);
 
+  --fg-invert-contrast     : var(--l-contrast);
+  --fg-invert-default      : var(--l-default);
+  --fg-invert-subtle       : var(--l-subtle);
+  --fg-invert-non-essential: var(--l-non-essential);
+
+  --bg-invert-contrast     : var(--d-contrast);
+  --bg-invert-default      : var(--d-default);
+  --bg-invert-subtle       : var(--d-subtle);
+  --bg-invert-non-essential: var(--d-non-essential);
+
   --primary-100: var(--l-primary-100);
   --primary-300: var(--l-primary-300);
   --primary-500: var(--l-primary-500);
@@ -50,6 +60,16 @@
   --bg-default      : var(--d-default);
   --bg-subtle       : var(--d-subtle);
   --bg-non-essential: var(--d-non-essential);
+
+  --fg-invert-contrast     : var(--d-contrast);
+  --fg-invert-default      : var(--d-default);
+  --fg-invert-subtle       : var(--d-subtle);
+  --fg-invert-non-essential: var(--d-non-essential);
+
+  --bg-invert-contrast     : var(--l-contrast);
+  --bg-invert-default      : var(--l-default);
+  --bg-invert-subtle       : var(--l-subtle);
+  --bg-invert-non-essential: var(--l-non-essential);
 
   --primary-100: var(--d-primary-100);
   --primary-300: var(--d-primary-300);

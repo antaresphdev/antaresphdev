@@ -1,0 +1,44 @@
+<footer class="footer">
+  <section class="footer__header">
+    <p>&copy; {{ "" | year }} Antares Programming</p>
+    <p>Powered by <a href="https://11ty.dev">Eleventy</a> and <a href="https://netlify.com">Netlify</a>.</p>
+  </section>
+  <section class="footer__body">
+    <div class="footer__section">
+      {% set hasTagline = true %}
+      {% include "ui/logo.njk" %}
+
+      {% set owner = authors[site.owner] %}
+      <p>Ang Antares Programming ay project ni <a href="{{ owner.url }}" class="h-card">{{ owner.name }}</a>
+      </p>
+    </div>
+    <div class="footer__section">
+      <h2 class="footer__section-title">Contact Us</h2>
+      <ul class="button-list">
+        {% for item in site.contact | notHidden %}
+          <li class="button-list__item">
+            <a href="{{ item.url }}" class="button">{{ item.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="footer__section">
+      <h2 class="footer__section-title">Join us!</h2>
+      <p>Interested in this project? Help us create more content!</p>
+      <ul class="button-list">
+        <li class="button-list__item">
+          <a href="/about/sponsorships/" class="button">Become a sponsor</a>
+        </li>
+        <li>
+          <a href="/about/donations/" class="button">Donate to us</a>
+        </li>
+        <li>
+          <a href="/about/collaborations/" class="button">Collabs</a>
+        </li>
+        <li>
+          <a href="/about/authors/" class="button">Our authors</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</footer>

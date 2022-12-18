@@ -19,6 +19,8 @@ a {
 }
 
 a {
+
+  @at-root .footer &,
   &:not([class]) {
     border-radius            : var(--radius-1);
     color                    : inherit;
