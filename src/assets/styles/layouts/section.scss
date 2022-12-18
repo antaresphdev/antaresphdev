@@ -3,3 +3,36 @@ main {
   max-width    : var(--page-width);
   width        : 90%;
 }
+
+.section {
+  display       : flex;
+  flex-direction: column;
+  gap           : var(--space);
+  margin-bottom : var(--space);
+
+  &__header {
+    font-size    : 120%;
+    margin-bottom: var(--space-l);
+
+    hgroup>* {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    font-family   : var(--font-sans);
+    font-weight   : normal;
+    text-transform: uppercase;
+    font-size     : var(--vtype-size);
+  }
+
+  &__subtitle {
+    font-size              : var(--vtype-size-2);
+    font-family            : var(--font-serif);
+    font-variation-settings: 'wght'350, 'SOFT'100, 'WONK'0;
+  }
+
+  &__description {
+    font-family: var(--font-serif);
+  }
+}

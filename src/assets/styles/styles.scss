@@ -12,6 +12,7 @@
 @import "components/author.scss";
 @import "components/button.scss";
 @import "components/breadcrumb.scss";
+@import "components/card.scss";
 @import "components/code-sample.scss";
 @import "components/form-control.scss";
 @import "components/links.scss";
@@ -33,6 +34,7 @@ body {
   background-color: hsl(var(--bg-default));
   color           : hsl(var(--fg-default));
   scroll-margin   : 5vh;
+  font-variation-settings: 'wght' 300;
 }
 
 pre,

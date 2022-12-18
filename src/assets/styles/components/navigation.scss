@@ -47,7 +47,8 @@
     margin : 0;
 
     &--supplementary {
-      margin-inline-start: auto
+      width              : min-content;
+      margin-inline-start: auto;
     }
 
     &-item {
@@ -141,6 +142,7 @@
     &__list {
       &--supplementary {
         margin-inline-start: auto;
+        width              : min-content;
       }
     }
   }

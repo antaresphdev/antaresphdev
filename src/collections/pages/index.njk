@@ -2,14 +2,23 @@
 title: 'Antares Programming'
 permalink: /
 ---
-<section class="section">
-  {{ title }}
+<h1 class="sr-only">{{ title | safe }}</h1>
 
-  <ol>
-    {% for item in collections.posts %}
-      <li>
-        <a href="{{ item.url }}">{{ item.data.title | safe }}</a>
-      </li>
-    {% endfor %}
-  </ol>
+<section class="section">
+  <header class="section__header">
+    <hgroup role="group">
+      <h2 class="section__title">Articles</h2>
+      <p class="section__subtitle">Magbasa.</p>
+      <p class="section__description">Mga bagong technology. Mga balita. Mga tutorial. Maraming iba pa.</p>
+    </hgroup>
+  </header>
+  <div class="section__body">
+    <ol class="card-list">
+      {% for post in collections.posts | reverse %}
+        <li class="card-list__item">
+          {% include "ui/article-card.njk" %}
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
 </section>

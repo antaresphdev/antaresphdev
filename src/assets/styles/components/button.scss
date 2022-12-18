@@ -1,20 +1,21 @@
 .button {
-  background-color: hsl(var(--fg-contrast) / 5%);
-  border          : none;
-  border-radius   : var(--radius-2);
-  color           : hsl(var(--primary-900));
-  cursor          : pointer;
-  display         : inline-flex;
-  font-family     : var(--font-sans);
-  font-size       : var(--type-size-6);
-  font-weight     : bold;
-  justify-content : center;
-  outline         : 3px solid hsl(var(--primary-700) / 0);
-  padding         : var(--space-xs) var(--space-m);
-  text-align      : center;
-  text-decoration : none !important;
-  text-transform  : lowercase;
-  transition      : outline 200ms, outline-offset 200ms, background-color 200ms;
+  background-color       : hsl(var(--fg-contrast) / 5%);
+  border                 : none;
+  border-radius          : var(--radius-2);
+  color                  : hsl(var(--primary-900));
+  cursor                 : pointer;
+  display                : inline-flex;
+  font-family            : var(--font-sans);
+  font-size              : var(--type-size-6);
+  font-variation-settings: 'wght'600;
+  font-weight            : bold;
+  justify-content        : center;
+  outline                : 3px solid hsl(var(--primary-700) / 0);
+  padding                : var(--space-xs) var(--space-m);
+  text-align             : center;
+  text-decoration        : none !important;
+  text-transform         : lowercase;
+  transition             : outline 200ms, outline-offset 200ms, background-color 200ms;
 
   &:hover {
     background-color: hsl(var(--primary-300) / 40%);
