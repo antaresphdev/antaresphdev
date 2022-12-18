@@ -5,10 +5,10 @@
   "owner": "teacherbuknoy",
   "seo": {
     "og": {
-      "src": ""
+      "src": "/assets/images/root/og.png"
     },
     "twitter": {
-      "src": ""
+      "src": "/assets/images/root/twitter.png"
     }
   },
   "contact": {
