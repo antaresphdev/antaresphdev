@@ -15,9 +15,11 @@ permalink: /
   <div class="section__body">
     <ol class="card-list">
       {% for post in collections.posts | reverse %}
-        <li class="card-list__item">
-          {% include "ui/article-card.njk" %}
-        </li>
+        {% if loop.index <= 5 %}
+          <li class="card-list__item">
+            {% include "ui/article-card.njk" %}
+          </li>
+        {% endif %}
       {% endfor %}
     </ol>
   </div>

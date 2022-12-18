@@ -6,7 +6,7 @@
     <h3 class="card__title" id="card--{{ post.data.title | slugify }}"><a class="card__title-link" href="{{ post.url }}">{{ post.data.title | safe }}</a></h3>
     <p class="card__subtitle">{{ post.data.description | safe }}</p>
     <div class="card__metadata">
-      <time class="card__pubdate" datetime="{{ post.date | machineReadableDate }}">{{ post.date | humanReadableDate }}</time>
+      <time class="card__pubdate">{{ post.date | humanReadableDate }}</time>
       <span>Read more</span>
     </div>
   </div>
