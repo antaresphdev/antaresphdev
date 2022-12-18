@@ -34,6 +34,10 @@ permalink: /articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
           Previous
         </a>
       {% endif %}
+      <a href="{{ site.feeds.articles.url }}" class="button">
+        {{ "rss" | icon | safe }}
+        <span class="sr-only">RSS feed ng lahat ng articles</span>
+      </a>
       {% if pagination.href.next %}
         <a href="{{ pagination.href.next }}" class="primary button">
           Next

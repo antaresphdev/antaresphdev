@@ -1,6 +1,6 @@
 {
-  "title": "eleventy-template",
-  "description": "Base project for eleventy websites",
+  "title": "Antares Programming",
+  "description": "For Filipino web developers",
   "baseUrl": "http://localhost:8080",
   "owner": "teacherbuknoy",
   "seo": {
@@ -47,9 +47,9 @@
   },
   "domains": [
     {
-      "name": "",
-      "domain": "",
-      "isPreferred": false
+      "name": "Netlify",
+      "domain": "https://antaresph.dev",
+      "isPreferred": true
     }
   ],
   "api": {
