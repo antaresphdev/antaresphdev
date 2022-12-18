@@ -127,7 +127,7 @@ May tutorial ding isinulat si Das Surma kung paano iko-customize ang scrollbars 
 
 - [CSS Deep-Dive: matrix3d() For a Frame-Perfect Custom Scrollbar](https://developers.google.com/web/updates/2017/03/custom-scrollbar)
 
-\*[W3C]: World Wide Web Consortium, ang group na in-charge sa paggawa ng standards para sa mga bagong feature ng Web.
+*[W3C]: World Wide Web Consortium, ang group na in-charge sa paggawa ng standards para sa mga bagong feature ng Web.
 
 [^1]: Technically, wala na tayong kailangang baguhin sa code natin kapag nasa lahat na ng browsers ang CSS Scrollbars. Pero dahil nasa <i>working draft</i> stage pa ang CSS Scrollbars specification, puwede pang magkaroon ng pagbabago. Ia-update ko ang post na ito in the future para i-reflect ang changes na iyon.
 [^3]: Dahil nasa working draft stage pa lang ang CSS Scrollbars, marami pang features na puwedeng maidagdag dito, kaya puwedeng dumating ang time kung kailan magkakaroon tayo ng mas maraming styling options para sa scrollbars. For now, `scrollbar-width` at `scrollbar-color` pa lang ang official na nasa drafts.

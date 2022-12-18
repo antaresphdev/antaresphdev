@@ -183,4 +183,75 @@
       }
     }
   }
+
+  iframe[src*="youtube"] {
+    aspect-ratio : 16/9;
+    height       : auto;
+    border-radius: var(--radius-3);
+    box-shadow   : 0 3px 3px #0001,
+      0 6px 6px #0001,
+      0 12px 12px #0001,
+      0 24px 24px #0001;
+  }
+
+  .cp_embed_iframe {
+    border       : 1px solid hsl(var(--fg-non-essential) / 50%);
+    border-radius: var(--radius-3);
+  }
+}
+
+.quotation {
+  --icon-size         : 2ch;
+  background-color    : hsl(var(--bg-contrast) / 50%);
+  background-color    : hsl(var(--secondary-100));
+  border-radius       : var(--radius-3);
+  display             : flex;
+  flex-direction      : column;
+  font-size           : var(--type-size-4);
+  padding             : var(--space);
+  padding-inline-start: calc((var(--space) * 2) + var(--icon-size));
+  position            : relative;
+
+  &::before {
+    content          : '';
+    background-image : url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 44 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='44' height='44' rx='22' fill='%23FFD568'/%3E%3Cpath d='M31 21.5C31.0034 22.8199 30.6951 24.1219 30.1 25.3C29.3944 26.7117 28.3098 27.8992 26.9674 28.7293C25.6251 29.5594 24.0782 29.9994 22.5 30C21.1801 30.0034 19.8781 29.6951 18.7 29.1L13 31L14.9 25.3C14.3049 24.1219 13.9966 22.8199 14 21.5C14.0006 19.9218 14.4406 18.3748 15.2707 17.0325C16.1008 15.6902 17.2883 14.6056 18.7 13.9C19.8781 13.3049 21.1801 12.9966 22.5 13H23C25.0843 13.115 27.053 13.9948 28.5291 15.4709C30.0052 16.947 30.885 18.9157 31 21V21.5Z' stroke='%234D2D00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size  : cover;
+    height           : var(--icon-size);
+    width            : var(--icon-size);
+    position         : absolute;
+    left             : var(--space);
+  }
+
+  blockquote {
+    margin        : 0;
+    display       : flex;
+    flex-direction: column;
+    gap           : 1ch;
+    line-height   : 1;
+    color         : hsl(var(--fg-contrast));
+
+    &>* {
+      margin: 0
+    }
+  }
+
+  figcaption {
+    font-size  : var(--type-size);
+    font-family: var(--font-sans);
+    text-align : end;
+
+    &::before {
+      content: '—';
+    }
+
+    cite {
+      font-family: var(--font-sans);
+      font-style : normal;
+    }
+  }
+
+  &.full-bleed {
+    width: 100%;
+  }
 }
