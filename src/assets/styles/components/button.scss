@@ -12,6 +12,7 @@
   outline         : 3px solid hsl(var(--primary-700) / 0);
   padding         : var(--space-xs) var(--space-m);
   text-align      : center;
+  text-decoration : none;
   text-transform  : lowercase;
   transition      : outline 200ms, outline-offset 200ms, background-color 200ms;
 

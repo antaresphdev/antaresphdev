@@ -1,9 +1,50 @@
 <!DOCTYPE html>
 <html lang="{{ lang }}">
-{% include "head/head.njk" %}
-<body class="no-js theme-default">
-  {% block content %}
-    {{ content | safe }}
-  {% endblock %}
-</body>
+  {% include "head/head.njk" %}
+  <body class="no-js theme-default">
+    {% include "ui/skip-link.njk" %}
+    {% include "ui/navigation.njk" %}
+    <main id="main" class="article h-entry">
+      <header class="article__header">
+        <img src="{{ image.src }}" alt="" class="article__image">
+        <hgroup role="group">
+          <h1 class="article__title p-name">{{ title | safe }}</h1>
+          <p class="article__subtitle p-summary">{{ description | safe }}</p>
+        </hgroup>
+        {% set articleAuthor = authors[author] %}
+        <div class="article__metadata">
+          <a href="/authors/{{ author }}/" class="h-card p-author article__author">
+            <img class="u-photo article__author__image" src="{{ articleAuthor.photo }}" alt="{{ articleAuthor.name }}'s photo">
+            <span class="p-name article__author__name">{{ articleAuthor.name }}</span>
+            <span class="u-uid" hidden="hidden">{{ articleAuthor.url }}</span>
+          </a>
+          <ul class="article__tags margin-left--auto" aria-label="Tags">
+            {% for item in tags %}
+              <li class="article__tag-item">
+                <a href="/articles/tags/{{ item }}/" class="article__tag-link h-category" rel="category tag">{{ item }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+          <div class="article__dates">
+            <a href="{{ page.url }}" class="article__date article__date--published">
+              {{ "clock" | icon | safe }}
+              {{ page.date | humanReadableDate }}
+            </a>
+          </div>
+        </div>
+      </header>
+      <div class="article__content e-content">
+        <aside class="article__toc">
+          <h2 class="article__toc-title">Sa post na ito…</h2>
+          {{ content | toc | safe }}
+        </aside>
+        <section class="article__body">
+          {% block content %}
+            {{ content | safe }}
+          {% endblock %}
+        </section>
+      </div>
+    </main>
+    {% include "head/scripts.njk" %}
+  </body>
 </html>

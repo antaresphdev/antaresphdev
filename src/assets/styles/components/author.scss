@@ -1,0 +1,29 @@
+.article__author {
+  display           : inline-flex;
+  align-items       : center;
+  gap               : 0.5ch;
+  background-color  : hsl(var(--bg-subtle) / 50%);
+  border-radius     : 100px;
+  padding-inline-end: 1ch;
+
+  &:focus-visible {
+    outline-offset: 1ch;
+  }
+
+  &__image {
+    aspect-ratio    : 1/1;
+    height          : 4ch;
+    object-fit      : cover;
+    object-position : top;
+    box-shadow      : 0 0 3px #0001;
+    border-radius   : 100%;
+    margin-block    : -1ch;
+    background-color: hsl(var(--bg-contrast));
+  }
+
+  &__name {
+    font-weight: bold;
+    font-family: var(--font-sans);
+    color      : hsl(var(--fg-contrast));
+  }
+}

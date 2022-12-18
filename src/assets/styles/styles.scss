@@ -4,6 +4,10 @@
 @import "base/config";
 @import "base/themes";
 
+@import "layouts/section.scss";
+@import "layouts/article.scss";
+
+@import "components/author.scss";
 @import "components/button.scss";
 @import "components/form-control.scss";
 @import "components/links.scss";
@@ -13,6 +17,7 @@
 
 @import "utils/fonts.scss";
 @import "utils/visibility.scss";
+@import "utils/space.scss";
 
 body {
   font-family     : var(--font-sans);
