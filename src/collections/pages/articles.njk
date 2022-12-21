@@ -27,7 +27,7 @@ permalink: /articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
   <div class="section__body">
     {% set headingLevel = 2 %}
     <ol class="card-list">
-      {% for post in pagination.items | reverse %}
+      {% for post in pagination.items %}
         <li class="card-list__item">
           {% include "ui/article-card.njk" %}
         </li>
