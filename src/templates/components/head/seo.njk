@@ -3,7 +3,7 @@
 <meta name="description" content="{{ description if description else site.description }}">
 
 {% set domain = site.domains | selectattr('isPreferred') | first %}
-<link rel="canonical" href="https://{{ domain.value }}{{ page.url }}">
+<link rel="canonical" href="{{ domain.domain }}{{ page.url }}">
 
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -17,7 +17,6 @@
 {% if seo.og.src %}
   {% set fb_image %}{{ "/assets/images" if seo.og.is_prefixed == null or seo.og.is_prefixed == true }}{{ seo.og.src }}{% endset %}
 {% endif %}
-
 
 
 <!-- Open Graph / Facebook -->
