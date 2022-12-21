@@ -119,7 +119,8 @@
     border-radius : var(--radius-3);
 
     &__menu {
-      display: flex
+      display: flex;
+      height : auto;
     }
 
     &__list {
