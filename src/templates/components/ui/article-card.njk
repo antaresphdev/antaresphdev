@@ -1,6 +1,6 @@
 <article class="card card--article" aria-labelledby="card--{{ post.data.title | slugify }}">
   <div class="card__image">
-    <img src="{{ post.data.image.src }}" alt="">
+    <img src="{{ post.data.image.src }}" alt="" width="1280" height="1012">
   </div>
   <div class="card__header">
     <h{{ headingLevel if headingLevel != null else 3 }} class="card__title" id="card--{{ post.data.title | slugify }}">
