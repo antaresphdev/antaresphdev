@@ -11,17 +11,15 @@
   }
 
   .tag {
-    background-color       : hsl(var(--primary-100));
+    @extend .button;
+
     border-radius          : 100px;
-    color                  : hsl(var(--primary-900));
-    display                : inline-flex;
     font-variation-settings: 'wght'500;
     padding                : var(--space-xxxs) var(--space-s);
     white-space            : nowrap;
 
     &.selected {
-      background-color       : hsl(var(--primary-700));
-      color                  : hsl(var(--d-contrast));
+      @extend .primary;
       font-variation-settings: 'wght'700;
     }
   }
