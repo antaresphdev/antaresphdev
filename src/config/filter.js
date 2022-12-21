@@ -25,5 +25,17 @@ module.exports = {
   },
   notHidden: function (object) {
     return Object.keys(object).filter(key => !object[key].hidden).map(key => object[key])
+  },
+  tags: function (collection) {
+    let allTags = []
+    collection.map(post => {
+      const { tags } = post.data
+      tags.forEach(tag => allTags.push(tag))
+    })
+
+    return Array.from(new Set(allTags))
+  },
+  filterByTags: function (collections, tag) {
+    return collections.filter(post => post.data.tags.includes(tag.data.title))
   }
 }

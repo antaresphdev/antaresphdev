@@ -1,0 +1,28 @@
+.tag-scroller {
+  margin  : 0;
+  overflow: auto;
+  padding : var(--space-xs);
+
+  &__list {
+    display: flex;
+    gap    : var(--space);
+    margin : 0;
+    padding: 0;
+  }
+
+  .tag {
+    background-color       : hsl(var(--primary-100));
+    border-radius          : 100px;
+    color                  : hsl(var(--primary-900));
+    display                : inline-flex;
+    font-variation-settings: 'wght'500;
+    padding                : var(--space-xxxs) var(--space-s);
+    white-space            : nowrap;
+
+    &.selected {
+      background-color       : hsl(var(--primary-700));
+      color                  : hsl(var(--d-contrast));
+      font-variation-settings: 'wght'700;
+    }
+  }
+}
