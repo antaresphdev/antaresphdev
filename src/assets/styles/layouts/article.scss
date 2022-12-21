@@ -83,16 +83,19 @@
   }
 
   &__toc {
-    flex-basis: 25ch;
-    flex-grow : 1;
-    height    : max-content;
-    font-size : 1.1rem;
-    text-align: right;
-    float     : right;
-    padding   : var(--space);
-    width     : 100%;
+    border-block : 1px solid hsl(var(--fg-default) / 25%);
+    flex-basis   : 25ch;
+    flex-grow    : 1;
+    float        : right;
+    font-size    : 1.1rem;
+    height       : max-content;
+    margin-bottom: var(--space);
+    padding      : var(--space);
+    text-align   : right;
+    width        : 100%;
 
     @media (min-width: 944px) {
+      border-block : none;
       border-right : 2px solid hsl(var(--fg-non-essential));
       margin-right : var(--space);
       padding-right: var(--space);
