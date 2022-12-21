@@ -34,22 +34,28 @@ permalink: /articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
       {% endfor %}
     </ol>
   </div>
-  <div class="section__footer">
-    <div class="cluster jc--center">
-      {% if pagination.href.previous %}
-        <a href="{{ pagination.href.previous }}" class="primary button">
-          {{ "arrow-left" | icon | safe }}
-          Previous
-        </a>
-      {% endif %}
-      {% if pagination.href.next %}
-        <a href="{{ pagination.href.next }}" class="primary button">
-          Next
-          {{ "arrow-right" | icon | safe }}
-        </a>
-      {% endif %}
-    </div>
-  </div>
+  <footer class="section__footer">
+    <nav class="pagination">
+      <ul class="pagination__list">
+        {% if pagination.href.previous %}
+          <li class="pagination__list-item">
+            <a href="{{ pagination.href.previous }}" class="button">{{ "arrow-left" | icon | safe }} Previous</a>
+          </li>
+        {% endif %}
+        {% for entry in pagination.pages %}
+          <li class="pagination__list-item">
+            {% set isCurrent = page.url == pagination.hrefs[loop.index0] %}
+            <a class="pagination__link" href="{{ pagination.hrefs[loop.index0] }}" {{ 'aria-current=page' if isCurrent }}>{{ loop.index }}</a>
+          </li>
+        {% endfor %}
+        {% if pagination.href.next %}
+          <li class="pagination__list-item">
+            <a href="{{ pagination.href.next }}" class="button">{{ "arrow-right" | icon | safe }} Next</a>
+          </li>
+        {% endif %}
+      </ul>
+    </nav>
+  </footer>
 </section>
 
 <footer class="section m-block--xxxl" style="text-align: center">

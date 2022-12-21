@@ -1,0 +1,19 @@
+.pagination {
+  &__list {
+    margin         : 0;
+    padding        : 0;
+    display        : flex;
+    gap            : 0.5ch;
+    justify-content: center;
+
+    &-item {}
+  }
+
+  &__link {
+    @extend .button;
+
+    &[aria-current=page] {
+      @extend .primary;
+    }
+  }
+}
