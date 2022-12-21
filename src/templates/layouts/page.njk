@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ lang }}">
-  {% include "head/head.njk" %}
-  <body class="no-js theme-default">
-    {% include "banners/under-construction.njk" %}
-    {% include "ui/skip-link.njk" %}
-    {% include "ui/navigation.njk" %}
-    <main id="main">
-      {% block content %}
-        {{ content | safe }}
-      {% endblock %}
-    </main>
-    {% include "ui/footer.njk" %}
-    {% include "head/scripts.njk" %}
-  </body>
-</html>
+{% extends './main.njk' %}
+{% block content %}
+  <main id="main">
+    {{ content | safe }}
+  </main>
+{% endblock %}
