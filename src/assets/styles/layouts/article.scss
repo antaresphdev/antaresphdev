@@ -166,6 +166,11 @@
         font-size: var(--type-size-#{$size});
       }
     }
+
+    cite,
+    cite * {
+      font-family: var(--font-serif);
+    }
   }
 
   .footnotes {
