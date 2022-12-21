@@ -14,12 +14,13 @@
 
     &::before {
       content              : '';
-      background-image     : linear-gradient(to top, hsl(var(--d-contrast)) 1%, transparent);
-      z-index              : 2;
-      grid-row             : 1/2;
-      grid-column          : 1/2;
       background-attachment: local;
+      background-image     : linear-gradient(to top, hsl(var(--d-contrast)) 1%, transparent);
       background-position  : center bottom;
+      grid-column          : 1/2;
+      grid-row             : 1/2;
+      margin-bottom        : -1px; // for chromium 1px offset bug
+      z-index              : 2;
     }
 
     .card {
@@ -115,7 +116,7 @@
         &__subtitle {
           margin-bottom: 0;
           opacity      : 1;
-          transition: margin-bottom 200ms, opacity 100ms 100ms;
+          transition   : margin-bottom 200ms, opacity 100ms 100ms;
         }
       }
     }
@@ -123,6 +124,7 @@
     &.featured {
       grid-template-rows   : 1fr;
       grid-template-columns: 1fr 2fr;
+      width                : 100%;
 
       &::before {
         background-image: linear-gradient(to left, hsl(var(--d-contrast)) 1%, transparent);
@@ -167,6 +169,9 @@
     &::marker {
       color: transparent;
     }
+
+    display        : flex;
+    justify-content: stretch;
 
     &:nth-child(5n - 4) {
       grid-column: 1/-1;
