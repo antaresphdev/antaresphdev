@@ -18,7 +18,7 @@
   text-decoration        : none !important;
   text-transform         : lowercase;
   transition             : outline 200ms, outline-offset 200ms, background-color 200ms;
-  width                  : min-content;
+  width                  : max-content;
 
   &:hover {
     background-color: hsl(var(--primary-300) / 40%);
@@ -42,6 +42,10 @@
       background-color: hsl(var(--primary-700));
       color           : hsl(var(--primary-100));
     }
+  }
+
+  &.icon-only {
+    width: min-content;
   }
 }
 
