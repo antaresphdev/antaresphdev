@@ -83,7 +83,7 @@
         color        : hsl(var(--fg-subtle) / 1);
         margin-bottom: -100%;
         opacity      : 0;
-        transition   : margin-bottom 300ms, opacity 300ms;
+        transition   : margin-bottom 100ms 100ms, opacity 200ms;
         will-change  : height;
 
         code {
@@ -115,6 +115,7 @@
         &__subtitle {
           margin-bottom: 0;
           opacity      : 1;
+          transition: margin-bottom 200ms, opacity 100ms 100ms;
         }
       }
     }
