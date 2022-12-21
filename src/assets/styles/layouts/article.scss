@@ -38,10 +38,11 @@
   }
 
   &__metadata {
-    display        : flex;
     align-items    : center;
+    display        : flex;
+    flex-wrap      : wrap;
+    gap            : var(--space);
     justify-content: space-between;
-    gap            : var(--space)
   }
 
   &__date {
@@ -69,6 +70,7 @@
     padding-block   : var(--space-xxxs);
     padding-inline  : var(--space-xs);
     text-transform  : uppercase;
+    white-space     : nowrap;
   }
 
   &__content {
