@@ -80,3 +80,13 @@ body {
     margin: 0;
   }
 }
+
+mark {
+  display         : inline-block;
+  line-height     : 1.2;
+  padding-inline  : 0.25ch;
+  margin-inline   : -0.25ch;
+  border-radius   : var(--radius-1);
+  background-color: hsl(var(--l-warning-500) / 50%);
+  color           : inherit;
+}
