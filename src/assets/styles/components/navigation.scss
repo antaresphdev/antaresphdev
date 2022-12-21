@@ -63,6 +63,7 @@
     color           : hsl(var(--primary-700));
     background-color: transparent;
     height          : 100%;
+    padding-block   : var(--space-xxs);
   }
 
   &__menu {
