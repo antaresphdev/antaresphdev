@@ -19,6 +19,7 @@ end;
 
 .text {
   @each $a in $alignments {
+
     &-#{$a},
     &--#{$a} {
       text-align: $a;
@@ -41,6 +42,7 @@ $weights: 100,
 
 .weight {
   @each $weight in $weights {
+
     &-#{$weight},
     &--#{$weight} {
       font-weight            : $weight;
@@ -54,6 +56,19 @@ $weights: 100,
 
   .weight-normal {
     font-weight: normal;
+  }
+}
+
+/* #endregion */
+
+/* #region FONT SIZES */
+@for $level from 1 through 9 {
+  .h#{$level} {
+    font-size: var(--type-size-#{$level});
+
+    &.em-sized {
+      font-size: var(--vtype-size-#{$level});
+    }
   }
 }
 

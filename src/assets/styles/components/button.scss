@@ -36,7 +36,7 @@
 
   &.primary {
     background-color: hsl(var(--primary-700));
-    color           : hsl(var(--l-contrast));
+    color           : hsl(var(--fg-invert-contrast));
 
     &:hover {
       background-color: hsl(var(--primary-700));

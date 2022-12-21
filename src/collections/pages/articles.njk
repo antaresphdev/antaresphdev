@@ -27,12 +27,10 @@ permalink: /articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
   <div class="section__body">
     {% set headingLevel = 2 %}
     <ol class="card-list">
-      {% for post in collections.posts | reverse %}
-        {% if loop.index <= 5 %}
-          <li class="card-list__item">
-            {% include "ui/article-card.njk" %}
-          </li>
-        {% endif %}
+      {% for post in pagination.items | reverse %}
+        <li class="card-list__item">
+          {% include "ui/article-card.njk" %}
+        </li>
       {% endfor %}
     </ol>
   </div>
@@ -44,10 +42,6 @@ permalink: /articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
           Previous
         </a>
       {% endif %}
-      <a href="{{ site.feeds.articles.url }}" class="icon-only button">
-        {{ "rss" | icon | safe }}
-        <span class="sr-only">RSS feed ng lahat ng articles</span>
-      </a>
       {% if pagination.href.next %}
         <a href="{{ pagination.href.next }}" class="primary button">
           Next
@@ -57,3 +51,19 @@ permalink: /articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
     </div>
   </div>
 </section>
+
+<footer class="section m-block--xxxl" style="text-align: center">
+  <div class="section__header">
+    <hgroup role="group">
+      <h2 class="section__subtitle h3">Huwag magpahuli sa mga bago naming content!</h2>
+      <p>Maging updated kapag may bago kaming posts. Mag-subscribe sa aming RSS feed</p>
+    </hgroup>
+  </div>
+  <div class="stack ai--center gap--s">
+    <a href="{{ site.feeds.articles.url }}" class="primary button" target="blank" rel="noopener">
+      {{ "rss" | icon | safe }}
+      <span>RSS feed ng lahat ng articles</span>
+    </a>
+    <a href="https://rss.com/blog/how-do-rss-feeds-work/" rel="noopener" target="_blank">Paano gamitin ang RSS feeds?</a>
+  </div>
+</footer>

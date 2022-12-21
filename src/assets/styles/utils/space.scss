@@ -17,3 +17,20 @@ $directions: top, bottom, left, right, inline, block, inline-start, inline-end,
     }
   }
 }
+
+.gap,
+.g {
+  gap: var(--space);
+
+  @each $space in $spaces {
+    &--#{$space} {
+      gap: var(--space-#{$space});
+    }
+
+    @each $d in $directions {
+      &-#{$d}--#{$space} {
+        gap-#{$d}: var(--space-#{$space});
+      }
+    }
+  }
+}
