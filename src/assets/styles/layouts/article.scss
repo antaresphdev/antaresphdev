@@ -24,7 +24,7 @@
 
   &__title {
     font-size  : var(--type-size-1);
-    font-size  : clamp(var(--type-size-4), 10vw, var(--type-size-1));
+    font-size  : clamp(var(--type-size-3), 10vw, var(--type-size-1));
     line-height: 1;
     color      : hsl(var(--fg-contrast));
     font-family: var(--font-serif);
@@ -34,6 +34,7 @@
   &__subtitle {
     font-family: var(--font-serif);
     font-size  : var(--type-size-4);
+    font-size  : clamp(var(--type-size-5), 5vw, var(--type-size-4));
     margin     : 0;
   }
 
