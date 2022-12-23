@@ -1,15 +1,15 @@
 .card {
-  display      : flex;
-  overflow     : hidden;
-  border-radius: var(--radius-3);
+  display: flex;
 
   &--article {
+    border-radius     : var(--radius-3);
     display           : grid;
     grid-template-rows: 1fr min-content;
     height            : 30ch;
     max-height        : 30ch;
-    position          : relative;
     outline           : 3px solid hsl(var(--primary-500) / 0);
+    overflow          : hidden;
+    position          : relative;
     transition        : outline 200ms, outline-offset 200ms, grid-template-rows 300ms;
 
     &::before {
@@ -167,6 +167,63 @@
       }
     }
   }
+
+  &--video {
+    flex-direction: column;
+    position      : relative;
+    row-gap       : 1ch;
+
+    .card {
+      &__image {
+        border-radius: var(--radius-3);
+        box-shadow   : 0 2px 2px #0001, 0 4px 4px #0001, 0 6px 6px #0001;
+        outline      : 3px solid hsl(var(--primary-500) / 0);
+        overflow     : hidden;
+        transition   : outline-color 200ms, outline-offset 200ms;
+      }
+
+      &__title {
+        margin                 : 0;
+        font-family            : var(--font-sans);
+        font-variation-settings: 'wght'500;
+
+        &,
+        &-link {
+          color: hsl(var(--fg-contrast));
+        }
+
+        &-link {
+          &::before {
+            content : '';
+            position: absolute;
+            inset   : 0;
+          }
+
+          &:focus-visible {
+            outline: none;
+          }
+        }
+      }
+
+      &__subtitle {
+        color: hsl(var(--fg-subtle));
+      }
+
+      &__metadata {
+        display        : flex;
+        justify-content: space-between;
+      }
+    }
+
+    &:focus-within {
+      .card {
+        &__image {
+          outline-color : hsl(var(--primary-500) / 100%);
+          outline-offset: 5px;
+        }
+      }
+    }
+  }
 }
 
 .card-list {
@@ -180,15 +237,21 @@
     &::marker {
       color: transparent;
     }
+  }
 
-    display        : flex;
-    justify-content: stretch;
+  &--articles {
+    .card-list {
+      &__item {
+        display        : flex;
+        justify-content: stretch;
 
-    &:nth-child(5n - 4) {
-      grid-column: 1/-1;
+        &:nth-child(5n - 4) {
+          grid-column: 1/-1;
 
-      .card--article {
-        @extend .featured;
+          .card--article {
+            @extend .featured;
+          }
+        }
       }
     }
   }

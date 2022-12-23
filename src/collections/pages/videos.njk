@@ -1,20 +1,20 @@
 ---
-title: 'Mga Article - Antares Programming'
+title: 'Mga Video - Antares Programming'
 pagination:
-  data: collections.posts
+  data: collections.videos
   size: 10
   reverse: true
-permalink: /articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html
+permalink: /videos/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html
 ---
 <section class="section h-feed" aria-labelledby="section--articles">
   <header class="section__header">
     <hgroup role="group">
-      <h1 class="section__title p-name" id="section--articles">Articles</h1>
-      <p class="section__subtitle">Magbasa.</p>
-      <p class="section__description">Mga bagong technology. Mga balita. Mga tutorial. Maraming iba pa.</p>
+      <h1 class="section__title p-name" id="section--articles">Videos</h1>
+      <p class="section__subtitle">Manood.</p>
+      <p class="section__description">Mga coding tutorial at commentaries.</p>
     </hgroup>
   </header>
-  <nav class="tag-scroller" aria-label="Tags">
+  <!--nav-- class="tag-scroller" aria-label="Tags">
     <ul class="tag-scroller__list">
       {% set tags = collections.tags %}
       {% for tag in tags %}
@@ -23,12 +23,13 @@ permalink: /articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
         </li>
       {% endfor %}
     </ul>
-  </nav>
+  </!--nav-->
   <div class="section__body">
     {% set headingLevel = 2 %}
-    <ol class="card-list card-list--articles">
+    <ol class="card-list card-list--videos">
       {% for post in pagination.items %}
         <li class="card-list__item">
+          {% set cardType = "video" %}
           {% include "ui/article-card.njk" %}
         </li>
       {% endfor %}

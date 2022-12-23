@@ -13,7 +13,7 @@ permalink: /
     </hgroup>
   </header>
   <div class="section__body">
-    <ol class="card-list">
+    <ol class="card-list card-list--articles">
       {% for post in collections.posts | reverse %}
         {% if loop.index <= 5 %}
           <li class="card-list__item">

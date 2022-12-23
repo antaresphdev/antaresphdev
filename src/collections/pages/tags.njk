@@ -28,7 +28,7 @@ permalink: /articles/tag/{{ selectedTag.data.title | slugify }}/
   </nav>
   <div class="section__body">
     {% set headingLevel = 2 %}
-    <ol class="card-list">
+    <ol class="card-list card-list--articles">
       {% for post in collections.posts | reverse | filterByTags(selectedTag) %}
         {% if loop.index <= 5 %}
           <li class="card-list__item">

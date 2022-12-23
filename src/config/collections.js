@@ -32,5 +32,13 @@ module.exports = {
     const tagCollection = uniqueTags.map(tag => ({ data: { title: tag } }))
 
     return tagCollection;
-  }
+  },
+
+  videos: function (collections) {
+    return collections.getFilteredByGlob([
+      "src/collections/videos/*.html",
+      "src/collections/videos/*.njk",
+      "src/collections/videos/*.md",
+    ])
+  },
 }

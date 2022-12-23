@@ -1,5 +1,5 @@
 
-<article class="card card--article" aria-labelledby="card--{{ post.data.title | slugify }}">
+<article class="card card--{{ cardType if cardType else "article" }}" aria-labelledby="card--{{ post.data.title | slugify }}">
   <div class="card__image">
     {% set usePicture = post.data.images %}
     {% if usePicture %}
