@@ -170,6 +170,7 @@
     @each $size in $sizes {
       h#{$size} {
         font-size: var(--type-size-#{$size});
+        font-size: clamp(var(--type-size-#{$size + 1}), 3vw, var(--type-size-#{$size}));
       }
     }
 
