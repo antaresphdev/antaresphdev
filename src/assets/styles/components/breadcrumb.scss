@@ -1,10 +1,12 @@
 .breadcrumb {
   &__list {
-    margin    : 0;
-    padding   : 0;
-    list-style: none;
-    display   : flex;
-    gap       : 1ch;
+    margin          : 0;
+    margin-block-end: var(--space);
+    padding         : 0;
+    list-style      : none;
+    display         : flex;
+    flex-wrap       : wrap;
+    column-gap      : 1ch;
 
     &-item {
       display    : flex;
@@ -23,7 +25,9 @@
 
   &__link {
     &:not([href]) {
-      font-weight: bold;
+      font-weight            : bold;
+      font-variation-settings: 'wght'600;
+      padding                : var(--space-xxxs) var(--space-xs);
     }
 
     &[href] {
