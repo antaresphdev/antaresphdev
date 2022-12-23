@@ -2,6 +2,9 @@
 title: Sulit pa bang aralin ang Bootstrap sa 2022?
 description: Sa panahon ng intrinsic web design, dapat mo na bang iwan ang Bootstrap?
 author: teacherbuknoy
+images:
+  identifier: cover
+  baseFolder: posts/bootstrap-2022/
 image: 
   src: /assets/images/posts/bootstrap-2022/cover.png
   color:

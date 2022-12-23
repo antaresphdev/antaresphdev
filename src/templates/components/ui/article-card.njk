@@ -1,6 +1,17 @@
 <article class="card card--article" aria-labelledby="card--{{ post.data.title | slugify }}">
   <div class="card__image">
-    <img src="{{ post.data.image.src }}" alt="" width="1280" height="1012">
+    {% if post.data.images.identifier != null %}
+      {% set defaultImageSource = post.data.image.src %}
+      {% set baseFolder = post.data.images.baseFolder %}
+      {% set identifier = post.data.images.identifier %}
+      {% set alt = "" %}
+      {% set defaultImageClass = "" %}
+      {% set width = "1280" %}
+      {% set height = "1012" %}
+      {% include "ui/picture.njk" %}
+    {% else %}
+      <img src="{{ post.data.image.src }}" alt="" width="1280" height="1012">
+    {% endif %}
   </div>
   <div class="card__header">
     <h{{ headingLevel if headingLevel != null else 3 }} class="card__title" id="card--{{ post.data.title | slugify }}">

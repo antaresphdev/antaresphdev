@@ -1,0 +1,45 @@
+{#
+ # Inserts a responsive image
+ #
+ # VARIABLES
+ # string   defaultImageSource - the fallback image
+ # string   baseFolder         - the folder that contains the images
+ # string   identifier         - the file name of the original unresized image excluding extension
+ # string   alt                - the alt text
+ # string   defaultImageClass  - the class attribute of the <img> element
+ # string   width              - the width attribute of the <img> element
+ # string   height             - the height attribute of the <img> element
+ #}
+
+{% set sizes = images.sizes %}
+{% set formats = images.formats %}
+
+{% set sizesAttribute %}
+  {% for size in sizes %}(max-width: {{ size }}px) {{ size }}px{{ ", " if not loop.last }}{% endfor %}
+{% endset %}
+
+{% set sourceElements %}
+  {% for format in formats %}
+    {% set srcset %}
+      {% for size in sizes %}
+        /assets/images/{{ baseFolder }}optimized/{{ identifier }}-{{ size }}.{{ format }} {{ size }}w{{ ',' if not loop.last }}
+      {% endfor %}
+    {% endset %}
+
+    <source
+      srcset="{{ srcset }}"
+      type="image/{{ format }}"
+      width="{{ width }}"
+      height="{{ height }}"
+      sizes="{{ sizesAttribute | trim }}">
+  {% endfor %}
+{% endset %}
+
+<picture>
+  {{ sourceElements | safe }}
+  <img src="{{ defaultImageSource }}" 
+    alt="{{ alt }}" 
+    width="{{ width }}"
+    height="{{ height }}"
+    class="{{ defaultImageClass }}">
+</picture>
