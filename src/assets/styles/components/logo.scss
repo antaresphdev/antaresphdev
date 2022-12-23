@@ -1,8 +1,9 @@
 .logo {
-  display    : flex;
   align-items: center;
-  gap        : 0.5ch;
   color      : hsl(var(--fg-contrast));
+  display    : flex;
+  flex-wrap  : wrap;
+  gap        : 0.5ch;
   line-height: 1;
 
   &__image {
@@ -11,6 +12,7 @@
 
   &__type {
     display                : flex;
+    flex-wrap              : wrap;
     font-family            : var(--font-sans);
     font-size              : var(--type-size-6);
     font-variant-alternates: styleset(alt-a);
@@ -35,7 +37,6 @@
   &.has-tagline {
     display              : grid;
     grid-template-columns: min-content auto;
-    row-gap              : 0;
 
     .logo__type,
     .logo__tagline {

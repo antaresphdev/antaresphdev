@@ -9,10 +9,12 @@
   color           : hsl(var(--fg-default));
 
   &__header {
-    padding         : var(--space);
     background-color: hsl(var(--bg-contrast));
     display         : flex;
+    flex-wrap       : wrap;
+    column-gap      : 1ch;
     justify-content : space-between;
+    padding         : var(--space);
 
     p {
       margin: 0;

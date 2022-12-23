@@ -21,7 +21,7 @@ tags:
 
 Ni-release ang Bootstrap noon pang 2011—sampung taon na ang nakalipas. Nang i-release sa public ang Bootstrap, kaka-release lang din ng version 9 ng Internet Explorer. Ngayon? Kakaatapos lang ng support ng Microsoft para sa nasabing browser. Ibang-iba na ang landscape ng web developmnet ngayon. Kaya isa-isahin natin ang mga problemang sino-solusyunan ng Bootstrap, at kung nasaan na tayo ngayon sa mga problemang ito.
 
-## Responsive Web Design
+## Respon&shy;sive Web Design
 Kapag sinasabing *responsive* ang isang web page, nag-a-adapt ito sa size ng viewport (screen o browser window). Sa nakalipas na mga dekada, mahirap gawin ang responsive web design dahil hindi ginawa ang CSS para sa ganitong paraan ng layout. `float` at media queries lang ang magagamit natin noon para sa web design. At dahil hindi naman ginawa ang `float` para sa responsive web design, unpredictable ang behavior nito. isa ito sa mga problemang sinosolusyunan ng Bootstrap. Dahil sa grid system ng Bootstrap, naging mas madali at simple ang paggawa ng responsive web pages.
 
 Pero ngayong 2022, mas madali na bang gumawa ng responsive web pages? Sa ngayon, nasa era na tayo ng tinatawag na *intrinsic web design*. Isa itong era ng mas pinadali at improved na responsive web:
@@ -93,7 +93,7 @@ Sa example na ito, ginamit natin ang `min()`, `max()`, at `clamp()` functions.
 
 </div>
 
-### Flexbox
+### Flex&shy;box
 
 Isa pa sa mga powerful features ng modern CSS ang Flexbox. Kung rows at columns ang ibinibigay sa atin ng CSS Grid, one-dimensional naman ang Flexbox (either column or row). Mula sa pangalan nito, binibigyan tayo nito ng ability na gawing flexible ang layout ng mga box sa layout natin—both sa sizes at spacing, at pati na rin sa posiitoning. Gamit ang Flexbox, posibleng makagawa ng responsive layouts nang walang media queries. tingnan ang example na ito kung saan sa mas malalaking viewport sizes, magkatabi sa horizontal axis ang sidebar at ang main content, pero nag-i-stack sila vertically kapag hindi na sapat ang horizontal space. Pansinin na walang ginamit na kahit anong media query para dito.
 
@@ -136,7 +136,7 @@ Isa pa sa mga powerful features ng modern CSS ang Flexbox. Kung rows at columns 
 
 </div>
 
-## Browser Support at Consistency
+## Brow&shy;ser Sup&shy;port at Consis&shy;tency
 
 Hindi laging consistent ang mga features natin sa web. Dahil sa iba-ibang implementation ng mga browsers, iba-iba rin ang behavior ng mga ginagamit nating features. Puwedeng gumagana ang isang feature sa isang browser, pero sira naman sa iba. Puwede rin namang gumagana ito sa lahat ng browsers pero may bugs ang implementation. Isa ito sa mga problemang sinosolusyonan ng Bootstrap (at ng jQuery para sa JavaScript).
 
@@ -146,7 +146,7 @@ Kapag may idadagdag na bagong features sa CSS, kailangan itong ma-test ng develo
 
 Sa mas recent na mga taon, nagkasundo ang mga browser vendor na huwag nang gumamit ng vendor prefixes. Instead, nag-release sila ng mga special version ng browsers nila na para lang sa developers. Halimbawa nito ang Safari Technology Preview, Firefox Nightly, at Chrome Canary. Sa mga browser na ito, kailangang i-turn on ang mga experimental na features kung gusto itong i-test ng mga developers. Kaya kapag ready na ang isang CSS feature at na-ship na ito sa mga browser, consistent na for the most part ang implementation nito, na-resolve na ang karamihan sa mga bugs, at alam na ng mga browser engineers ang next step na gagawin sa mga bagong feature.[^2]
 
-## Dapat pa bang gumamit ng Bootstrap?
+## Dapat pa bang gumamit ng Boot&shy;strap?
 
 Sa panahon ng intrinsic web design at mas consistent na implementations across browsers, **oo, may benefits pa rin ang paggamit ng Bootstrap.** Sa 2021 survey na [State of CSS](https://2021.stateofcss.com/), 85% ng respondents ang nagsabi na nakagamit na sila ng Bootstrap samantalang 41% ang nagsabi na gagamitin pa nila ulit ang Bootstrap. Sa maraming kompanya, Bootstrap pa rin ang ginagamit nila. Ayon sa [similartech.com](https://www.similartech.com/technologies/bootstrap), nasa 21,142 websites na hosted sa Pilipinas ang gumagamit pa rin ng Bootstrap. malinaw na kailangan pa rin nating at least matutunan kung paano gamitin ang Bootstrap, if at least magme-maintain tayo ng mga project na gumamit ng Bootstrap.
 
