@@ -1,6 +1,9 @@
 ---
 title: Ang display Property ng CSS
 description: Tingnan nating muli ang display property ng CSS.
+images:
+  identifier: cover
+  baseFolder: posts/ang-display-property-ng-css/
 image: 
   src: /assets/images/posts/ang-display-property-ng-css/cover.png
   color:

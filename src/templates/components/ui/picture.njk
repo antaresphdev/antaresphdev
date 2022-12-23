@@ -11,8 +11,8 @@
  # string   height             - the height attribute of the <img> element
  #}
 
-{% set sizes = images.sizes %}
-{% set formats = images.formats %}
+{% set sizes = imgconfig.sizes %}
+{% set formats = imgconfig.formats %}
 
 {% set sizesAttribute %}
   {% for size in sizes %}(max-width: {{ size }}px) {{ size }}px{{ ", " if not loop.last }}{% endfor %}

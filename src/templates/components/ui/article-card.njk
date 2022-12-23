@@ -1,6 +1,8 @@
+
 <article class="card card--article" aria-labelledby="card--{{ post.data.title | slugify }}">
   <div class="card__image">
-    {% if post.data.images.identifier != null %}
+    {% set usePicture = post.data.images %}
+    {% if usePicture %}
       {% set defaultImageSource = post.data.image.src %}
       {% set baseFolder = post.data.images.baseFolder %}
       {% set identifier = post.data.images.identifier %}
