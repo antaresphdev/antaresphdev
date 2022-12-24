@@ -17,6 +17,11 @@
       "identifier": "info@antaresph.dev",
       "url": "mailto:info@antaresph.dev"
     },
+    "facebook": {
+      "name": "Facebook",
+      "identifier": "antaresprogramming",
+      "url": "https://www.facebook.com/antaresprogramming/"
+    },
     "instagram": {
       "name": "Instagram",
       "identifier": "antaresphdev",
