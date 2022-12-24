@@ -39,10 +39,10 @@
       "hidden": true
     },
     "youtube": {
-      "name": "",
-      "identifier": "",
-      "url": "",
-      "hidden": true
+      "name": "Youtube",
+      "identifier": "@antaresphdev",
+      "url": "https://youtube.com/@antaresphdev",
+      "hidden": false
     }
   },
   "domains": [

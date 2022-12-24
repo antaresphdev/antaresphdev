@@ -17,7 +17,9 @@
   </div>
   <div class="card__header">
     <h{{ headingLevel if headingLevel != null else 3 }} class="card__title" id="card--{{ post.data.title | slugify }}">
-      <a class="card__title-link" href="{{ post.url }}">{{ post.data.title | safe }}</a>
+      {% set externalUrl = post.data.link.url %}
+      {% set newTab %}target="_blank" rel="noopener"{% endset %}
+      <a class="card__title-link" href="{{ externalUrl if externalUrl else post.url }}" {{ newTab if externalUrl }}>{{ post.data.title | safe }}</a>
     </h{{headingLevel if headingLevel != null else 3}}>
     <p class="card__subtitle">{{ post.data.description | safe }}</p>
     <div class="card__metadata">
