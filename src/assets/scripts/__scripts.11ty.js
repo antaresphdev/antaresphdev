@@ -4,6 +4,8 @@ const webpack = require('webpack')
 const { fs: mfs } = require('memfs')
 const isProd = process.env.ELEVENTY_ENV === 'production'
 
+require('dotenv').config()
+
 class Script {
   constructor() {
     this.inputFiles = {
@@ -15,7 +17,9 @@ class Script {
     const outputPath = path.resolve(__dirname, "../../memory-fs/js/")
     const envPlugin = new webpack.EnvironmentPlugin({ ELEVENTY_ENV: process.env.ELEVENTY_ENV })
     const vars = new webpack.DefinePlugin({
-      GENERATED: JSON.stringify(new Date().toISOString())
+      GENERATED: JSON.stringify(new Date().toISOString()),
+      API_SITE_DATA: JSON.stringify(process.env.SITE_DATA),
+      API_CONTENT: JSON.stringify(process.env.CONTENT)
     })
 
     const rules = [

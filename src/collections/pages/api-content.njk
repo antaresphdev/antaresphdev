@@ -8,7 +8,8 @@ permalink: /api/v1/content.json
       {
         "title": "{{ post.data.title | safe }}",
         "description": "{{ post.data.description | safe }}",
-        "content": "{{ post.templateContent | striptags | dump }}"
+        "content": "{{ post.templateContent | striptags }}",
+        "url": "{{ post.url }}"
       }{{ "," if not loop.last }}
     {% endfor %}
   ]
