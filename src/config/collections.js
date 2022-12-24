@@ -41,4 +41,12 @@ module.exports = {
       "src/collections/videos/*.md",
     ])
   },
+
+  infographics: function (collections) {
+    return collections.getFilteredByGlob([
+      "src/collections/infographics/*.html",
+      "src/collections/infographics/*.njk",
+      "src/collections/infographics/*.md",
+    ])
+  },
 }
