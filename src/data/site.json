@@ -64,7 +64,8 @@
   ],
   "api": {
     "email": "",
-    "siteData": "/api/v1/site-data.json"
+    "siteData": "/api/v1/site-data.json",
+    "content": "/api/v1/content.json"
   },
   "feeds": {
     "articles": {
