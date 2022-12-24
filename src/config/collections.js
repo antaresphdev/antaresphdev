@@ -49,4 +49,12 @@ module.exports = {
       "src/collections/infographics/*.md",
     ])
   },
+
+  about: function (collections) {
+    return collections.getFilteredByGlob([
+      "src/collections/about/*.html",
+      "src/collections/about/*.njk",
+      "src/collections/about/*.md",
+    ])
+  },
 }

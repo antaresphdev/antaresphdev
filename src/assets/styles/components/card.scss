@@ -224,6 +224,51 @@
       }
     }
   }
+
+  &--author {
+    display    : flex;
+    gap        : var(--space-xxl);
+    align-items: flex-start;
+    flex-wrap  : wrap;
+
+    .card {
+      &__image {
+        flex            : 1 0 10ch;
+        aspect-ratio    : 1/1;
+        position        : relative;
+        overflow        : hidden;
+        border-radius   : var(--radius-3);
+        background-color: hsl(var(--bg-contrast));
+
+
+        img {
+          object-fit: cover;
+          position  : absolute;
+          inset     : 0;
+          height    : 100%;
+          width     : 100%;
+        }
+      }
+
+      &__header {
+        flex          : 3;
+        display       : flex;
+        flex-direction: column;
+        gap           : 1ch;
+        min-width     : 70%;
+      }
+
+      &__title {
+        font-size              : clamp(var(--type-size-5), 2vw, var(--type-size-3));
+        font-variation-settings: 'wght'500;
+        margin                 : 0;
+      }
+
+      &__subtitle {
+        font-family: var(--font-serif);
+      }
+    }
+  }
 }
 
 .card-list {

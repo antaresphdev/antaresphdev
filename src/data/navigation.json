@@ -3,5 +3,5 @@
   { "text": "Articles", "url": "/articles/" },
   { "text": "Infographics", "url": "/slidesets/", "hidden": true},
   { "text": "Videos", "url": "/videos/" },
-  { "text": "About", "url": "/about/", "hidden": true }
+  { "text": "About", "url": "/about/" }
 ]
