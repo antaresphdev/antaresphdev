@@ -8,9 +8,11 @@
   </a>
   <ul class="navigation__list navigation__list--main">
     {% for item in navigation %}
-      <li class="navigation__list-item">
-        <a href="{{ item.url }}" class="navigation__link">{{item.text}}</a>
-      </li>
+      {% if not item.hidden %}
+        <li class="navigation__list-item">
+          <a href="{{ item.url }}" class="navigation__link">{{item.text}}</a>
+        </li>
+      {% endif %}
     {% endfor %}
   </ul>
   <ul class="navigation__list navigation__list--supplementary">
