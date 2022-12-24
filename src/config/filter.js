@@ -37,5 +37,9 @@ module.exports = {
   },
   filterByTags: function (collections, tag) {
     return collections.filter(post => post.data.tags.includes(tag.data.title))
+  },
+  removeInvalidAtomTags: function (html) {
+    const invalidTagRegex = /\&lt;(script|style).*\&lt;\/(script|style)&gt;/gm
+    return html.replace(invalidTagRegex, '')
   }
 }

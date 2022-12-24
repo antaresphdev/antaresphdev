@@ -22,7 +22,6 @@ Ngayong araw, nakita ko ang tweet na ito:
   &mdash; sdwaco (@sdwaco)
   <a href="https://twitter.com/sdwaco/status/1291459680422830083?ref_src=twsrc%5Etfw">August 7, 2020</a>
 </blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Ni-retweet ito ni Jen Simmons:
 

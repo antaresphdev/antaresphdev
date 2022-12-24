@@ -1,14 +1,14 @@
 ---
 eleventyExcludeFromCollections: true
 layout: null
-permalink: /rss-articles.xml
+permalink: /rss-videos.xml
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   {% set preferredDomain = site.domains | selectattr('isPreferred') | first %}
-  <title>{{ site.title }} Articles</title>
+  <title>{{ site.title }} Videos</title>
   <subtitle>{{ site.description }}</subtitle>
-  <link href="{{ preferredDomain.domain }}/rss-articles.xml" rel="self"/>
+  <link rel="self" href="{{ preferredDomain.domain }}/rss-videos.njk"/>
   <updated>{{ generated }}</updated>
   <author>
     <name>{{ authors.teacherbuknoy.name }}</name>
@@ -16,14 +16,14 @@ permalink: /rss-articles.xml
     <uri>{{ authors.teacherbuknoy.url }}</uri>
   </author>
   <id>{{ preferredDomain.domain }}/</id>
-  <category term="blog"/>
+  <category term="videos"/>
   <icon>{{ preferredDomain.domain }}/assets/root/favicon.svg</icon>
   <rights>ⓒ {{ "" | year }} Francis Rubio</rights>
 
-  {% for post in collections.posts %}
-    {% set absolutePostUrl %}{{ preferredDomain.domain }}{{ post.url }}{% endset %}
+  {% for post in collections.videos %}
+    {% set absolutePostUrl %}{{ post.data.link.url }}{% endset %}
     <entry>
-      <title type="html">{{ post.data.title }}</title>
+      <title>{{ post.data.title }}</title>
       <link href="{{ absolutePostUrl }}"/>
       <updated>{{ post.date | dateToRfc3339 }}</updated>
       <id>{{ absolutePostUrl }}</id>
@@ -39,25 +39,25 @@ permalink: /rss-articles.xml
       </author>
       {% if post.data.tags and post.data.tags.length > 0 %}
         {% for tag in post.data.tags %}
-          <category term="{{ tag }}" />
-          {% endfor %}
-        {% endif %}
+          <category term="{{ tag }}"/>
+        {% endfor %}
+      {% endif %}
 
-        {% if post.data.contributors and post.data.contributors.length > 0 %}
-          {% for contributor in post.data.contributors %}
-            {% set person = authors[contributor] %}
-            <contributor>
-              <name>{{ person.name }}</name>
-              {% if person.url %}
-                <uri>{{ person.url }}</uri>
-              {% endif %}
-              {% if person.email %}
-                <email>{{ person.email }}</email>
-              {% endif %}
-            </contributor>
-          {% endfor %}
-        {% endif %}
-        <content type="html">{{ post.templateContent | removeInvalidAtomTags | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
-      </entry>
-    {% endfor %}
-  </feed>
+      {% if post.data.contributors and post.data.contributors.length > 0 %}
+        {% for contributor in post.data.contributors %}
+          {% set person = authors[contributor] %}
+          <contributor>
+            <name>{{ person.name }}</name>
+            {% if person.url %}
+              <uri>{{ person.url }}</uri>
+            {% endif %}
+            {% if person.email %}
+              <email>{{ person.email }}</email>
+            {% endif %}
+          </contributor>
+        {% endfor %}
+      {% endif %}
+      <content type="html">{{ post.data.description | htmlToAbsoluteUrls(absolutePostUrl) | safe }}</content>
+    </entry>
+  {% endfor %}
+</feed>

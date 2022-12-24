@@ -9,4 +9,8 @@ images:
   identifier: cover
   baseFolder: videos/multi-column-layouts/
   defaultImageSource: videos/multi-column-layouts/cover.jpg
+tags:
+  - css
+  - layout
+  - graphic design
 ---
