@@ -15,7 +15,7 @@ tags:
 Sa maraming projects, afterthought lang ang accessibility. Para sa maraming kompanya, para lang itong plugin na idadagdag sa website kapag tapos na ang design at development phase. Kaya nga nauso ang mga service na nag-o-offer ng accessibility overlays (na hindi naman effective para sa mga walang kapansanan at nagpapahirap din sa mga PWD). Iniisip ng marami na mga may kapansanan lang ang makikinabang sa isang accessible na website. Pero hindi naman iyon totoo.
 
 ## Ano ang accessibility?
-Kapag ang isang bagay ay accessible, ibig sabihin, puwede itong gamitin ng lahat, kahit pa ng mga may kapansanan. Kung accessible ang isang website, puwede itong magamit nang madali ng mga walang sakit o injury, pati na ng mga bulag, mahina ang pandinig, bingi, mga may motor impairment gaya ng panginginig ng kamay, 
+Kapag ang isang bagay ay <dfn>accessible</dfn>, ibig sabihin, puwede itong gamitin ng lahat, kahit pa ng mga may kapansanan. Kung accessible ang isang website, puwede itong magamit nang madali ng mga walang sakit o injury, pati na ng mga bulag, mahina ang pandinig, bingi, at mga may motor impairment gaya ng panginginig ng kamay, 
 
 ## Lahat tayo ay “disabled”
 Siguro wala kang kapansanan. Malinaw ang mata mo, kumpleto ang lahat ng parts ng katawan mo. Pero puwede kang maging disabled nang pansamantala paminsan-minsan. Halimbawa, “disabled” ka sa mga time na hindi ka makapanood nang maayos ng videos sa isang public place dahil maingay at wala kang earphones. “Disabled” ka rin kung kumakain ka habang nagko-computer kaya hindi mo magamit nang maayos ang mouse mo. “Disabled” ka ring matatawag kung sira ang touchpad ng laptop mo at wala kang ibang magamit kundi ang keyboard.
