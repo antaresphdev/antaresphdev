@@ -8,4 +8,5 @@ link:
 images:
   identifier: cover
   baseFolder: videos/multi-column-layouts/
+  defaultImageSource: videos/multi-column-layouts/cover.jpg
 ---
