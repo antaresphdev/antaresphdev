@@ -26,7 +26,7 @@ permalink: /rss-videos.xml
       <title>{{ post.data.title }}</title>
       <link href="{{ absolutePostUrl }}"/>
       <updated>{{ post.date | dateToRfc3339 }}</updated>
-      <id>{{ absolutePostUrl }}</id>
+      <id>{{ preferredDomain.domain }}{{ post.url }}</id>
       {% set person = authors[post.data.author] %}
       <author>
         <name>{{ person.name }}</name>
@@ -57,7 +57,10 @@ permalink: /rss-videos.xml
           </contributor>
         {% endfor %}
       {% endif %}
-      <content type="html">{{ post.data.description | htmlToAbsoluteUrls(absolutePostUrl) | safe }}</content>
+      <content type="html">
+        {{ post.data.description | htmlToAbsoluteUrls(absolutePostUrl) | safe }}
+        <a href="{{ absolutePostUrl }}">Panoorin sa YouTube.</a>
+      </content>
     </entry>
   {% endfor %}
 </feed>
