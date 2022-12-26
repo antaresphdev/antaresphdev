@@ -15,7 +15,6 @@ class Toggle {
     this.#element = document.getElementById(id)
 
     this.#toggler.addEventListener('click', e => {
-      console.log("HELLO")
       this.toggle();
     })
 
@@ -71,9 +70,7 @@ class Toggle {
   }
 
   toggle() {
-    console.log('[TOGGLE] Before: ', this.hidden)
     this.hidden = !this.hidden
-    console.log('[TOGGLE] Now: ', this.hidden)
   }
 }
 

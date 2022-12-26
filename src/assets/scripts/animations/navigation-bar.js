@@ -7,7 +7,6 @@ observer.observe(main)
 
 function observationCallback(entries) {
   entries.forEach(entry => {
-    console.log(entry)
     if (entry.isIntersecting) {
       attachNavbar(false)
     } else {

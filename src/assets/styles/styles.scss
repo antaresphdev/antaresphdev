@@ -13,14 +13,15 @@
 
 @import "components/author.scss";
 @import "components/banner.scss";
-@import "components/callout.scss";
-@import "components/button.scss";
 @import "components/breadcrumb.scss";
+@import "components/button.scss";
+@import "components/callout.scss";
 @import "components/card.scss";
 @import "components/code-sample.scss";
 @import "components/form-control.scss";
 @import "components/links.scss";
 @import "components/logo.scss";
+@import "components/modal.scss";
 @import "components/navigation.scss";
 @import "components/pagination.scss";
 @import "components/skip-link.scss";
@@ -34,6 +35,10 @@
 :root {
   scroll-padding : 20vh;
   scroll-behavior: smooth;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 body {

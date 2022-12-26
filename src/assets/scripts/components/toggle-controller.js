@@ -23,7 +23,6 @@ class ToggleController {
 
       const elementIDs = [...this.#toggles].map(t => `#${t.popup.getAttribute('id')}, #${t.popup.getAttribute('id') } *`).join(', ')
       const selector = 'button[data-toggle], button[data-toggle] *, ' + elementIDs
-      console.log(selector, !target.matches(selector))
       if (!target.matches(selector)) {
         this.hideAll()
       }

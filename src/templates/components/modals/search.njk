@@ -1,0 +1,25 @@
+<div class="modal" id="dlg-search" aria-label="Search">
+  <div class="modal__backdrop" data-dialog-hide></div>
+  <div class="modal__content-group" style="mask-image: linear-gradient(to bottom, transparent var(--space-xxxl), black var(--space-xxxl))">
+    <form class="modal__card modal__card--row" name="search" style="position: sticky; top: 0;">
+      <div class="form-control form-control--floating">
+        <input type="text" name="query" id="query" placeholder=" " minlength="3" required>
+        <label for="query">Search the site</label>
+    </div>
+    <button class="primary button icon-only">
+      {{ "search" | icon | safe }}
+      <span class="sr-only">Search</span>
+    </button>
+  </form>
+  <div class="modal__card" style="width: min(calc(var(--content-width) - var(--space)),85%)" data-search-results></div>
+</div>
+</div>
+<template id="tmpl-search">
+<li class="search-result">
+  <a href="" data-result="link" class="search-result__link" data-search-result="link">
+    <p class="search-result__title" data-search-result="title"></p>
+    <p class="search-result__subtitle" data-search-result="description"></p>
+    <p class="search-result__datetime" data-search-result="datetime"></p>
+  </a>
+</li>
+</template>

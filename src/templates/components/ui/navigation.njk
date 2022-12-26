@@ -17,7 +17,7 @@
   </ul>
   <ul class="navigation__list navigation__list--supplementary">
     <li class="navigation__list-item">
-      <button class="icon-only navigation__link">
+      <button class="icon-only navigation__link" data-dialog="dlg-search">
         {{ "search" | icon | safe }}
         <span class="sr-only">Search</span>
       </button>
@@ -62,3 +62,5 @@
   </ul>
 </nav>
 <div data-navbar-attach-trigger=""></div>
+
+{% include "modals/search.njk" %}
