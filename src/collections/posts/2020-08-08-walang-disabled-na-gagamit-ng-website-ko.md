@@ -13,6 +13,7 @@ author: teacherbuknoy
 slug: /walang-disabled-na-gagamit-ng-website-ko/
 tags:
   - accessibility
+eleventyExcludeFromCollections: true
 ---
 Ngayong araw, nakita ko ang tweet na ito:
 

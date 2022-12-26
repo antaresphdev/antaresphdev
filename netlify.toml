@@ -1,0 +1,5 @@
+[[redirects]]
+  from    = "/articles/walang-disabled-na-gagamit-ng-website-ko/"
+  to      = "/articles/hindi-lang-para-sa-mga-may-kapansanan-ang-accessibility/"
+  status  = 301
+  force   = true
