@@ -106,3 +106,4 @@ dist
 public
 # Local Netlify folder
 .netlify
+hint-report
