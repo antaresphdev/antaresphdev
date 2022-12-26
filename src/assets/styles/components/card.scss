@@ -269,6 +269,39 @@
       }
     }
   }
+
+  &--generic {
+    flex-direction  : column;
+    background-color: hsl(var(--bg-contrast));
+    border-radius   : var(--radius-4);
+
+    .card {
+
+      &__footer,
+      &__header,
+      &__body {
+        padding: var(--space);
+      }
+
+      &__header+.card__body {
+        padding-block-start: 0;
+      }
+
+      &__title {
+        margin   : 0;
+        font-size: clamp(var(--type-size-5), 3vw, var(--type-size-4));
+      }
+
+      &__footer {
+        display         : flex;
+        flex-wrap       : wrap;
+        align-items     : center;
+        gap             : 1ch;
+        justify-content : end;
+        background-color: hsl(var(--bg-default) / 15%);
+      }
+    }
+  }
 }
 
 .card-list {

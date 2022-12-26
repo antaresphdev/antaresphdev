@@ -3,8 +3,8 @@
   <div class="modal__content-group" style="mask-image: linear-gradient(to bottom, transparent var(--space-xxxl), black var(--space-xxxl))">
     <form class="modal__card modal__card--row" name="search" style="position: sticky; top: 0;">
       <div class="form-control form-control--floating">
-        <input type="text" name="query" id="query" placeholder=" " minlength="3" required>
-        <label for="query">Search the site</label>
+        <input class="form-input" type="text" name="query" id="query" placeholder=" " minlength="3" required>
+        <label class="form-label" for="query">Search the site</label>
     </div>
     <button class="primary button icon-only">
       {{ "search" | icon | safe }}

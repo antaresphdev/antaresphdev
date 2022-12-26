@@ -10,21 +10,50 @@ permalink: /about/
       <p class="section__description">For Filipino web developers.</p>
     </hgroup>
   </header>
-  <div class="section__body" style="width: min(var(--content-width), 90%); font-size: 110%;">
-    <p>Ang Antares Programming ay isang project para gawing mas accessible sa mga Pilipino ang web development. Sinimulan ito ng creator na si <a href="{{ authors.teacherbuknoy.url }}">{{ authors.teacherbuknoy.name }}</a> noong 2018. Sa ngayon, gumagawa ang Antares Programming ng mga infographic at nagsusulat ng mga article sa wikang Filipino para madali itong maintindihan ng audience nito.</p>
+  <div class="section__body" style="font-size: 110%;">
+    <div class="sidebar-layout">
+      <div class="sidebar__main">
+        <p>Ang Antares Programming ay isang project para gawing mas accessible sa mga Pilipino ang web development. Sinimulan ito ng creator na si <a href="{{ authors.teacherbuknoy.url }}">{{ authors.teacherbuknoy.name }}</a> noong 2018. Sa ngayon, gumagawa ang Antares Programming ng mga infographic at nagsusulat ng mga article sa wikang Filipino para madali itong maintindihan ng audience nito.</p>
 
-    <h2 class="section__subtitle" style="font-size: clamp(var(--type-size-3), 3vw, var(--type-size-2))">Ang Creator</h2>
-    <article class="card card--author m-bottom--xxxl" aria-labelledby="card--teacherbuknoy">
-      <div class="card__image">
-        <img src="{{ authors.teacherbuknoy.photo }}" alt="Francis Rubio" width="300" height="400" style="object-position: top;">
+        <h2 class="section__subtitle" style="font-size: clamp(var(--type-size-3), 3vw, var(--type-size-2))">Ang Creator</h2>
+        <article class="card card--author m-bottom--xxxl" aria-labelledby="card--teacherbuknoy">
+          <div class="card__image">
+            <img src="{{ authors.teacherbuknoy.photo }}" alt="Francis Rubio" width="300" height="400" style="object-position: top;">
+          </div>
+          <div class="card__header">
+            <h3 class="card__title" id="card--teacherbuknoy">{{ authors.teacherbuknoy.name }}</h3>
+            <p class="card__subtitle">{{ authors.teacherbuknoy.bio }}</p>
+            <div class="cluster card__metadata">
+              <a href="{{ authors.teacherbuknoy.url }}" class="primary button">Website</a>
+            </div>
+          </div>
+        </article>
       </div>
-      <div class="card__header">
-        <h3 class="card__title" id="card--teacherbuknoy">{{ authors.teacherbuknoy.name }}</h3>
-        <p class="card__subtitle">{{ authors.teacherbuknoy.bio }}</p>
-        <div class="cluster card__metadata">
-          <a href="{{ authors.teacherbuknoy.url }}" class="primary button">Website</a>
-        </div>
+      <div class="sidebar__aside">
+        <form class="form card card--generic" name="contact-us" data-netlify="true" method="POST">
+          <div class="card__header">
+            <h2 class="card__title">Contact Us</h2>
+          </div>
+          <div class="card__body">
+            <div class="form-control form-control--stack">
+              <input placeholder class="form-input" type="text" autocomplete="name" inputmode="text" id="name" name="full-name" required>
+              <label class="form-label" for="name">Your Name</label>
+            </div>
+            <div class="form-control form-control--stack">
+              <input placeholder class="form-input" type="email" autocomplete="email" inputmode="email" id="email" name="email" required>
+              <label class="form-label" for="email">Your Email Address</label>
+            </div>
+            <div class="form-control form-control--stack">
+              <textarea placeholder class="form-input" name="message" id="message" cols="30" rows="10" required></textarea>
+              <label class="form-label" for="message">Message</label>
+            </div>
+          </div>
+          <div class="card__footer">
+            <p class="form-comment">Required ang lahat ng fields</p>
+            <button class="primary button">Send</button>
+          </div>
+        </form>
       </div>
-    </article>
+    </div>
   </div>
 </section>
