@@ -34,8 +34,11 @@
 @import "utils/visibility.scss";
 
 :root {
-  scroll-padding : 20vh;
-  scroll-behavior: smooth;
+  scroll-padding: 20vh;
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
 
   &.no-scroll {
     overflow: hidden;
