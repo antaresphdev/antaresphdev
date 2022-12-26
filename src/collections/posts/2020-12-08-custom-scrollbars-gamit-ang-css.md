@@ -70,7 +70,6 @@ Kung nasa Firefox ka, makikita mo na gagana ang custom scrollbar natin sa exampl
   CSS Scrollbars</a> by Francis Rubio (<a href="https://codepen.io/maniczirconium">@maniczirconium</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 <figure>
     <img src="/assets/images/posts/css-custom-scrollbars/css-scrollbar.png" alt="Sa Firefox, magiging dodgerblue ang scrollbar track at dark blue naman ang scrollbar thumb">
