@@ -1,8 +1,7 @@
-
 <article class="card card--{{ cardType if cardType else "article" }}" aria-labelledby="card--{{ post.data.title | slugify }}">
   <div class="card__image">
     {% set article = post.data %}
-    {% set postType = 'posts' %}
+    {% set postType = "videos" if cardType === 'video' else 'posts' %}
     {% set sizes = article.cover.sizes %}
     {% set formats = article.cover.formats %}
     {% set folder = article.cover.folder %}

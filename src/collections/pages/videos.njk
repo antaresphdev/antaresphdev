@@ -29,7 +29,8 @@ permalink: /videos/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 
     <ol class="card-list card-list--videos">
       {% for post in pagination.items %}
         <li class="card-list__item">
-          {% set cardType = "video" %}
+          {% set cardType = 'video' %}
+          {% set postType = 'videos' %}
           {% include "ui/article-card.njk" %}
         </li>
       {% endfor %}

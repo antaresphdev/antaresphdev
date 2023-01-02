@@ -5,10 +5,11 @@ author: teacherbuknoy
 link: 
   label: Panoorin sa YouTube
   url: https://youtu.be/L7Zp1n6IoCk
-images:
-  identifier: cover
-  baseFolder: videos/multi-column-layouts/
-  defaultImageSource: videos/multi-column-layouts/cover.jpg
+cover:
+  folder: multi-column-layouts
+  filename: cover.jpg
+  sizes: [300, 600, 900, 1200]
+  formats: ['png', 'webp', 'avif']
 tags:
   - css
   - layout
