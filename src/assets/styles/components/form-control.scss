@@ -68,8 +68,8 @@
 
   &-input {
     border-radius   : var(--radius-2);
-    border          : none;
-    background-color: hsl(var(--bg-default) / 25%);
+    border          : 1px solid hsl(var(--bg-default));
+    background-color: hsl(var(--d-default) / 10%);
     color           : hsl(var(--fg-contrast));
     font-family     : var(--font-sans);
     font-size       : var(--type-size);
