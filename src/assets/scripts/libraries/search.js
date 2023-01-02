@@ -22,10 +22,10 @@ class Search {
       .forEach(key => {
         const array = this.#data[key]
         const keyResults = array.filter(item =>
-             item.title.toLowerCase().includes(query.toLowerCase())
+          item.title.toLowerCase().includes(query.toLowerCase())
           || item.description.toLowerCase().includes(query.toLowerCase())
           || item.content.toLowerCase().includes(query.toLowerCase()))
-        
+
         results[key] = keyResults
       })
 

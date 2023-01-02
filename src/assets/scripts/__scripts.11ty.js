@@ -18,8 +18,8 @@ class Script {
     const envPlugin = new webpack.EnvironmentPlugin({ ELEVENTY_ENV: process.env.ELEVENTY_ENV })
     const vars = new webpack.DefinePlugin({
       GENERATED: JSON.stringify(new Date().toISOString()),
-      API_SITE_DATA: JSON.stringify(process.env.SITE_DATA),
-      API_CONTENT: JSON.stringify(process.env.CONTENT)
+      API_SITE_DATA: JSON.stringify("/api/v1/site-data.json"),
+      API_CONTENT: JSON.stringify("api/v1/content.json")
     })
 
     const rules = [
