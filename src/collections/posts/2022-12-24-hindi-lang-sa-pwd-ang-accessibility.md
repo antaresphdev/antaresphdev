@@ -2,9 +2,11 @@
 title: Hindi lang para sa mga may kapansanan ang accessibility
 description: May misconception tayo na para lang sa persons with disability ang accessibility. Pero mahalaga na may pakialam tayong lahat tungkol dito.
 author: teacherbuknoy
-images:
-  identifier: cover
-  baseFolder: posts/bootstrap-2022/
+cover:
+  folder: walang-disabled-na-gagamit-ng-website-ko
+  filename: cover.png
+  sizes: [500, 600, 700]
+  formats: ['png', 'webp', 'avif']
 seo_image:
   og: /assets/images/posts/bootstrap-2022/og.png
   twitter: /assets/images/posts/bootstrap-2022/twitter.png

@@ -1,11 +1,11 @@
 ---
 title: "Accessible Writing"
 description: Ilang tips para maging accessible ang text mo
-image: 
-  src: /assets/images/posts/accessible-writing/cover.png
-  color:
-    light: 344 100% 79%
-    dark:  209 40% 20%
+cover:
+  folder: accessible-writing
+  filename: cover.png
+  sizes: [500, 600, 700]
+  formats: ['png', 'webp', 'avif']
 seo_image: /assets/images/posts/accessible-writing/seo-cover.png
 author: teacherbuknoy
 tags:

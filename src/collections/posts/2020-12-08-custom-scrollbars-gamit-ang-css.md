@@ -1,11 +1,11 @@
 ---
 title: Custom scrollbars gamit ang CSS
 description: Puwede na nating i-customize ang mga scrollbar nang walang JavaScript
-image: 
-  src: /assets/images/posts/css-custom-scrollbars/cover.png
-  color:
-    light: 173 58% 79%
-    dark: 173 58% 19%
+cover:
+  folder: css-custom-scrollbars
+  filename: cover.png
+  sizes: [500, 600, 700]
+  formats: ['png', 'webp', 'avif']
 seo_image: /assets/images/posts/css-custom-scrollbars/seo_cover.png
 author: teacherbuknoy
 slug: /css-custom-scrollbars/

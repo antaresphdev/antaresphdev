@@ -2,10 +2,11 @@
 title: Bakit mahirap ang CSS?
 description: Maraming developers na nadadalian sa ibang programming language pero nahihirapan sa CSS. Isa-isahin natin ang mga posibleng dahilan at kung ano ang mga tips na puwedeng makatulong.
 author: teacherbuknoy
-images:
-  identifier: cover
-  baseFolder: posts/bakit-mahirap-css/
-image: /assets/images/posts/bakit-mahirap-css/cover.jpg
+cover:
+  folder: bakit-mahirap-css
+  filename: cover.jpg
+  sizes: [500, 600, 700]
+  formats: ['png', 'webp', 'avif']
 seo_image:
   og: /assets/images/posts/min-max-clamp/fb_image.png
   twitter: /assets/images/posts/min-max-clamp/twitter_image.png

@@ -1,14 +1,11 @@
 ---
 title: "Ang Cascade, Inheritance, at Specificity"
 description: Mga nakakalitong concepts ng CSS, at kung paano sila gumagana.
-images:
-  identifier: cover
-  baseFolder: posts/cascading-inheritance-specificity/
-image: 
-  src: /assets/images/posts/cascading-inheritance-specificity/cover.png
-  color:
-    light: 0 0% 100%
-    dark: 0 0% 20%
+cover:
+  folder: cascading-inheritance-specificity
+  filename: cover.png
+  sizes: [500, 600, 700]
+  formats: ['png', 'webp', 'avif']
 seo_image: /assets/images/posts/cascading-inheritance-specificity/seo-cover.png
 author: teacherbuknoy
 tags:

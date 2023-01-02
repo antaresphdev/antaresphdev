@@ -1,0 +1,42 @@
+{% set sizes = sizes if sizes else 
+  [500, 700, 1000] %}
+{% set formats = formats if formats else 
+  ['png', 'webp', 'avif'] %}
+{% set cdnUrl = site.api.images %}
+
+{% set sizesAttr %}
+{% for size in sizes %}
+    (max-width: {{ size }}px) {{ size }}px{{ ", " if not loop.last }}
+{% endfor %}
+{% endset %}
+
+{% set defaultImageSource %}{{ cdnUrl }}/{{ postType }}/{{ folder }}/{{ filename }}{% endset %}
+{% set thumbnailSize = width / 4 %}
+{% set thumbnail = cdnUrl + 'tr:w-1,h-1:w-' + width + ',h-' + height + ',bl-5' + filename %}
+
+<picture>
+  {% for format in formats %}
+    {% set srcset %}
+    {% for size in sizes %}
+      {{ cdnUrl }}/tr:f-{{ format }},w-{{ size }}/{{ postType }}/{{ folder }}/{{ filename }}
+      {{ size }}w{{ ',' if not loop.last }}
+    {% endfor %}
+    {% endset %}
+
+    <source
+      srcset="{{ srcset }}"
+      type="image/{{ format }}"
+      sizes="{{ sizesAttr }}"
+      width="{{ width }}"
+      height="{{ height }}"
+    >
+  {% endfor %}
+
+  <img 
+      {% if hasThumbnail %}style="--thumbnail: url({{ thumbnail }})"{% endif %}
+      src="{{ defaultImageSource }}" alt="{{ alt }}"
+      class="{{ defaultImageClass }}"
+      width="{{ width }}"
+      height="{{ height }}"
+      loading="lazy">
+</picture>

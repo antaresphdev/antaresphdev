@@ -1,14 +1,11 @@
 ---
 title: "Using Linear Gradients to Create Stripes"
 description: "Sa halip na gumamit ng maraming <code>div</code>, puwede nating gamitin ang CSS <code>linear-gradient()</code> function para maglagay ng stripes sa design natin."
-images:
-  identifier: using-linear-gradients-to-create-stripes
-  baseFolder: posts/using-linear-gradients-to-create-stripes/
-image:
-  src: /assets/images/posts/using-linear-gradients-to-create-stripes/using-linear-gradients-to-create-stripes.png
-  color: 
-    light: 170 65% 54%
-    dark: 170 65% 24%
+cover:
+  folder: using-linear-gradients-to-create-stripes
+  filename: cover.png
+  sizes: [500, 600, 700]
+  formats: ['png', 'webp', 'avif']
 author: teacherbuknoy
 slug: /using-linear-gradients-to-create-stripes/
 tags: 
