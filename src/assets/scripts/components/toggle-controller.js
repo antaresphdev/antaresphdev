@@ -21,11 +21,16 @@ class ToggleController {
     document.body.addEventListener('click', e => {
       const { target } = e
 
-      const elementIDs = [...this.#toggles].map(t => `#${t.popup.getAttribute('id')}, #${t.popup.getAttribute('id') } *`).join(', ')
+      const elementIDs = [...this.#toggles].map(t => `#${t.popup.getAttribute('id')}, #${t.popup.getAttribute('id')} *`).join(', ')
       const selector = 'button[data-toggle], button[data-toggle] *, ' + elementIDs
       if (!target.matches(selector)) {
         this.hideAll()
       }
+    })
+
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') this.hideAll()
     })
   }
 
