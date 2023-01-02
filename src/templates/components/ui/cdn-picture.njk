@@ -12,7 +12,7 @@
 
 {% set defaultImageSource %}{{ cdnUrl }}/{{ postType }}/{{ folder }}/{{ filename }}{% endset %}
 {% set thumbnailSize = width / 4 %}
-{% set thumbnail = cdnUrl + 'tr:w-1,h-1:w-' + width + ',h-' + height + ',bl-5' + filename %}
+{% set thumbnail %}{{cdnUrl}}/tr:w-2,h-2/{{ postType }}/{{ folder }}/{{ filename }}{% endset %}
 
 <picture>
   {% for format in formats %}
