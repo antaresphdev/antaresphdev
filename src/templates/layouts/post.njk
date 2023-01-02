@@ -2,7 +2,16 @@
 {% block content %}
   <main id="main" class="article h-entry">
     <header class="article__header">
-      <img src="{{ image.src }}" alt="" class="article__image">
+      {% set postType = 'posts' %}
+      {% set sizes = cover.sizes %}
+      {% set formats = cover.formats %}
+      {% set folder = cover.folder %}
+      {% set filename = cover.filename %}
+      {% set defaultImageClass = "article__image" %}
+      {% set alt = "" %}
+      {% set width = 1280 %}
+      {% set height = 1012 %}
+      {% include "ui/cdn-picture.njk" %}
       <nav class="breadcrumb" aria-label="Breadcrumbs">
         <ol class="breadcrumb__list">
           <li class="breadcrumb__list-item">
