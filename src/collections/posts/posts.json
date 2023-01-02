@@ -1,4 +1,5 @@
 {
   "permalink": "/articles/{{ title | slugify }}/",
-  "layout": "post.njk"
+  "layout": "post.njk",
+  "postType": "posts"
 }

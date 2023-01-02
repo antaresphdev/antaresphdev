@@ -10,28 +10,27 @@
 <link rel="icon" href="/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-{% if seo.twitter.src %}
-  {% set twitter_image %}{{ "/assets/images" if seo.twitter.is_prefixed == null or seo.twitter.is_prefixed == true }}{{ seo.twitter.src }}{% endset %}
-{% endif %}
+{% set twitter_image %}{{ domain.domain }}/assets/images/root/twitter.png{% endset %}
+{% set og_image %}{{ domain.domain }}/assets/images/root/og.png{% endset %}
 
-{% if seo.og.src %}
-  {% set fb_image %}{{ "/assets/images" if seo.og.is_prefixed == null or seo.og.is_prefixed == true }}{{ seo.og.src }}{% endset %}
+{% if cover %}
+  {% set twitter_image %}{{ site.api.images }}/{{ postType }}/{{ cover.folder }}/twitter.png{% endset %}
+  {% set og_image %}{{ site.api.images }}/{{ postType }}/{{ cover.folder }}/og.png{% endset %}
 {% endif %}
-
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ domain.domain }}{{ page.url if page.url }}">
 <meta property="og:title" content="{{ title if title else site.title }}">
 <meta property="og:description" content="{{ description if description else site.description }}">
-<meta property="og:image" content="{{ domain.domain }}{{ fb_image if fb_image else site.seo.og.src }}">
+<meta property="og:image" content="{{ og_image }}">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="{{ domain.domain }}{{ page.url if page.url }}">
 <meta property="twitter:title" content="{{ title if title else site.title }}">
 <meta property="twitter:description" content="{{ description if description else site.description }}">
-<meta property="twitter:image" content="{{ domain.domain }}{{ twitter_image if twitter_image else site.seo.twitter.src }}">
+<meta property="twitter:image" content="{{ twitter_image }}">
 
 <!-- Feeds -->
 <link rel="alternate" type="application/rss+xml" title="Articles by Francis Rubio" href="/rss-articles.xml">

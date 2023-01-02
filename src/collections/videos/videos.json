@@ -1,4 +1,5 @@
 {
   "permalink": "/videos/{{ title | slugify }}/",
-  "layout": "video.njk"
+  "layout": "video.njk",
+  "postType": "videos"
 }
