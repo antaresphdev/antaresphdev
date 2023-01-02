@@ -5,7 +5,7 @@ author: teacherbuknoy
 cover:
   folder: creating-links-to-up-one-directory
   filename: cover.png
-  sizes: [500, 600, 700]
+  sizes: [300, 600, 900, 1200]
   formats: ['png', 'webp', 'avif']
 tags: 
   - web development

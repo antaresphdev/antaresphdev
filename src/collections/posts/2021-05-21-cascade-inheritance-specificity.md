@@ -4,7 +4,7 @@ description: Mga nakakalitong concepts ng CSS, at kung paano sila gumagana.
 cover:
   folder: cascading-inheritance-specificity
   filename: cover.png
-  sizes: [500, 600, 700]
+  sizes: [300, 600, 900, 1200]
   formats: ['png', 'webp', 'avif']
 seo_image: /assets/images/posts/cascading-inheritance-specificity/seo-cover.png
 author: teacherbuknoy

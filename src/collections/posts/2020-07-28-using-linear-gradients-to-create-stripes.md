@@ -4,7 +4,7 @@ description: "Sa halip na gumamit ng maraming <code>div</code>, puwede nating ga
 cover:
   folder: using-linear-gradients-to-create-stripes
   filename: cover.png
-  sizes: [500, 600, 700]
+  sizes: [300, 600, 900, 1200]
   formats: ['png', 'webp', 'avif']
 author: teacherbuknoy
 slug: /using-linear-gradients-to-create-stripes/

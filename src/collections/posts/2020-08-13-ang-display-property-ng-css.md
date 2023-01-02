@@ -4,7 +4,7 @@ description: Tingnan nating muli ang display property ng CSS.
 cover:
   folder: ang-display-property-ng-css
   filename: cover.png
-  sizes: [500, 600, 700]
+  sizes: [300, 600, 900, 1200]
   formats: ['png', 'webp', 'avif']
 author: teacherbuknoy
 slug: /ang-display-property-ng-css/

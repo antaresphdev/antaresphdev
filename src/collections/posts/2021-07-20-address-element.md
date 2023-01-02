@@ -5,7 +5,7 @@ permalink: /articles/address-ang-contact-address-element/
 cover:
   folder: address-element
   filename: cover.png
-  sizes: [500, 600, 700]
+  sizes: [300, 600, 900, 1200]
   formats: ['png', 'webp', 'avif']
 seo_image: /assets/images/posts/address-element/seo-cover.png
 author: teacherbuknoy

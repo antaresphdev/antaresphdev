@@ -4,7 +4,7 @@ description: Ilang tips para maging accessible ang text mo
 cover:
   folder: accessible-writing
   filename: cover.png
-  sizes: [500, 600, 700]
+  sizes: [300, 600, 900, 1200]
   formats: ['png', 'webp', 'avif']
 seo_image: /assets/images/posts/accessible-writing/seo-cover.png
 author: teacherbuknoy

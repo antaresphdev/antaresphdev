@@ -5,7 +5,7 @@ author: teacherbuknoy
 cover:
   folder: bakit-mahirap-css
   filename: cover.jpg
-  sizes: [500, 600, 700]
+  sizes: [300, 600, 900, 1200]
   formats: ['png', 'webp', 'avif']
 seo_image:
   og: /assets/images/posts/min-max-clamp/fb_image.png

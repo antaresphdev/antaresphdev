@@ -4,7 +4,7 @@ description: Pag-usapan natin kung paano nakaka-influence sa layout ang box sizi
 cover:
   folder: box-sizing
   filename: cover.png
-  sizes: [500, 600, 700]
+  sizes: [300, 600, 900, 1200]
   formats: ['png', 'webp', 'avif']
 seo_image: /assets/images/posts/box-sizing/seo-cover.png
 author: teacherbuknoy

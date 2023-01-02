@@ -5,7 +5,7 @@ author: teacherbuknoy
 cover:
   folder: walang-disabled-na-gagamit-ng-website-ko
   filename: cover.png
-  sizes: [500, 600, 700]
+  sizes: [300, 600, 900, 1200]
   formats: ['png', 'webp', 'avif']
 seo_image:
   og: /assets/images/posts/bootstrap-2022/og.png

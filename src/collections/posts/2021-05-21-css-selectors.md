@@ -4,7 +4,7 @@ description: Bukod sa HTML tags, puwede tayong gumamit ng patterns, o selectors,
 cover:
   folder: css-selectors
   filename: cover.png
-  sizes: [500, 600, 700]
+  sizes: [300, 600, 900, 1200]
   formats: ['png', 'webp', 'avif']
 seo_image: /assets/images/posts/css-selectors/seo-cover.png
 author: teacherbuknoy

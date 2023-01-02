@@ -4,7 +4,7 @@ description: Puwede na nating i-customize ang mga scrollbar nang walang JavaScri
 cover:
   folder: css-custom-scrollbars
   filename: cover.png
-  sizes: [500, 600, 700]
+  sizes: [300, 600, 900, 1200]
   formats: ['png', 'webp', 'avif']
 seo_image: /assets/images/posts/css-custom-scrollbars/seo_cover.png
 author: teacherbuknoy

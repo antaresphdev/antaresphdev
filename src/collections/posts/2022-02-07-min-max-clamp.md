@@ -5,7 +5,7 @@ author: teacherbuknoy
 cover:
   folder: min-max-clamp
   filename: cover.png
-  sizes: [500, 600, 700]
+  sizes: [300, 600, 900, 1200]
   formats: ['png', 'webp', 'avif']
 seo_image:
   og: /assets/images/posts/min-max-clamp/fb_image.png
