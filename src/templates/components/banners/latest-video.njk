@@ -2,14 +2,16 @@
 {% set latestVideo = post.data %}
 <section class="banner banner--video">
   <div class="banner__image">
-    {% set defaultImageSource = latestVideo.images.defaultImageSource %}
-    {% set baseFolder = latestVideo.images.baseFolder %}
-    {% set identifier = latestVideo.images.identifier %}
-    {% set alt = "" %}
+    {% set postType = "videos" %}
+    {% set sizes = latestVideo.cover.sizes %}
+    {% set formats = latestVideo.cover.formats %}
+    {% set folder = latestVideo.cover.folder %}
+    {% set filename = latestVideo.cover.filename %}
     {% set defaultImageClass = "" %}
-    {% set width = "1920" %}
-    {% set height = "1080" %}
-    {% include "ui/picture.njk" %}
+    {% set alt = "" %}
+    {% set width = 1920 %}
+    {% set height = 1080 %}
+    {% include "ui/cdn-picture.njk" %}
   </div>
   <div class="banner__header">
     <h2 class="banner__title">{{ latestVideo.title | safe }}</h2>
