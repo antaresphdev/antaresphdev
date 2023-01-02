@@ -26,54 +26,6 @@
       gap           : 0.25ch;
     }
 
-    &+& {
-      margin-top: 1ch;
-    }
-
-    input {
-
-      &:where([type="radio"], [type="checkbox"], [type="button"]),
-      &:where([type="radio"], [type="checkbox"], [type="button"])+label {
-        cursor: pointer;
-      }
-
-      &[type="radio"] {
-        @extend .sr-only;
-
-        &+label {
-          align-items: center;
-          display    : flex;
-          gap        : 1ch;
-
-          &::before {
-            content         : "";
-            --size          : 1ch;
-            background-color: hsl(var(--fg-default) / 20%);
-            border-radius   : 100%;
-            height          : var(--size);
-            outline         : 2px solid hsl(var(--fg-default));
-            width           : var(--size);
-            transition      : outline-offset 300ms;
-          }
-        }
-
-        &:checked+label {
-          &::before {
-            background-color: transparent;
-            background-image: radial-gradient(circle at center, hsl(var(--primary-700)) 75%, transparent 75%);
-            outline-color   : hsl(var(--primary-700));
-            outline-offset  : 2px;
-          }
-        }
-
-        &:focus-visible+label {
-          &::before {
-            outline-offset: 5px;
-          }
-        }
-      }
-    }
-
     &--floating {
       display: grid;
 
@@ -144,6 +96,43 @@
         content       : "Optional";
         text-transform: uppercase;
         font-size     : var(--type-size-7);
+      }
+    }
+  }
+
+  &-radio {
+    @extend .sr-only;
+
+    &+.form-label {
+      align-items: center;
+      cursor     : pointer;
+      display    : flex;
+      gap        : 1ch;
+
+      &::before {
+        --size          : 1ch;
+        background-color: hsl(var(--fg-default) / 20%);
+        border-radius   : 100%;
+        content         : "";
+        height          : var(--size);
+        outline         : 2px solid hsl(var(--fg-default));
+        transition      : outline-offset 300ms;
+        width           : var(--size);
+      }
+    }
+
+    &:checked+.form-label {
+      &::before {
+        background-color: transparent;
+        background-image: radial-gradient(circle at center, hsl(var(--primary-700)) 75%, transparent 75%);
+        outline-color   : hsl(var(--primary-700));
+        outline-offset  : 2px;
+      }
+    }
+
+    &:focus-visible+.form-label {
+      &::before {
+        outline-offset: 5px;
       }
     }
   }
