@@ -6,19 +6,11 @@ module.exports = {
       output: data => {
         const includeHours = data.hours != null
         const includeMinutes = data.minutes != null && !includeHours
+        let hours = includeHours ? `${data.hours} hour` : ''
+        let minutes = includeMinutes ? `${data.minutes} minute` : ''
 
-        const hrs = includeHours ? data.hours : 0
-        const min = includeMinutes ? data.minutes : 0
-
-        const formatter = new Intl.PluralRules('en-US')
-        const hrsUnit = formatter.select(hrs) === 'one' ? 'hour' : 'hours'
-        const minUnit = formatter.select(min) === 'one' ? 'minute' : 'minutes'
-
-        const strHours = `${hrs} ${hrsUnit}`
-        const strMinutes = `${min} ${minUnit}`
-
-        const timing = [strHours, strMinutes].filter(s => s.length > 0)
-        const listFormatter = new Intl.ListFormat('en-US', { style: 'long', type: 'conjunction' })
+        const timing = [hours, minutes].filter(s => s.length > 0)
+        const listFormatter = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' })
 
         return `${listFormatter.format(timing)} read`
       }

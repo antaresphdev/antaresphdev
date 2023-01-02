@@ -44,8 +44,8 @@
           {% endfor %}
         </ul>
         <div class="article__dates">
+          <span class="article__date">{{ "clock" | icon | safe }} {{ content | timeToRead }}</span>
           <a href="{{ page.url }}" class="article__date article__date--published">
-            {{ "clock" | icon | safe }}
             {{ page.date | humanReadableDate }}
           </a>
         </div>
