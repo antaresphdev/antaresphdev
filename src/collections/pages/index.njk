@@ -33,33 +33,36 @@ permalink: /
     </div>
   </div>
 </section>
-<section class="section h-feed m-bottom--xxxl" aria-labelledby="section--videos">
-  <header class="section__header">
-    <hgroup role="group">
-      <h2 class="section__title p-name" id="section--videos">Videos</h2>
-      <p class="section__subtitle">Manood.</p>
-      <p class="section__description">Mga coding tutorial at commentaries.</p>
-    </hgroup>
-  </header>
-  <div class="section__body">
-    <ol class="card-list card-list--videos">
-      {% for post in collections.videos | reverse %}
-        {% if loop.index <= 5 %}
-          <li class="card-list__item">
-            {% set cardType = "video" %}
-            {% include "ui/article-card.njk" %}
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ol>
-  </div>
-  <div class="section__footer">
-    <div class="cluster jc--center">
-      <a href="/videos/" class="primary button">Tingnan lahat ng videos</a>
-      <a href="{{ site.feeds.videos.url }}" class="button">
-        {{ "rss" | icon | safe }}
-        <span class="sr-only">Atom feed ng lahat ng videos</span>
-      </a>
+
+{% if collections.videos.length > 0 %}
+  <section class="section h-feed m-bottom--xxxl" aria-labelledby="section--videos">
+    <header class="section__header">
+      <hgroup role="group">
+        <h2 class="section__title p-name" id="section--videos">Videos</h2>
+        <p class="section__subtitle">Manood.</p>
+        <p class="section__description">Mga coding tutorial at commentaries.</p>
+      </hgroup>
+    </header>
+    <div class="section__body">
+      <ol class="card-list card-list--videos">
+        {% for post in collections.videos | reverse %}
+          {% if loop.index <= 5 %}
+            <li class="card-list__item">
+              {% set cardType = "video" %}
+              {% include "ui/article-card.njk" %}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ol>
     </div>
-  </div>
-</section>
+    <div class="section__footer">
+      <div class="cluster jc--center">
+        <a href="/videos/" class="primary button">Tingnan lahat ng videos</a>
+        <a href="{{ site.feeds.videos.url }}" class="button">
+          {{ "rss" | icon | safe }}
+          <span class="sr-only">Atom feed ng lahat ng videos</span>
+        </a>
+      </div>
+    </div>
+  </section>
+{% endif %}
