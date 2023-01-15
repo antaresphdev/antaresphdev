@@ -21,12 +21,13 @@ main {
 
   &__title {
     font-family   : var(--font-sans);
+    font-size     : var(--vtype-size);
     font-weight   : normal;
     text-transform: uppercase;
-    font-size     : var(--vtype-size);
   }
 
   &__subtitle {
+    color                  : hsl(var(--fg-contrast));
     font-size              : var(--vtype-size-2);
     font-family            : var(--font-serif);
     font-variation-settings: 'wght'350, 'SOFT'100, 'WONK'0;

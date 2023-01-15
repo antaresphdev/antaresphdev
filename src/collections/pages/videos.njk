@@ -1,10 +1,12 @@
 ---
 title: 'Mga Video - Antares Programming'
-pagination:
-  data: collections.videos
-  size: 10
-  reverse: true
-permalink: /videos/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html
+# pagination:
+#   data: collections.videos
+#   size: 10
+#   reverse: true
+#   generatePageOnEmptyData: true
+# permalink: /videos/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html
+permalink: /videos/
 ---
 <section class="section h-feed" aria-labelledby="section--articles">
   <header class="section__header">
@@ -14,27 +16,21 @@ permalink: /videos/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 
       <p class="section__description">Mga coding tutorial at commentaries.</p>
     </hgroup>
   </header>
-  <!--nav-- class="tag-scroller" aria-label="Tags">
-    <ul class="tag-scroller__list">
-      {% set tags = collections.tags %}
-      {% for tag in tags %}
-        <li class="tag-scroller__list-item">
-          <a href="/articles/tag/{{ tag.data.title | slugify }}" class="tag">{{ tag.data.title | safe }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </!--nav-->
   <div class="section__body">
-    {% set headingLevel = 2 %}
+    {# {% set headingLevel = 2 %}
     <ol class="card-list card-list--videos">
       {% for post in pagination.items %}
-        <li class="card-list__item">
-          {% set cardType = 'video' %}
-          {% set postType = 'videos' %}
-          {% include "ui/article-card.njk" %}
-        </li>
+        {% if not post.data.hidden %}
+          <li class="card-list__item">
+            {% set cardType = 'video' %}
+            {% set postType = 'videos' %}
+            {% include "ui/article-card.njk" %}
+          </li>
+        {% endif %}
       {% endfor %}
-    </ol>
+    </ol> #}
+
+    <p style="text-align: center; font-size: var(--type-size-4);">Wala pang available na videos ngayon.</p>
   </div>
   <footer class="section__footer">
     <nav class="pagination">

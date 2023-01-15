@@ -14,4 +14,6 @@ tags:
   - css
   - layout
   - graphic design
+eleventyExcludeFromCollections: true
+hidden: true
 ---
