@@ -7,6 +7,7 @@ class ColorScheme {
     })
 
     const scheme = this.#loadFromLocalStorage()
+    console.log('[COLOR SCHEME]', scheme)
     this.scheme = ""
     this.#setColorScheme(scheme)
 
@@ -22,7 +23,11 @@ class ColorScheme {
   #loadFromLocalStorage() {
     const colorScheme = localStorage.getItem('color-scheme')
 
-    return colorScheme ? colorScheme : "default"
+    return colorScheme != null
+      ? colorScheme in ['light', 'dark', 'default']
+        ? colorScheme
+        : "default"
+      : "default"
   }
 
   /**
