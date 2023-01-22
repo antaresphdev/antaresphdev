@@ -74,6 +74,12 @@
       }
 
       &__subtitle {
+        color      : hsl(var(--fg-subtle));
+        font-family: var(--font-sans);
+        font-size  : var(--type-size-5);
+      }
+
+      &__description {
         margin   : 0;
         color    : hsl(var(--l-subtle));
         font-size: clamp(var(--type-size-6), 3vw, var(--type-size-4));

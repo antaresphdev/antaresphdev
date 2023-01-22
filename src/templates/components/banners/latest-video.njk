@@ -14,8 +14,13 @@
     {% include "ui/cdn-picture.njk" %}
   </div>
   <div class="banner__header">
-    <h2 class="banner__title">{{ latestVideo.title | safe }}</h2>
-    <p class="banner__subtitle">{{ latestVideo.description | safe }}</p>
+    {% if latestVideo.banner.title and latestVideo.banner.subtitle %}
+      <span class="banner__subtitle">{{ latestVideo.banner.subtitle | safe }}</span>
+      <h2 class="banner__title">{{ latestVideo.banner.title | safe }}</h2>
+    {% else  %}
+      <h2 class="banner__title">{{ latestVideo.title | safe }}</h2>
+    {% endif %}
+    <p class="banner__description">{{ latestVideo.description | safe }}</p>
     <div class="cluster gap-xxs m-top--l">
       <a class="primary button" href="{{ latestVideo.link.url }}" target="_blank" rel="noopener">{{ latestVideo.link.label }}</a>
       <a href="/videos/" class="button theme-dark">Lahat ng videos</a>

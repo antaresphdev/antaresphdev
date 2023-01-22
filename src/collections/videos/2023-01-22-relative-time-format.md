@@ -1,5 +1,8 @@
 ---
 title: RelativeTimeFormat | JS Internationalization API
+banner:
+  title: RelativeTimeFormat
+  subtitle: JS Internationalization API
 description: Sa video na ito, pag-usapan natin ang Intl.RelativeTimeFormat at kung paano ito gagamitin sa pagdi-display ng user-friendly na dates.
 author: teacherbuknoy
 link: 
