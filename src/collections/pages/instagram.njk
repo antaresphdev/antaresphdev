@@ -1,0 +1,32 @@
+---
+title: 'Mga Link - Antares Programming'
+permalink: /links/
+---
+
+<section class="section h-feed" aria-labelledby="section--articles">
+  <header class="section__header">
+    <hgroup role="group">
+      <h1 class="section__title p-name" id="section--articles">Links</h1>
+      <p class="section__subtitle">Mga promoted content.</p>
+      <p class="section__description"></p>
+    </hgroup>
+  </header>
+  <div class="grid grid--instagram">
+    {% for link in links %}
+      <a href="{{ link.url }}" target="_blank" rel="noopener">
+        <span class="sr-only">{{ link.title }}</span>
+        {% set article = link %}
+        {% set postType = "videos" %}
+        {% set sizes = article.cover.sizes %}
+        {% set formats = article.cover.formats %}
+        {% set folder = article.cover.folder %}
+        {% set filename = article.cover.filename %}
+        {% set defaultImageClass = "" %}
+        {% set alt = "" %}
+        {% set width =  article.cover.width if article.cover.width else 1280 %}
+        {% set height = article.cover.height if article.cover.height else  1012 %}
+        {% include "ui/cdn-picture.njk" %}
+      </a>
+    {% endfor %}
+  </div>
+</section>

@@ -3,3 +3,9 @@
   to      = "/articles/hindi-lang-para-sa-mga-may-kapansanan-ang-accessibility/"
   status  = 301
   force   = true
+
+[[redirects]]
+  from   = "/instagram/"
+  to     = "/links/"
+  status = 301
+  force  = true
