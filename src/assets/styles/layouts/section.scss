@@ -28,7 +28,7 @@ main {
 
   &__subtitle {
     color                  : hsl(var(--fg-contrast));
-    font-size              : var(--vtype-size-2);
+    font-size              : clamp(var(--type-size-3), 10vw, var(--type-size-1));
     font-family            : var(--font-serif);
     font-variation-settings: 'wght'350, 'SOFT'100, 'WONK'0;
   }

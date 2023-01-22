@@ -1,6 +1,6 @@
 const markdown = require('markdown-it')
 const mdAnchor = require('markdown-it-anchor')
-const slug = require('slug')
+const yaml = require('js-yaml')
 
 const config = require('./src/config/index');
 const { passthrough, collections, filters, plugins, watchtargets, transforms } = config
@@ -12,6 +12,8 @@ module.exports = function (eleventy) {
   Object.keys(filters).forEach(key => eleventy.addFilter(key, filters[key]))
   Object.keys(watchtargets).forEach(key => eleventy.addWatchTarget(watchtargets[key]()))
   Object.keys(transforms).forEach(key => eleventy.addTransform(key, transforms[key]))
+
+  eleventy.addDataExtension("yml", "yaml", (contents) => yaml.load(contents))
 
   let envIsProduction = process.env.ELEVENTY_ENV === 'production'
   Object.keys(plugins).forEach(key => {
