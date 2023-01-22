@@ -8,8 +8,8 @@
     {% set filename = article.cover.filename %}
     {% set defaultImageClass = "" %}
     {% set alt = "" %}
-    {% set width = 1280 %}
-    {% set height = 1012 %}
+    {% set width =  article.cover.width if article.cover.width else 1280 %}
+    {% set height = article.cover.height if article.cover.height else  1012 %}
     {% include "ui/cdn-picture.njk" %}
   </div>
   <div class="card__header">

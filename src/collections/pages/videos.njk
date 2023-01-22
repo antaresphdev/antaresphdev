@@ -1,12 +1,12 @@
 ---
 title: 'Mga Video - Antares Programming'
-# pagination:
-#   data: collections.videos
-#   size: 10
-#   reverse: true
-#   generatePageOnEmptyData: true
-# permalink: /videos/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html
-permalink: /videos/
+pagination:
+  data: collections.videos
+  size: 10
+  reverse: true
+  generatePageOnEmptyData: true
+permalink: /videos/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html
+# permalink: /videos/
 ---
 <section class="section h-feed" aria-labelledby="section--articles">
   <header class="section__header">
@@ -17,7 +17,7 @@ permalink: /videos/
     </hgroup>
   </header>
   <div class="section__body">
-    {# {% set headingLevel = 2 %}
+    {% set headingLevel = 2 %}
     <ol class="card-list card-list--videos">
       {% for post in pagination.items %}
         {% if not post.data.hidden %}
@@ -28,9 +28,9 @@ permalink: /videos/
           </li>
         {% endif %}
       {% endfor %}
-    </ol> #}
+    </ol>
 
-    <p style="text-align: center; font-size: var(--type-size-4);">Wala pang available na videos ngayon.</p>
+    {# <p style="text-align: center; font-size: var(--type-size-4);">Wala pang available na videos ngayon.</p> #}
   </div>
   <footer class="section__footer">
     <nav class="pagination">
