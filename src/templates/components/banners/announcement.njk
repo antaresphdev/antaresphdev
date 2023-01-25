@@ -1,6 +1,6 @@
 {% set announcement = announcements[0] %}
 {% set announcementId = announcement.title | slugify %}
-<div class="banner banner--announcement {{ announcement.type }}" role="region" aria-labelledby="{{ announcementId }}">
+<article class="banner banner--announcement {{ announcement.type }}" role="region" aria-labelledby="{{ announcementId }}">
   <h2 class="banner__title">{{ announcement.title | safe }}</h2>
   <div class="banner__actions">
     {% for item in announcement.actions %}
@@ -11,4 +11,4 @@
       {% endif %}
     {% endfor %}
   </div>
-</div>
+</article>
