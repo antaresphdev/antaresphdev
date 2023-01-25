@@ -2,16 +2,18 @@
 {% block content %}
   <main id="main" class="article h-entry">
     <header class="article__header">
-      {% set postType = 'posts' %}
-      {% set sizes = cover.sizes %}
-      {% set formats = cover.formats %}
-      {% set folder = cover.folder %}
-      {% set filename = cover.filename %}
-      {% set defaultImageClass = "article__image" %}
-      {% set alt = "" %}
-      {% set width = 1280 %}
-      {% set height = 1012 %}
-      {% include "ui/cdn-picture.njk" %}
+      {% if cover %}
+        {% set postType = 'posts' %}
+        {% set sizes = cover.sizes %}
+        {% set formats = cover.formats %}
+        {% set folder = cover.folder %}
+        {% set filename = cover.filename %}
+        {% set defaultImageClass = "article__image" %}
+        {% set alt = "" %}
+        {% set width = 1280 %}
+        {% set height = 1012 %}
+        {% include "ui/cdn-picture.njk" %}
+      {% endif %}
       <nav class="breadcrumb" aria-label="Breadcrumbs">
         <ol class="breadcrumb__list">
           <li class="breadcrumb__list-item">
@@ -44,7 +46,8 @@
           {% endfor %}
         </ul>
         <div class="article__dates">
-          <span class="article__date">{{ "clock" | icon | safe }} {{ content | timeToRead }}</span>
+          <span class="article__date">{{ "clock" | icon | safe }}
+            {{ content | timeToRead }}</span>
           <a href="{{ page.url }}" class="article__date article__date--published">
             {{ page.date | humanReadableDate }}
           </a>
@@ -52,10 +55,12 @@
       </div>
     </header>
     <div class="article__content e-content">
-      <aside class="article__toc">
-        <h2 class="article__toc-title">Sa post na ito…</h2>
-        {{ content | toc | safe }}
-      </aside>
+      {% if not disableToc %}
+        <aside class="article__toc">
+          <h2 class="article__toc-title">Sa post na ito…</h2>
+          {{ content | toc | safe }}
+        </aside>
+      {% endif %}
       <section class="article__body">
         {{ content | safe }}
       </section>

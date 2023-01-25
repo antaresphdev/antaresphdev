@@ -1,25 +1,11 @@
 .banner {
 
-  &--warning {
-    display         : flex;
-    flex-wrap       : wrap;
-    color           : hsl(var(--warning-900));
-    text-align      : center;
-    padding-inline  : 1rem;
-    padding-block   : var(--space-xs);
-    background-color: hsl(var(--warning-100));
-
-    &>* {
-      margin-inline: auto;
-    }
-  }
-
   &--video {
     overflow     : hidden;
     border-radius: var(--radius-3);
     display      : grid;
     height       : 80vh;
-    margin-bottom: var(--space-xxl);
+    margin-bottom: var(--space);
 
     .banner {
 
@@ -157,6 +143,41 @@
           hsl(var(--secondary-500)) 74.40%,
           hsl(var(--secondary-700)) 74.40%,
           hsl(var(--secondary-700)));
+    }
+  }
+
+  &--announcement {
+    align-items     : center;
+    background-color: var(--bg-announcement, transparent);
+    border          : 1px solid var(--fg-announcement, hsl(var(--fg-non-essential)));
+    border-radius   : var(--radius-4);
+    display         : flex;
+    flex-wrap       : wrap;
+    gap             : 1ch;
+    padding         : var(--space);
+
+    &.info {
+      --fg-announcement: hsl(var(--info-500) / 25%);
+      --bg-announcement: hsl(var(--info-500) / 25%);
+    }
+
+    &.primary {
+      --fg-announcement: hsl(var(--primary-300) / 25%);
+      --bg-announcement: hsl(var(--primary-300) / 25%);
+    }
+
+    .banner {
+      &__title {
+        margin: 0;
+        flex  : 1;
+      }
+
+      &__actions {
+        display        : flex;
+        gap            : 1ch;
+        align-items    : center;
+        justify-content: end;
+      }
     }
   }
 }

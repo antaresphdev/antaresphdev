@@ -1,0 +1,14 @@
+{% set announcement = announcements[0] %}
+{% set announcementId = announcement.title | slugify %}
+<div class="banner banner--announcement {{ announcement.type }}" role="region" aria-labelledby="{{ announcementId }}">
+  <h2 class="banner__title">{{ announcement.title | safe }}</h2>
+  <div class="banner__actions">
+    {% for item in announcement.actions %}
+      {% if item.delegate %}
+        <button class="button{{ " primary" if item.isPrimary }}">{{ item.label }}</button>
+      {% else %}
+        <a href="{{ item.url }}" class="button{{ " primary" if item.isPrimary }}" {{ 'target="_blank" rel="noopener"' if item.opensInNewTab }}>{{ item.label }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
