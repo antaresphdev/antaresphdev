@@ -5,7 +5,7 @@
   "main": ".eleventy.js",
   "scripts": {
     "start": "npm run dev",
-    "dev": "cross-env ELEVENTY_ENV=development eleventy --serve",
+    "dev": "cross-env ELEVENTY_ENV=development eleventy --serve --incremental",
     "prod": "cross-env ELEVENTY_ENV=production eleventy --serve",
     "build": "cross-env ELEVENTY_ENV=production eleventy",
     "images": "node ./dev/compress-images.js",
@@ -32,7 +32,7 @@
     "webpack": "^5.75.0"
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy": "^2.0.0-beta.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
     "babel-preset-minify": "^0.5.2",
