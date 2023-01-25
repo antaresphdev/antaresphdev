@@ -19,7 +19,7 @@ class Script {
     const vars = new webpack.DefinePlugin({
       GENERATED: JSON.stringify(new Date().toISOString()),
       API_SITE_DATA: JSON.stringify("/api/v1/site-data.json"),
-      API_CONTENT: JSON.stringify("api/v1/content.json")
+      API_CONTENT: JSON.stringify("/api/v1/content.json")
     })
 
     const rules = [

@@ -1,0 +1,49 @@
+<div class="banner banner--share">
+  <h2 class="banner__title">Share</h2>
+  <p class="banner__content">I-share sa mga kaibigan at kakilala ang content na ito kung nagustuhan mo o nakatulong ito sa iyo.</p>
+  <div class="banner__actions">
+    <button class="button" data-share="clipboard">Kopyahin ang link</button>
+    <button class="button primary" data-share="overlay" data-share-title="{{ title | safe }}" data-share-text="{{ description | safe }}">I-share</button>
+  </div>
+</div>
+<script>
+  const shareButtons = [...document.querySelectorAll('button[data-share]')]
+  const btnShareOverlay = shareButtons.filter(button => button.dataset.share === 'overlay')
+  const btnShareClipboard = shareButtons.filter(button => button.dataset.share === 'clipboard')
+
+  if (navigator.share) {
+    btnShareOverlay.forEach(shareButton => {
+      shareButton.setAttribute('data-share-shown', '')
+      shareButton.addEventListener('click', async e => {
+        const shareDetails = {
+          title: shareButton.dataset.shareTitle,
+          text: shareButton.dataset.shareText,
+          url: window
+            .location
+            .toString()
+        }
+
+        try {
+          await navigator.share(shareDetails)
+          console.log("[SHARE] Share successful")
+        } catch (e) {
+          console.error('[SHARE]', e)
+        }
+      })
+    })
+
+  }
+
+  if (navigator.clipboard) {
+    btnShareClipboard.forEach(button => {
+      button.setAttribute('data-share-shown', '')
+      button.addEventListener('click', async e => {
+        navigator
+          .clipboard
+          .writeText(window.location.toString())
+          .then(data => console.log("[SHARE] Clipboard success", data))
+          .catch(err => console.error("[SHARE] Clipboard error", err))
+        })
+    })
+  }
+</script>

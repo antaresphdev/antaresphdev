@@ -180,4 +180,30 @@
       }
     }
   }
+
+  &--share {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    text-align     : center;
+    gap            : var(--space);
+    padding-block  : var(--space-xxl);
+
+    .banner {
+      &__title {
+        font-size              : clamp(var(--type-size-4), 3vw, var(--type-size-3));
+        font-family            : var(--font-serif);
+        font-variation-settings: 'wght'400, 'SOFT'100, 'WONK'100;
+        margin                 : 0;
+      }
+
+      &__content {
+        font-size: var(--type-size-5);
+      }
+    }
+
+    button[data-share]:not([data-share-shown]) {
+      display: none;
+    }
+  }
 }
