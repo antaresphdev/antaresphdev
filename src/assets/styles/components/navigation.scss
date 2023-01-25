@@ -80,15 +80,13 @@
 
 @supports (backdrop-filter: blur(10px)) {
 
-  .navigation,
-  .navigation__popup {
+  .navigation {
     backdrop-filter: blur(10px);
   }
 
   .theme-dark {
 
-    .navigation,
-    .navigation__popup {
+    .navigation {
       background-color: hsl(var(--secondary-100)/50%);
     }
   }
@@ -96,8 +94,7 @@
   .theme-light,
   .theme-default {
 
-    .navigation,
-    .navigation__popup {
+    .navigation {
       background-color: hsl(var(--secondary-300)/75%);
     }
   }
@@ -105,8 +102,7 @@
   .theme-default {
     @media (prefers-color-scheme: dark) {
 
-      .navigation,
-      .navigation__popup {
+      .navigation {
         background-color: hsl(var(--secondary-100)/50%);
       }
     }
