@@ -200,6 +200,20 @@
       &__content {
         font-size: var(--type-size-5);
       }
+
+      &__notice {
+        background-color: hsl(var(--warning-300) / 25%);
+        color           : hsl(var(--warning-900));
+        width           : fit-content;
+        padding         : var(--space-xxs) var(--space-s);
+        margin-inline   : auto;
+        font-size       : var(--type-size-5);
+        border-radius   : var(--radius-2);
+
+        &:empty {
+          display: none;
+        }
+      }
     }
 
     button[data-share]:not([data-share-shown]) {

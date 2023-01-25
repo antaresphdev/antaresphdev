@@ -1,6 +1,7 @@
 <div class="banner banner--share">
   <h2 class="banner__title">Share</h2>
   <p class="banner__content">I-share sa mga kaibigan at kakilala ang content na ito kung nagustuhan mo o nakatulong ito sa iyo.</p>
+  <output class="banner__notice" data-share></output>
   <div class="banner__actions">
     <button class="button" data-share="clipboard">Kopyahin ang link</button>
     <button class="button primary" data-share="overlay" data-share-title="{{ title | safe }}" data-share-text="{{ description | safe }}">I-share</button>
@@ -8,6 +9,7 @@
 </div>
 <script>
   const shareButtons = [...document.querySelectorAll('button[data-share]')]
+  const shareOutputs = [...document.querySelectorAll('output[data-share]')]
   const btnShareOverlay = shareButtons.filter(button => button.dataset.share === 'overlay')
   const btnShareClipboard = shareButtons.filter(button => button.dataset.share === 'clipboard')
 
@@ -25,8 +27,10 @@
 
         try {
           await navigator.share(shareDetails)
+          showOutputMessage("Nai-share na!")
           console.log("[SHARE] Share successful")
         } catch (e) {
+          showOutputMessage("Nagka-error.")
           console.error('[SHARE]', e)
         }
       })
@@ -41,9 +45,21 @@
         navigator
           .clipboard
           .writeText(window.location.toString())
-          .then(data => console.log("[SHARE] Clipboard success", data))
-          .catch(err => console.error("[SHARE] Clipboard error", err))
+          .then(data => {
+            showOutputMessage("Nakopya na!")
+          })
+          .catch(err => {
+            showOutputMessage("Nagka-error.")
+          })
         })
+    })
+  }
+
+  function showOutputMessage(str, duration = 3000) {
+    shareOutputs.forEach(output => {
+      output.value = str
+
+      setTimeout(() => output.value = '', duration)
     })
   }
 </script>
