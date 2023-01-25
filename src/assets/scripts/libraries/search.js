@@ -40,8 +40,8 @@ class Search {
  */
 async function createSearchHandler() {
   return new Promise((resolve, reject) => {
-    console.log(API_CONTENT)
-    fetch(API_CONTENT, { method: "GET" })
+    console.log(`/${API_CONTENT}`)
+    fetch(`/${API_CONTENT}`, { method: "GET" })
       .then(response => response.json())
       .then(json => resolve(new Search(json)))
       .catch(err => reject(err))
