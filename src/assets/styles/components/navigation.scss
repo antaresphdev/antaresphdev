@@ -1,6 +1,6 @@
 .navigation {
   align-items     : center;
-  background-color: hsl(var(--secondary-100));
+  background-color: hsl(var(--bg-default));
   border-radius   : var(--radius-2);
   display         : flex;
   gap             : var(--space);
@@ -86,24 +86,27 @@
 
   .theme-dark {
 
-    .navigation {
-      background-color: hsl(var(--secondary-100)/50%);
+    .navigation.attached {
+      background-color: hsl(var(--bg-default)/75%);
+      filter: brightness(125%);
     }
   }
 
   .theme-light,
   .theme-default {
 
-    .navigation {
-      background-color: hsl(var(--secondary-300)/75%);
+    .navigation.attached {
+      background-color: hsl(var(--bg-default)/75%);
+      filter: brightness(125%);
     }
   }
 
   .theme-default {
     @media (prefers-color-scheme: dark) {
 
-      .navigation {
-        background-color: hsl(var(--secondary-100)/50%);
+      .navigation.attached {
+        background-color: hsl(var(--bg-default)/75%);
+        filter: brightness(125%);
       }
     }
   }
