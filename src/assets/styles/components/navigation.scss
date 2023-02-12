@@ -97,11 +97,35 @@
   &__menu {
     display: none;
   }
+
+  &__popup {
+    position        : absolute;
+    width           : max-content;
+    right           : 0;
+    background-color: hsl(var(--bg-default));
+    padding         : var(--space-xs);
+    border-radius   : var(--radius-3);
+    top             : calc(100% + var(--space));
+    display         : flex;
+    flex-direction  : column;
+    gap             : 1ch;
+
+    box-shadow: 0 1px 1px hsl(var(--d-contrast) / 0.05),
+      0 2px 2px hsl(var(--d-contrast) / 0.05),
+      0 4px 4px hsl(var(--d-contrast) / 0.05),
+      0 8px 8px hsl(var(--d-contrast) / 0.05),
+      0 16px 16px hsl(var(--d-contrast) / 0.075),
+      0 32px 32px hsl(var(--d-contrast) / 0.075),
+      0 64px 64px hsl(var(--d-contrast) / 0.075);
+
+
+  }
 }
 
 @supports (backdrop-filter: blur(10px)) {
 
-  .navigation {
+  .navigation,
+  .navigation__popup {
     backdrop-filter: blur(5px);
 
     &.attached::before {
@@ -111,7 +135,8 @@
 
   .theme-dark {
 
-    .navigation.attached {
+    .navigation.attached,
+    .navigation__popup {
       background-color: hsl(var(--bg-contrast)/ 75%);
     }
   }
@@ -119,7 +144,8 @@
   .theme-light,
   .theme-default {
 
-    .navigation.attached {
+    .navigation.attached,
+    .navigation__popup {
       background-color: hsl(var(--bg-contrast)/ 75%);
     }
   }
@@ -127,7 +153,8 @@
   .theme-default {
     @media (prefers-color-scheme: dark) {
 
-      .navigation.attached {
+      .navigation.attached,
+      .navigation__popup {
         background-color: hsl(var(--bg-contrast)/ 75%);
         filter          : brightness(125%);
       }
@@ -202,27 +229,4 @@
       display: none;
     }
   }
-}
-
-.navigation__popup {
-  position        : absolute;
-  width           : max-content;
-  right           : 0;
-  background-color: hsl(var(--secondary-100));
-  padding         : var(--space-xs);
-  border-radius   : var(--radius-3);
-  top             : calc(100% + var(--space));
-  display         : flex;
-  flex-direction  : column;
-  gap             : 1ch;
-
-  box-shadow: 0 1px 1px hsl(var(--d-contrast) / 0.05),
-    0 2px 2px hsl(var(--d-contrast) / 0.05),
-    0 4px 4px hsl(var(--d-contrast) / 0.05),
-    0 8px 8px hsl(var(--d-contrast) / 0.05),
-    0 16px 16px hsl(var(--d-contrast) / 0.075),
-    0 32px 32px hsl(var(--d-contrast) / 0.075),
-    0 64px 64px hsl(var(--d-contrast) / 0.075);
-
-
 }
