@@ -1,4 +1,5 @@
 import "./animations/navigation-bar"
+import "./animations/button"
 import "./components/dialog"
 import { ColorScheme } from "./libraries/color-scheme"
 import { Toggle } from './components/toggle'

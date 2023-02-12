@@ -31,10 +31,18 @@
     }
 
     &[href] {
-      @extend .button;
+      @include hoverable;
 
-      padding         : var(--space-xxxs) var(--space-xs);
-      background-color: transparent;
+      background-color       : transparent;
+      border-radius          : var(--radius-1);
+      color                  : hsl(var(--fg-default));
+      font-family            : var(--font-sans);
+      font-size              : var(--type-size-6);
+      font-variation-settings: 'wght'700;
+      font-weight            : bold;
+      overflow               : hidden;
+      padding                : var(--space-xxxs) var(--space-xs);
+      position               : relative;
     }
   }
 }

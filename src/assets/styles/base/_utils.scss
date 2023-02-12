@@ -7,3 +7,24 @@
   $radius: calc(#{$innerRadius} + #{$parentPadding});
   @return $radius;
 }
+
+@mixin hoverable {
+
+  &::before {
+    content         : "";
+    position        : absolute;
+    background-image: radial-gradient(circle at center, var(--hoverable-color, hsl(var(--primary-500) / 15%)), transparent 75%);
+    transform       : translate(-50%, -50%);
+    width           : 100%;
+    aspect-ratio    : 1/1;
+    top             : var(--hover-top, 0);
+    left            : var(--hover-left, 0);
+    transition      : top 100ms, left 100ms, opacity 200ms;
+  }
+
+  &:not(:hover) {
+    &::before {
+      opacity: 0;
+    }
+  }
+}

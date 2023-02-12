@@ -19,6 +19,8 @@
   text-transform         : lowercase;
   transition             : outline 200ms, outline-offset 200ms, background-color 200ms;
   width                  : max-content;
+  position               : relative;
+  overflow               : hidden;
 
   &:hover {
     background-color: hsl(var(--primary-300) / 40%);

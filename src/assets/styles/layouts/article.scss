@@ -72,10 +72,14 @@
     gap        : 0.5ch;
     list-style : none;
     margin     : 0;
+    overflow   : hidden;
     padding    : 0;
+    position   : relative;
   }
 
   &__tag-link {
+    @include hoverable;
+
     background-color: hsl(var(--bg-subtle) / 25%);
     border-radius   : var(--radius-1);
     color           : hsl(var(--primary-700));
