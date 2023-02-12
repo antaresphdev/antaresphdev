@@ -67,6 +67,17 @@
     }
   }
 
+  .navigation__popup {
+    .navigation {
+      &__link {
+        &:hover {
+          background: transparent;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
   &__logo {
     text-decoration: none;
   }
@@ -85,7 +96,7 @@
       align-items: center;
       display    : flex;
       position   : relative;
-      text-shadow: 0 1px 1px #fffa;
+      text-shadow: 0 1px 1px hsl(var(--bg-contrast));
     }
   }
 
@@ -94,7 +105,7 @@
     @include button;
     @include hoverable;
 
-    --hoverable-color: hsl(var(--fg-non-essential) / 40%);
+    --hoverable-color: hsl(var(--l-subtle) / 20%);
 
     background-color       : transparent;
     color                  : hsl(var(--fg-default));
@@ -115,7 +126,7 @@
     }
 
     svg {
-      filter: drop-shadow(0 1px 1px #fffd);
+      filter: drop-shadow(0 1px 1px hsl(var(--bg-contrast)));
     }
   }
 
@@ -141,7 +152,9 @@
   &.attached,
   &__popup {
     @include raised-3d(10, 1);
-    --raised-3d-color: hsl(var(--d-contrast)/0.01);
+    --raised-3d-color     : hsl(var(--d-contrast)/0.01);
+    --r3-highlight-color  : #fff2;
+    --r3-highlight-2-color: #fff3;
   }
 }
 

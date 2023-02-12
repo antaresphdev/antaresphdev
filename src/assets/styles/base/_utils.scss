@@ -81,7 +81,7 @@
 
   $highlights: 
     inset 0 0 0 var(--r3-highlight-size, 1px) var(--r3-highlight-color, #fff3),
-    inset 0 var(--r3-highlight-size, 1px) var(--r3-highlight-size, 1px) var(--r3-highlight-color, #fff3),
+    inset 0 var(--r3-highlight-size, 1px) var(--r3-highlight-size, 1px) var(--r3-highlight-2-color, var(--r3-highlight-color, #fff3)),
     0 0 0 var(--r3-etch-size, 1px) var(--raised-3d-border, #0002);
 
   box-shadow: unquote($string: "#{$highlights}, #{$raiseShadow}");
