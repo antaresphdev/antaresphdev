@@ -10,7 +10,7 @@
   }
 
   &__link {
-    @extend .button;
+    @include button;
 
     &[aria-current=page] {
       @extend .primary;

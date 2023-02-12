@@ -2,7 +2,8 @@ const selectors = [
   '.button:is(a, button)',
   '[data-animation=button]:is(a, button)',
   '.breadcrumb__link',
-  '.article__tag-link'
+  '.article__tag-link',
+  '.navigation__link, .navigation__menu'
 ]
 
 document.addEventListener('mousemove', e => {

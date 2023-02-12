@@ -62,11 +62,18 @@
 
   &__menu,
   &__link {
-    @extend .button;
+    @include button;
+    @include hoverable;
 
-    color           : hsl(var(--primary-700));
     background-color: transparent;
+    color           : hsl(var(--primary-700));
     height          : 100%;
+    overflow        : hidden;
+    position        : relative;
+
+    &:hover {
+      background-color: hsl(var(--primary-100) / 10%);
+    }
 
     @media (min-width: 980px) {
       padding-block: var(--space-xxs);
@@ -88,7 +95,7 @@
 
     .navigation.attached {
       background-color: hsl(var(--bg-default)/75%);
-      filter: brightness(125%);
+      filter          : brightness(125%);
     }
   }
 
@@ -97,7 +104,7 @@
 
     .navigation.attached {
       background-color: hsl(var(--bg-default)/75%);
-      filter: brightness(125%);
+      filter          : brightness(125%);
     }
   }
 
@@ -106,7 +113,7 @@
 
       .navigation.attached {
         background-color: hsl(var(--bg-default)/75%);
-        filter: brightness(125%);
+        filter          : brightness(125%);
       }
     }
   }

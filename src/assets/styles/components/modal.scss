@@ -82,7 +82,7 @@
 
 .search-result {
   &__link {
-    @extend .button;
+    @include button;
 
     align-items            : stretch;
     background             : transparent;
