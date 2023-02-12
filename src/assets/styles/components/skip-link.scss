@@ -1,12 +1,15 @@
 .skip-link {
   @include button;
   @extend .primary;
+  @include raised-3d(10);
+
+  --raised-3d-color: hsl(var(--d-contrast) / 0.01);
 
   left      : 50%;
   position  : fixed;
   top       : 0;
   transition: translate 200ms;
-  translate : -50% -120%;
+  translate : -50% -200%;
   z-index   : 9999;
 
   &:focus-visible {

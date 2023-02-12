@@ -33,6 +33,14 @@
 
   &.attached {
 
+    .navigation {
+      &__link {
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+
     @media (prefers-reduced-motion: no-preference) {
       max-width: min(calc((var(--page-width) / 4) * 3), 100%);
 
@@ -43,6 +51,17 @@
               display: none;
             }
           }
+        }
+      }
+    }
+  }
+
+  &:not(.attached) {
+    .navigation {
+      &__link {
+        &:hover {
+          @include raised-3d;
+          background-color: hsl(var(--bg-contrast) / 10%);
         }
       }
     }
@@ -63,9 +82,10 @@
     }
 
     &-item {
-      position   : relative;
+      align-items: center;
       display    : flex;
-      align-items: center
+      position   : relative;
+      text-shadow: 0 1px 1px #fffa;
     }
   }
 
@@ -74,7 +94,7 @@
     @include button;
     @include hoverable;
 
-    --hoverable-color: hsl(var(--fg-non-essential) / 20%);
+    --hoverable-color: hsl(var(--fg-non-essential) / 40%);
 
     background-color       : transparent;
     color                  : hsl(var(--fg-default));
@@ -90,15 +110,16 @@
       width: min-content;
     }
 
-    &:hover {
-      @include raised-3d;
-      background-color: hsl(var(--bg-contrast) / 10%);
-    }
-
     @media (min-width: 980px) {
       padding-block: var(--space-xxs);
     }
+
+    svg {
+      filter: drop-shadow(0 1px 1px #fffd);
+    }
   }
+
+
 
   &__menu {
     display: none;
@@ -119,7 +140,8 @@
 
   &.attached,
   &__popup {
-    @include raised-3d;
+    @include raised-3d(10, 1);
+    --raised-3d-color: hsl(var(--d-contrast)/0.01);
   }
 }
 

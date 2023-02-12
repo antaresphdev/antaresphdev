@@ -1,8 +1,8 @@
 .button {
   @include hoverable;
+  --hoverable-color      : hsl(var(--fg-non-essential) / 75%);
 
   align-items            : center;
-  background-color       : hsl(var(--fg-contrast) / 5%);
   border                 : none;
   border-radius          : var(--radius-2);
   color                  : hsl(var(--primary-900));
@@ -25,7 +25,7 @@
   overflow               : hidden;
 
   &:hover {
-    background-color: hsl(var(--primary-300) / 40%);
+    background-color: hsl(var(--fg-contrast) / 15%);
   }
 
   &:focus-visible {
@@ -38,11 +38,22 @@
     }
   }
 
+  &.raised {
+    @include raised-3d(2);
+
+    background-color: hsl(var(--fg-contrast) / 15%);
+  }
+
   &.primary {
 
     background-color : hsl(var(--primary-700));
     color            : hsl(var(--fg-invert-contrast));
     --hoverable-color: hsl(var(--primary-100) / 15%);
+    --raised-3d-color: hsl(var(--primary-900) / 0.15);
+
+    &.raised {
+      @include raised-3d(2, 1);
+    }
 
     &:hover {
       filter: brightness(125%);

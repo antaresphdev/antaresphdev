@@ -68,20 +68,21 @@
   }
 }
 
-@mixin raised-3d($raise-level: 1) {
+@mixin raised-3d($raise-level: 1, $raise-factor: 2) {
   $raiseShadow: '';
 
   @for $level from 1 through $raise-level {
-    $raiseShadow: $raiseShadow+'0 #{$level * 2}px #{$level * 2}px hsl(var(--d-contrast)/0.075)';
+    $raiseShadow: $raiseShadow+'0 #{$level * $raise-factor}px #{$level * $raise-factor}px var(--raised-3d-color, hsl(var(--d-contrast)/0.075))';
 
     @if $level < $raise-level {
       $raiseShadow: $raiseShadow + ',';
     }
   }
 
-  $highlights: inset 0 0 0 1px #fff3,
-  inset 0 1px 1px #fff3,
-  0 0 0 1px #0002;
+  $highlights: 
+    inset 0 0 0 var(--r3-highlight-size, 1px) var(--r3-highlight-color, #fff3),
+    inset 0 var(--r3-highlight-size, 1px) var(--r3-highlight-size, 1px) var(--r3-highlight-color, #fff3),
+    0 0 0 var(--r3-etch-size, 1px) var(--raised-3d-border, #0002);
 
   box-shadow: unquote($string: "#{$highlights}, #{$raiseShadow}");
 }
