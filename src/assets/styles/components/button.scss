@@ -1,4 +1,6 @@
 .button {
+  @include hoverable;
+
   align-items            : center;
   background-color       : hsl(var(--fg-contrast) / 5%);
   border                 : none;
@@ -37,12 +39,14 @@
   }
 
   &.primary {
-    background-color: hsl(var(--primary-700));
-    color           : hsl(var(--fg-invert-contrast));
+
+    background-color : hsl(var(--primary-700));
+    color            : hsl(var(--fg-invert-contrast));
+    --hoverable-color: hsl(var(--primary-100) / 15%);
 
     &:hover {
-      background-color: hsl(var(--primary-700));
-      color           : hsl(var(--primary-100));
+      filter: brightness(125%);
+      color : hsl(var(--fg-invert-contrast));
     }
   }
 
