@@ -19,22 +19,25 @@ a {
 }
 
 a {
+  border-radius            : var(--radius-1);
+  color                    : inherit;
+  text-decoration          : underline;
+  text-decoration-color    : hsl(var(--primary-900, pink));
+  text-decoration-skip-ink : all;
+  text-decoration-thickness: 1px;
+  transition               : text-decoration 200ms, text-underline-offset 200ms, outline 200ms, outline-offset 200ms;
+  outline                  : 3px solid hsl(var(--primary-700) / 0);
 
-  @at-root .footer &,
-  &:not([class]) {
-    border-radius            : var(--radius-1);
-    color                    : inherit;
-    text-decoration          : underline;
-    text-decoration-color    : hsl(var(--primary-900, pink));
-    text-decoration-skip-ink : all;
-    text-decoration-thickness: 1px;
+  &:hover {
+    text-underline-offset    : 3px;
+    text-decoration-thickness: 3px;
+  }
 
-    &:hover {
-      background-color: hsl(var(--primary-300));
-      outline-color   : hsl(var(--primary-300));
-      outline-offset  : 0;
-      transition      : outline-offset 20ms, outline 200ms, background-color 300ms;
-    }
+  &:focus-visible {
+    outline-color        : hsl(var(--primary-700));
+    outline-offset       : 3px;
+    text-decoration-color: transparent;
+    text-underline-offset: 10px;
   }
 }
 

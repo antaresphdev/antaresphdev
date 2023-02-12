@@ -52,7 +52,7 @@ body {
   background-color       : hsl(var(--bg-default));
   color                  : hsl(var(--fg-default));
   scroll-margin          : 5vh;
-  font-variation-settings: 'wght'300;
+  font-variation-settings: 'wght' 300, 'SOFT' 100;
 }
 
 pre,

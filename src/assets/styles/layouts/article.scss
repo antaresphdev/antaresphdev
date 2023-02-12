@@ -25,9 +25,9 @@
   &__title {
     color                  : hsl(var(--fg-contrast));
     font-family            : var(--font-serif);
-    font-size              : clamp(var(--type-size-3), 10vw, var(--type-size-1));
     font-size              : var(--type-size-1);
-    font-variation-settings: 'wght'500;
+    font-size              : clamp(var(--type-size-3), 10vw, var(--type-size-1));
+    font-variation-settings: 'wght'500, 'SOFT'100;
     line-height            : 1;
     margin                 : 0;
   }
@@ -155,6 +155,10 @@
         text-decoration: none !important;
         font-size      : 1em;
 
+        &:is(:hover) {
+          text-decoration: underline 1px solid hsl(var(--primary-500));
+        }
+
         @media (max-width: 943px) {
           display       : inline-block;
           margin-inline : calc(-1 * var(--space-l));
@@ -187,7 +191,7 @@
     h5,
     h6 {
       margin-block-end       : 0;
-      font-variation-settings: 'wght'600;
+      font-variation-settings: 'wght'600, 'SOFT'100;
       color                  : hsl(var(--fg-contrast));
     }
 
@@ -249,8 +253,6 @@
 
 .quotation {
   --icon-size         : 2ch;
-  background-color    : hsl(var(--bg-contrast) / 50%);
-  background-color    : hsl(var(--secondary-100));
   border-radius       : var(--radius-3);
   display             : flex;
   flex-direction      : column;
@@ -279,7 +281,8 @@
     color         : hsl(var(--fg-contrast));
 
     &>* {
-      margin: 0
+      margin     : 0;
+      line-height: 1.5;
     }
   }
 
