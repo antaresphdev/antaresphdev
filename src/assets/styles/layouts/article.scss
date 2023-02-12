@@ -61,7 +61,7 @@
 
     &>*+* {
       &::before {
-        content          : '•';
+        content: '•';
       }
     }
   }
@@ -296,5 +296,24 @@
 
   &.full-bleed {
     width: 100%;
+  }
+}
+
+figure.image {
+  display       : flex;
+  flex-direction: column;
+  gap           : var(--space);
+  margin-block  : var(--space-xxl);
+
+  img {
+    border-radius: var(--radius-1);
+  }
+
+  figcaption p {
+    font-family  : var(--font-sans);
+    font-size    : var(--type-size-6);
+    margin-inline: auto;
+    text-align   : center;
+    width        : 80%;
   }
 }

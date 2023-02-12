@@ -20,7 +20,7 @@ module.exports = {
     plugin: require('eleventy-plugin-toc'),
     options: {
       wrapperClass: 'article__toc-list',
-      tags: ['h2', 'h3']
+      tags: ['h2']
     }
   }),
   rss: () => ({ plugin: require('@11ty/eleventy-plugin-rss') })

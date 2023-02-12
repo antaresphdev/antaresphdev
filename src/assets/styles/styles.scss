@@ -33,6 +33,7 @@
 @import "utils/fonts.scss";
 @import "utils/space.scss";
 @import "utils/visibility.scss";
+@import "utils/unstyled.scss";
 
 :root {
   scroll-padding: 20vh;
@@ -73,6 +74,11 @@ i,
 em,
 cite {
   font-family: var(--font-serif);
+}
+
+strong, b {
+  font-weight: 700;
+  font-variation-settings: 'wght' 700;
 }
 
 abbr {

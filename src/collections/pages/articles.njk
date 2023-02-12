@@ -16,7 +16,7 @@ permalink: /articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
   </header>
   <nav class="tag-scroller" aria-label="Tags">
     <ul class="tag-scroller__list">
-      {% set tags = collections.tags %}
+      {% set tags = collections.tags | reverse %}
       {% for tag in tags %}
         <li class="tag-scroller__list-item">
           <a href="/articles/tag/{{ tag.data.title | slugify }}" class="tag">{{ tag.data.title | safe }}</a>

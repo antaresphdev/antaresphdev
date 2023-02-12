@@ -5,7 +5,7 @@ pagination:
   size: 1
   alias: selectedTag
   reverse: true
-permalink: /articles/tag/{{ selectedTag.data.title | slugify }}/
+permalink: /articles/tag/{{ selectedTag.data.title | lower | slugify }}/
 ---
 <section class="section h-feed" aria-labelledby="section--articles">
   <header class="section__header">
@@ -17,7 +17,7 @@ permalink: /articles/tag/{{ selectedTag.data.title | slugify }}/
   </header>
   <nav class="tag-scroller" aria-label="Tags">
     <ul class="tag-scroller__list">
-      {% set tags = collections.tags %}
+      {% set tags = collections.tags | reverse %}
       {% for tag in tags %}
         {% set isSelected = tag.data.title === selectedTag.data.title %}
         <li class="tag-scroller__list-item">

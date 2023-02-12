@@ -43,10 +43,11 @@
 
     &--left,
     &--right {
-      width         : min(25ch, 90%);
-      margin-inline : var(--space-l);
       border-radius : var(--callout-radius);
+      margin-block  : var(--space-l);
+      margin-inline : var(--space-l);
       padding-inline: var(--space);
+      width         : min(25ch, 90%);
     }
 
     &--left {
