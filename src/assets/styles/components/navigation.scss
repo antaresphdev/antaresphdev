@@ -85,7 +85,7 @@
       align-items: center;
       display    : flex;
       position   : relative;
-      text-shadow: 0 1px 1px #fffa;
+      text-shadow: 0 1px 1px hsl(var(--bg-contrast));
     }
   }
 
@@ -115,7 +115,7 @@
     }
 
     svg {
-      filter: drop-shadow(0 1px 1px #fffd);
+      filter: drop-shadow(0 1px 1px hsl(var(--bg-contrast)));
     }
   }
 
@@ -141,7 +141,9 @@
   &.attached,
   &__popup {
     @include raised-3d(10, 1);
-    --raised-3d-color: hsl(var(--d-contrast)/0.01);
+    --raised-3d-color     : hsl(var(--d-contrast)/0.01);
+    --r3-highlight-color  : #fff2;
+    --r3-highlight-2-color: #fff3;
   }
 }
 
