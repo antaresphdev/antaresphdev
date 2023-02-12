@@ -67,7 +67,9 @@
     }
 
     &-item {
-      position: relative;
+      position   : relative;
+      display    : flex;
+      align-items: center
     }
   }
 
@@ -78,12 +80,14 @@
 
     --hoverable-color: hsl(var(--fg-non-essential) / 20%);
 
-    background-color: transparent;
-    color           : hsl(var(--fg-default));
-    height          : 100%;
-    overflow        : hidden;
-    position        : relative;
-    text-transform  : capitalize;
+    background-color       : transparent;
+    color                  : hsl(var(--fg-default));
+    height                 : 100%;
+    overflow               : hidden;
+    position               : relative;
+    text-transform         : none;
+    font-weight            : normal;
+    font-variation-settings: 'wght'500;
 
     &:hover {
       background-color: hsl(var(--bg-contrast) / 10%);

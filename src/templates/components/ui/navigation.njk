@@ -52,11 +52,15 @@
         <span class="sr-only">RSS feeds</span>
       </button>
       <ul class="navigation__popup navigation__list" id="form-rss-feeds" style="flex-direction: row" hidden>
+        <li class="navigation__list-item weight-600 padding-inline-start--s">RSS Feeds</li>
         {% for rss in site.feeds | values %}
           <li class="navigation__list-item">
             <a href="{{ rss.url }}" class="navigation__link">{{ rss.text }}</a>
           </li>
         {% endfor %}
+        <li class="navigation__list-item">
+          <a href="https://rss.com/blog/how-do-rss-feeds-work/" target="_blank" rel="noopener" class="navigation__link">Paano ito ginagamit?</a>
+        </li>
       </ul>
     </li>
   </ul>

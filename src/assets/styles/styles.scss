@@ -76,9 +76,10 @@ cite {
   font-family: var(--font-serif);
 }
 
-strong, b {
-  font-weight: 700;
-  font-variation-settings: 'wght' 700;
+strong,
+b {
+  font-weight            : 700;
+  font-variation-settings: 'wght'700;
 }
 
 abbr {
@@ -107,4 +108,13 @@ mark {
   border-radius   : var(--radius-1);
   background-color: hsl(var(--l-warning-500) / 50%);
   color           : inherit;
+}
+
+a:not(.no-arrow)[target="_blank"]::after {
+  align-self         : baseline;
+  content            : "🡥";
+  margin-inline-start: auto;
+  font-size          : var(--type-size-7);
+  vertical-align     : middle;
+  align-items        : center;
 }
