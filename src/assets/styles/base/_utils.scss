@@ -30,6 +30,8 @@
 }
 
 @mixin button {
+  --button-transitions: outline 200ms, outline-offset 200ms, background-color 200ms;
+
   align-items            : center;
   background-color       : hsl(var(--fg-contrast) / 5%);
   border                 : none;
@@ -64,4 +66,22 @@
       transition    : outline 200ms, outline-offset 50ms, background-color 200ms;
     }
   }
+}
+
+@mixin raised-3d($raise-level: 1) {
+  $raiseShadow: '';
+
+  @for $level from 1 through $raise-level {
+    $raiseShadow: $raiseShadow+'0 #{$level * 2}px #{$level * 2}px hsl(var(--d-contrast)/0.075)';
+
+    @if $level < $raise-level {
+      $raiseShadow: $raiseShadow + ',';
+    }
+  }
+
+  $highlights: inset 0 0 0 1px #fff3,
+  inset 0 1px 1px #fff3,
+  0 0 0 1px #0002;
+
+  box-shadow: unquote($string: "#{$highlights}, #{$raiseShadow}");
 }
