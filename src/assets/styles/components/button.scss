@@ -38,7 +38,7 @@
     }
   }
 
-  &.raised {
+  &.raised, &.raised-hover:hover {
     @include raised-3d(2);
 
     background-color: hsl(var(--fg-contrast) / 15%);

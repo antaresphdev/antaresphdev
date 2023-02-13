@@ -39,7 +39,7 @@ permalink: /articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
       <ul class="pagination__list">
         {% if pagination.href.previous %}
           <li class="pagination__list-item">
-            <a href="{{ pagination.href.previous }}" class="button">{{ "arrow-left" | icon | safe }} Previous</a>
+            <a href="{{ pagination.href.previous }}" class="pagination__link">{{ "arrow-left" | icon | safe }} Previous</a>
           </li>
         {% endif %}
         {% for entry in pagination.pages %}
@@ -50,7 +50,7 @@ permalink: /articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
         {% endfor %}
         {% if pagination.href.next %}
           <li class="pagination__list-item">
-            <a href="{{ pagination.href.next }}" class="button">{{ "arrow-right" | icon | safe }} Next</a>
+            <a href="{{ pagination.href.next }}" class="pagination__link">{{ "arrow-right" | icon | safe }} Next</a>
           </li>
         {% endif %}
       </ul>

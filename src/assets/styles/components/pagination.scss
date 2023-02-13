@@ -11,6 +11,25 @@
 
   &__link {
     @include button;
+    @include hoverable;
+    overflow: hidden;
+    position: relative;
+
+    --hoverable-color: hsl(var(--l-contrast) / 25%);
+
+    &:hover {
+      @include raised-3d;
+      background-color: hsl(var(--fg-subtle) / 25%);
+
+      &.primary {
+        background-color : hsl(var(--primary-700));
+        --hoverable-color: hsl(var(--primary-500) / 15%);
+
+        &:focus-visible {
+          outline-offset: 5px;
+        }
+      }
+    }
 
     &[aria-current=page] {
       @extend .primary;

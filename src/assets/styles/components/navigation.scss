@@ -105,8 +105,7 @@
     @include button;
     @include hoverable;
 
-    --hoverable-color: hsl(var(--l-subtle) / 20%);
-
+    --hoverable-color      : hsl(var(--l-contrast) / 25%);
     background-color       : transparent;
     color                  : hsl(var(--fg-default));
     font-variation-settings: 'wght'500;

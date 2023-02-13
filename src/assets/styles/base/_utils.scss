@@ -66,6 +66,23 @@
       transition    : outline 200ms, outline-offset 50ms, background-color 200ms;
     }
   }
+
+  &.primary {
+
+    background-color : hsl(var(--primary-700));
+    color            : hsl(var(--fg-invert-contrast));
+    --hoverable-color: hsl(var(--primary-100) / 15%);
+    --raised-3d-color: hsl(var(--primary-900) / 0.15);
+
+    &.raised {
+      @include raised-3d(2, 1);
+    }
+
+    &:hover {
+      filter: brightness(125%);
+      color : hsl(var(--fg-invert-contrast));
+    }
+  }
 }
 
 @mixin raised-3d($raise-level: 1, $raise-factor: 2) {
@@ -79,10 +96,9 @@
     }
   }
 
-  $highlights: 
-    inset 0 0 0 var(--r3-highlight-size, 1px) var(--r3-highlight-color, #fff3),
-    inset 0 var(--r3-highlight-size, 1px) var(--r3-highlight-size, 1px) var(--r3-highlight-2-color, var(--r3-highlight-color, #fff3)),
-    0 0 0 var(--r3-etch-size, 1px) var(--raised-3d-border, #0002);
+  $highlights: inset 0 0 0 var(--r3-highlight-size, 1px) var(--r3-highlight-color, #fff3),
+  inset 0 var(--r3-highlight-size, 1px) var(--r3-highlight-size, 1px) var(--r3-highlight-2-color, var(--r3-highlight-color, #fff3)),
+  0 0 0 var(--r3-etch-size, 1px) var(--raised-3d-border, #0002);
 
   box-shadow: unquote($string: "#{$highlights}, #{$raiseShadow}");
 }
