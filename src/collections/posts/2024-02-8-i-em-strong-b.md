@@ -15,6 +15,7 @@ tags:
   - html
 eleventyExcludeFromCollections: false
 disableToc: false
+permalink: /articles/i-em-strong-b/
 ---
 
 Sa mga word document, kapag kailangang i-emphasize ang isang salita o pangungusap, gumagamit lang tayo ng italics at bold font weight. At ideally, ganito lang din kadali sa mga web pages. Pero dahil naka-focus ang HTML sa <i lang="en">semantics</i> ng mga web page, kailangan nating maging mas specific. Kung sa bagay, hindi lang naman kasi mga tao ang uma-access ng mga website natin. At hindi rin lahat ng users natin ay visual gaya ng mga gumagamit ng assistive technologies. <sup id="fn-2">[<a href="#footnote-2">Ano ito?</a>]</sup>
