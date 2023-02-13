@@ -17,9 +17,16 @@
 
     --hoverable-color: hsl(var(--l-contrast) / 25%);
 
+    &::before {
+      transition: opacity 300ms;
+    }
+
     &:hover {
-      @include raised-3d;
       background-color: hsl(var(--fg-subtle) / 25%);
+    }
+
+    &.raised-hover:hover {
+      @include raised-3d;
 
       &.primary {
         background-color : hsl(var(--primary-700));
@@ -33,6 +40,10 @@
 
     &[aria-current=page] {
       @extend .primary;
+
+      &:hover {
+        background-color: hsl(var(--primary-700));
+      }
     }
   }
 }
