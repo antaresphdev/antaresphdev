@@ -64,9 +64,10 @@
         will-change: font-size;
 
         &-link:is(a[href]) {
-          font-family: inherit;
-          color      : inherit;
-          outline    : none;
+          font-family    : inherit;
+          color          : inherit;
+          outline        : none;
+          text-decoration: none;
 
           &:focus-visible {
             outline: none;
@@ -202,9 +203,10 @@
 
         &-link {
           &::before {
-            content : '';
-            position: absolute;
-            inset   : 0;
+            content        : '';
+            inset          : 0;
+            position       : absolute;
+            text-decoration: none;
           }
 
           &:focus-visible {
