@@ -60,12 +60,12 @@ Kaya hindi dapat gamitin ang `<em>` para lang gawing italics ang formatting ng t
 <aside class="callout callout--warning" id="callout-1" aria-labelledby="callout-1-headline">
   {{ 'alert-triangle' | icon }}
   <div class="callout__body">
-    <p><strong id="callout-1-headline">Update:</strong> Sa maraming screen readers na kadalasang ginagamit gaya ng VoiceOver, JAWS, o NVDA, walang pagbabago sa pagbigkas ng mga salita sa loob ng <code>&lt;em></code> at <code>&lt;strong></code>. Ayon kay James Teh, isa sa developers ng NVDA, maraming users ang nagrereklamo kapag ini-indicate ng screen readers ang <code>&lt;em></code> at <code>&lt;strong></code> dahil sa dami ng content na mali ang paggamit sa dalawang tags na ito.</p>
+    <p><strong id="callout-1-headline">Update:</strong> Sa maraming screen readers na kadalasang ginagamit gaya ng VoiceOver, JAWS, o NVDA, walang pagbabago sa pagbigkas ng mga salita sa loob ng <code>&lt;em></code> at <code>&lt;strong></code>. Ayon kay James Teh, isa sa developers ng NVDA, <a href="https://github.com/nvaccess/nvda/issues/4920#issuecomment-161162498" target="_blank" rel="noopenr">maraming users ang nagrereklamo</a> kapag ini-indicate ng screen readers ang <code>&lt;em></code> at <code>&lt;strong></code> dahil sa dami ng content na mali ang paggamit sa dalawang tags na ito.</p>
     <p>Hindi na ba dapat gamitin ang <code>&lt;em></code> at <code>&lt;strong></code> dahil wala naman palang saysay? Mali. Dapat pa ring gamitin ang tamang HTML tags dahil una, hindi natin alam ang lahat ng software na gagamit sa markup natin. At ikalawa, posibleng sa hinaharap, magkaroon ng iba pang devices o software na magko-consume ng HTML markup natin. Wala tayong way para ma-predict kung saan pa mapapadpad ang mga website natin, kaya ang tanging paraan para masigurong gumagana ito nang tama ay gamitin nang tama ang mga HTML tag. Kung sa bagay, kaya lang naman naka-disable ang <code>&lt;em></code> at <code>&lt;strong></code> sa mga screen reader by default ay dahil marami ang gumagamit dito nang mali.</p>
     <p>Sources:</p>
     <ul>
-      <li><a href="https://matthiasott.com/notes/screen-readers-semantics-strong-em"><cite>Screen Readers Don’t Convey the Semantics of STRONG and EM</cite></a>, Matthias Ott</li>
-      <li><a href="https://www.tpgi.com/screen-readers-support-for-text-level-html-semantics/"><cite>Screen Readers support for text level HTML semantics</cite></a>, Steve Faulkner</li>
+      <li><a href="https://matthiasott.com/notes/screen-readers-semantics-strong-em" target="_blank" rel="noopenr"><cite>Screen Readers Don’t Convey the Semantics of STRONG and EM</cite></a>, Matthias Ott</li>
+      <li><a href="https://www.tpgi.com/screen-readers-support-for-text-level-html-semantics/" target="_blank" rel="noopenr"><cite>Screen Readers support for text level HTML semantics</cite></a>, Steve Faulkner</li>
     </ul>
   </div>
 </aside>
