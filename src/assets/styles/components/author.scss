@@ -5,6 +5,7 @@
   background-color  : hsl(var(--bg-subtle) / 50%);
   border-radius     : 100px;
   padding-inline-end: 1ch;
+  text-decoration   : none;
 
   &:focus-visible {
     outline-offset: 1ch;

@@ -48,9 +48,22 @@
         <div class="article__dates">
           <span class="article__date">{{ "clock" | icon | safe }}
             {{ content | timeToRead }}</span>
+          {% if updateDate %}
+          <span class="separator"></span>
+          <span>Published on 
           <a href="{{ page.url }}" class="article__date article__date--published">
-            {{ page.date | humanReadableDate }}
-          </a>
+            <time datetime="{{ page.date | machineReadableDate }}">{{ page.date | humanReadableDate }}</time>
+          </a></span>
+          <span class="separator"></span>
+          <span>Last updated on <a href="{{ page.url }}" class="article__date article__date--published">
+            <time datetime="{{ updateDate | machineReadableDate }}">{{ updateDate | humanReadableDate }}</time>
+          </a></span>
+          {% else %}
+          <span class="separator"></span>
+          <a href="{{ page.url }}" class="article__date article__date--published">
+            <time datetime="{{ page.date | machineReadableDate }}">{{ page.date | humanReadableDate }}</time>
+          </a> 
+          {% endif %}
         </div>
       </div>
     </header>

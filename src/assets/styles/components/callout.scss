@@ -7,10 +7,14 @@
   gap             : 1ch;
   padding         : var(--space);
 
-  .callout__body {
+  &__body {
     flex       : 1;
     font-family: var(--font-sans);
     font-size  : var(--type-size-6);
+
+    &>*+* {
+      margin-block-start: var(--space);
+    }
   }
 
   .feather {
