@@ -16,6 +16,7 @@ tags:
 eleventyExcludeFromCollections: false
 disableToc: false
 permalink: /articles/i-em-strong-b/
+updateDate: 2023-02-17
 ---
 
 Sa mga word document, kapag kailangang i-emphasize ang isang salita o pangungusap, gumagamit lang tayo ng italics at bold font weight. At ideally, ganito lang din kadali sa mga web pages. Pero dahil naka-focus ang HTML sa <i lang="en">semantics</i> ng mga web page, kailangan nating maging mas specific. Kung sa bagay, hindi lang naman kasi mga tao ang uma-access ng mga website natin. At hindi rin lahat ng users natin ay visual gaya ng mga gumagamit ng assistive technologies. <sup id="fn-2">[<a href="#footnote-2">Ano ito?</a>]</sup>
@@ -55,6 +56,19 @@ By default, italicized ang salitang <q>cannot</q> sa paragraph na ito gamit ang 
 <audio src="/assets/images/posts/i-em-strong-b/eg-1.ogg" controls></audio>
 
 Kaya hindi dapat gamitin ang `<em>` para lang gawing italics ang formatting ng text. Kapag ito ang ginawa natin, baka biglang mabago ang kahulugan ng nakasulat nang hindi natin sinasadya.
+
+<aside class="callout callout--warning" id="callout-1" aria-labelledby="callout-1-headline">
+  {{ 'alert-triangle' | icon }}
+  <div class="callout__body">
+    <p><strong id="callout-1-headline">Update:</strong> Sa maraming screen readers na kadalasang ginagamit gaya ng VoiceOver, JAWS, o NVDA, walang pagbabago sa pagbigkas ng mga salita sa loob ng <code>&lt;em></code> at <code>&lt;strong></code>. Ayon kay James Teh, isa sa developers ng NVDA, maraming users ang nagrereklamo kapag ini-indicate ng screen readers ang <code>&lt;em></code> at <code>&lt;strong></code> dahil sa dami ng content na mali ang paggamit sa dalawang tags na ito.</p>
+    <p>Hindi na ba dapat gamitin ang <code>&lt;em></code> at <code>&lt;strong></code> dahil wala naman palang saysay? Mali. Dapat pa ring gamitin ang tamang HTML tags dahil una, hindi natin alam ang lahat ng software na gagamit sa markup natin. At ikalawa, posibleng sa hinaharap, magkaroon ng iba pang devices o software na magko-consume ng HTML markup natin. Wala tayong way para ma-predict kung saan pa mapapadpad ang mga website natin, kaya ang tanging paraan para masigurong gumagana ito nang tama ay gamitin nang tama ang mga HTML tag. Kung sa bagay, kaya lang naman naka-disable ang <code>&lt;em></code> at <code>&lt;strong></code> sa mga screen reader by default ay dahil marami ang gumagamit dito nang mali.</p>
+    <p>Sources:</p>
+    <ul>
+      <li><a href="https://matthiasott.com/notes/screen-readers-semantics-strong-em"><cite>Screen Readers Don’t Convey the Semantics of STRONG and EM</cite></a>, Matthias Ott</li>
+      <li><a href="https://www.tpgi.com/screen-readers-support-for-text-level-html-semantics/"><cite>Screen Readers support for text level HTML semantics</cite></a>, Steve Faulkner</li>
+    </ul>
+  </div>
+</aside>
 
 Para saan naman ang `<i>` element? Bago ang HTML5, ginagamit na talagang pang-italicize ang `<i>` element; wala itong ibang trabaho noon kundi gawing italicized ang text. Pero sa HTML5 na ginagamit natin ngayon, hindi na ito totoo.
 
