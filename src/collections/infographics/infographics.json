@@ -1,0 +1,5 @@
+{
+  "permalink": "/guides/{{ title | slugify }}/",
+  "layout": "infographics.njk",
+  "stylesheets": [ "guide" ]
+}

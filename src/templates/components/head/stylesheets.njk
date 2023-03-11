@@ -1,1 +1,4 @@
 <link rel="stylesheet" href="/assets/styles/styles.css">
+{% for item in stylesheets %}
+  <link rel="stylesheet" href="/assets/styles/{{ item }}.css">
+{% endfor %}

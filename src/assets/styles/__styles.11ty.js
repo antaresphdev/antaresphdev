@@ -4,7 +4,8 @@ const sass = require('sass')
 class Stylesheets {
   constructor() {
     this.inputFiles = {
-      styles: 'styles.scss'
+      styles: 'styles.scss',
+      guide: 'guide.scss'
     }
   }
 

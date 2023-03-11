@@ -1,0 +1,30 @@
+.guide {
+  display       : flex;
+  flex-direction: row-reverse;
+  flex-wrap     : wrap;
+  margin        : 0;
+  margin-inline : auto;
+  max-width     : 200ch;
+  min-height    : calc(100vh - 5rem);
+  padding       : var(--space);
+  width         : 100%;
+
+  &__demo,
+  &__details {
+    padding : var(--space);
+    overflow: auto;
+  }
+
+  &__demo {
+    min-width : 65%;
+    flex-grow : 999;
+    flex-basis: 0;
+  }
+
+  &__details {
+    flex-grow       : 1;
+    flex-basis      : var(--sidebar-size, calc(var(--page-width) / 3));
+    background-color: hsl(var(--bg-contrast));
+    border-radius   : var(--radius-5);
+  }
+}
