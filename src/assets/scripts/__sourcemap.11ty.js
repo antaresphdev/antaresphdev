@@ -6,7 +6,8 @@ const isProd = process.env.ELEVENTY_ENV === 'production'
 class ScriptSourceMap {
   constructor() {
     this.inputFiles = {
-      index: 'index.js'
+      index: 'index.js',
+      guide: 'guide.js'
     }
   }
 
