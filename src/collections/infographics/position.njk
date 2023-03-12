@@ -3,6 +3,8 @@ title: Position
 description: Ino-override nito ang normal na layout ng isang element. Sa maraming kaso, binibigyan tayo nito ng ability na sa bihin sa briowser ang exact position ng isang element gamit ang x at y coordinates.
 tags:
   - CSS
+directory: src/collections/guides/position/
+slides: 5
 ---
 
 <div class="guide__demo">
@@ -10,7 +12,19 @@ This is a demo from inside the collection
 </div>
 
 <div class="guide__details">
-  {% renderTemplate "md" %}
-## This is a tutorial from inside the collection
-  {% endrenderTemplate %}
+  <div class="guide__text">
+    {% renderTemplate "md" %}# Ang `position` property
+
+      Ino-override nito ang normal na layout ng isang element. Sa maraming kaso, binibigyan tayo nito ng ability na sa bihin sa briowser ang exact position ng isang element gamit ang x at y coordinates.
+
+      By default, static ang position ng karamihan sa mga HTML elements. Kapag naka-set ito sa ibang value, puwede itong iposisyon nang mano-mano gamit ang top, left, right, at bottom properties. Depende sa value ng position property, nagbabago ang reference ng positioning.
+    {% endrenderTemplate %}
+  </div>
+  <div class="guide__code theme-dark">
+    {% set details = directory + "details" %}
+    {% set sections = details | guidesAsCollection %}
+    {% for section in sections %}
+      {% renderFile details + '/' + section %}
+    {% endfor %}
+  </div>
 </div>

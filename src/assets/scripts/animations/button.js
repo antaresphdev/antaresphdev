@@ -4,7 +4,8 @@ const selectors = [
   '.breadcrumb__link',
   '.article__tag-link',
   '.navigation__link, .navigation__menu',
-  '.pagination__link'
+  '.pagination__link',
+  '.guide__navigation'
 ]
 
 document.addEventListener('mousemove', e => {

@@ -1,0 +1,40 @@
+<article class="guide__code__entry" id="code-4">
+  <div class="guide__headerbar">
+    <a class="guide__navigation previous" href="#code-3">
+      <span class="sr-only">Previous</span>
+      {{ "chevron-left" | icon | safe }}
+    </a>
+    <h2 class="guide__heading">Absolute Position</h2>
+    <a class="guide__navigation next" href="#code-5">
+      <span class="sr-only">Next</span>
+      {{ "chevron-right" | icon | safe }}
+    </a>
+  </div>
+  <p>Sa example na ito, dahil static ang position ng <code>.container</code>, hindi rito mako-contain ang coordinate system ng <code>.element</code>. Babase ito sa <code>.ancestor</code> dahil iyon ang pinakamalapit na parent element na hindi static ang position.</p>
+  <div class="code-sample">
+    {% renderTemplate "md" %}
+```html
+<div class="ancestor">
+<div class="container">
+<div class="element"></div>
+</div>
+</div>
+```
+```css
+.ancestor {
+position: relative;
+}
+
+.container {
+position: static;
+}
+
+.element {
+position: absolute;
+top: 50px;
+left: 50px;
+}
+```
+  {% endrenderTemplate %}
+  </div>
+</article>

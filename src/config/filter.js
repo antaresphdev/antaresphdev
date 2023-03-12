@@ -1,3 +1,6 @@
+const fs = require('fs')
+const path = require('path')
+
 module.exports = {
   markdown: function (value) {
     let markdown = require('markdown-it')({ html: true })
@@ -41,5 +44,8 @@ module.exports = {
   removeInvalidAtomTags: function (html) {
     const invalidTagRegex = /\&lt;(script|style).*\&lt;\/(script|style)&gt;/gm
     return html.replace(invalidTagRegex, '')
+  },
+  guidesAsCollection: function (directory) {
+    return fs.readdirSync(directory)
   }
 }
