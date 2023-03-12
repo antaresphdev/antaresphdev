@@ -1,0 +1,41 @@
+<style>
+  #viewport-3 {
+    padding: var(--space);
+  }
+
+  #viewport-3 .container {
+    width: 15ch;
+    padding: 1rem;
+    border: 1px solid hsl(var(--success-500));
+    background-color: hsl(var(--success-100));
+    position: relative;
+  }
+
+  #viewport-3 .element {
+    padding: 1rem;
+    border: 1px solid hsl(var(--warning-500));
+    background-color: hsl(var(--warning-100));
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+</style>
+<div class="guide__illustration">
+  <div class="window">
+    <div class="window__header">
+      <div class="window__actions">
+        <span class="window__action close"></span>
+        <span class="window__action minimize"></span>
+        <span class="window__action maximize"></span>
+      </div>
+      <div class="window__tabstrip">
+        <div class="window__tab"></div>
+      </div>
+    </div>
+    <div class="window__viewport" id="viewport-3">
+      <div class="container">
+        <div class="element"></div>
+      </div>
+    </div>
+  </div>
+</div>

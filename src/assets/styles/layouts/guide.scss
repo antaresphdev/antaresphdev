@@ -30,6 +30,7 @@
 
   &__demo {
     background-color: hsl(var(--bg-default));
+    display         : grid;
     flex-basis      : 0;
     flex-grow       : 999;
     min-width       : 65%;
@@ -144,6 +145,18 @@
     }
 
     &:not([href]) {
+      display: none;
+    }
+  }
+
+  &__illustration {
+    display      : grid;
+    place-content: center;
+    height       : 100%;
+    grid-row     : 1/2;
+    grid-column  : 1/2;
+
+    &:not(.shown) {
       display: none;
     }
   }

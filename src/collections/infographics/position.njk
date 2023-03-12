@@ -8,7 +8,11 @@ slides: 5
 ---
 
 <div class="guide__demo">
-This is a demo from inside the collection
+  {% set details = directory + "demos" %}
+  {% set sections = details | guidesAsCollection %}
+  {% for section in sections %}
+    {% renderFile details + '/' + section %}
+  {% endfor %}
 </div>
 
 <div class="guide__details">

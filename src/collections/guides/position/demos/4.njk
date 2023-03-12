@@ -1,0 +1,51 @@
+<style>
+  #viewport-4 {
+    padding: var(--space);
+  }
+
+  #viewport-4 .ancestor {
+    width: 25ch;
+    height: 25ch;
+    padding: 1rem;
+    border: 1px solid hsl(var(--info-500));
+    background-color: hsl(var(--info-100));
+    position: relative;
+  }
+
+  #viewport-4 .container {
+    padding: 1rem;
+    border: 1px solid hsl(var(--success-500));
+    background-color: hsl(var(--success-100));
+    position: static;
+  }
+
+  #viewport-4 .element {
+    padding: 1rem;
+    border: 1px solid hsl(var(--warning-500));
+    background-color: hsl(var(--warning-100));
+    position: absolute;
+    top: 75px;
+    left: 50px;
+  }
+</style>
+<div class="guide__illustration">
+  <div class="window">
+    <div class="window__header">
+      <div class="window__actions">
+        <span class="window__action close"></span>
+        <span class="window__action minimize"></span>
+        <span class="window__action maximize"></span>
+      </div>
+      <div class="window__tabstrip">
+        <div class="window__tab"></div>
+      </div>
+    </div>
+    <div class="window__viewport" id="viewport-4">
+      <div class="ancestor">
+        <div class="container">
+          <div class="element"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
