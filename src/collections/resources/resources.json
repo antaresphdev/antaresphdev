@@ -1,6 +1,6 @@
 {
   "eleventyExcludeFromCollection": false,
-  "permalink": "/resources/{{ title | slugify }}",
+  "permalink": "/resources/{{ title | slugify }}/",
   "layout": "resources.njk",
   "postType": "posts"
 }
