@@ -1,5 +1,6 @@
 const fs = require('fs')
-const path = require('path')
+const fetch = require('@11ty/eleventy-fetch')
+const parse = require("node-html-parser").parse
 
 module.exports = {
   markdown: function (value) {
@@ -47,5 +48,39 @@ module.exports = {
   },
   guidesAsCollection: function (directory) {
     return fs.readdirSync(directory)
+  },
+  metatags: {
+    isAsync: true,
+    function: async function (url) {
+      const html = await fetch(url, { duration: '0s', type: 'text' })
+      const document = parse(html)
+      const rawMeta = {}
+      rawMeta.title = document.querySelector('title').innerText;
+
+      const metaTags = [...document.querySelectorAll('meta')]
+      metaTags.forEach(meta => {
+        if (meta.hasAttribute('name')) {
+          rawMeta[meta.getAttribute('name')] = meta.getAttribute('content')
+        }
+
+        if (meta.hasAttribute('property')) {
+          rawMeta[meta.getAttribute('property')] = meta.getAttribute('content')
+        }
+      })
+
+      metadata = {
+        title: rawMeta.title,
+        description: rawMeta.description,
+        url,
+        image: rawMeta['og:image']
+          ? rawMeta['og:image']
+          : rawMeta['twitter:image']
+            ? rawMeta['twitter:image']
+            : null,
+        themeColor: rawMeta['theme-color']
+      }
+
+      return metadata
+    }
   }
 }

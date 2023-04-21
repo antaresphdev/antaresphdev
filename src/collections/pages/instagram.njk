@@ -13,7 +13,7 @@ permalink: /links/
   </header>
   <div class="grid grid--instagram">
     {% for link in links %}
-      <a href="{{ link.url }}" target="_blank" rel="noopener">
+      <a href="{{ link.url }}" target="_blank" rel="noopener" class="no-arrow">
         <span class="sr-only">{{ link.title }}</span>
         {% set article = link %}
         {% set postType = "videos" %}

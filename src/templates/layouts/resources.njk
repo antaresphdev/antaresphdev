@@ -1,0 +1,63 @@
+{% extends "./main.njk" %}
+{% block content %}
+  <main id="main" class="article h-entry">
+    <header class="article__header">
+      {% if cover %}
+        {% set postType = 'posts' %}
+        {% set sizes = cover.sizes %}
+        {% set formats = cover.formats %}
+        {% set folder = cover.folder %}
+        {% set filename = cover.filename %}
+        {% set defaultImageClass = "article__image" %}
+        {% set alt = "" %}
+        {% set width = 1280 %}
+        {% set height = 1012 %}
+        {% include "ui/cdn-picture.njk" %}
+      {% endif %}
+      <nav class="breadcrumb" aria-label="Breadcrumbs">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__list-item">
+            <a href="/" class="breadcrumb__link">Frontpage</a>
+          </li>
+          <li class="breadcrumb__list-item">
+            <a class="breadcrumb__link">Resources</a>
+          </li>
+          <li class="breadcrumb__list-item">
+            <a aria-current="location" class="breadcrumb__link">This page</a>
+          </li>
+        </ol>
+      </nav>
+      <hgroup role="group">
+        <h1 class="article__title p-name">{{ title | safe }}</h1>
+        <p class="article__subtitle p-summary">{{ description | safe }}</p>
+      </hgroup>
+      {% set articleAuthor = authors[author] %}
+      <div class="article__metadata">
+        <a href="/authors/{{ author }}/" class="h-card p-author article__author">
+          <img class="u-photo article__author__image" src="{{ articleAuthor.photo }}" alt="{{ articleAuthor.name }}'s photo">
+          <span class="p-name article__author__name">{{ articleAuthor.name }}</span>
+          <span class="u-uid" hidden="hidden">{{ articleAuthor.url }}</span>
+        </a>
+        <ul class="article__tags margin-left--auto" aria-label="Tags">
+          {% for item in tags %}
+            <li class="article__tag-item">
+              <a href="/articles/tag/{{ item }}/" class="article__tag-link h-category" rel="category tag">{{ item }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </header>
+    <div class="article__content e-content">
+      <section class="article__body link-grid">
+        {% for url in urls %}
+          {% setAsync "meta" %}{{ url | metatags | dump | safe }}{% endsetAsync %}
+          {% set metadata = utils.jsonify(meta) %}
+          {% include 'ui/social-share-card.njk' %}
+        {% endfor %}
+      </section>
+    </div>
+    <footer class="article__footer">
+      {% include "banners/share.njk" %}
+    </footer>
+  </main>
+{% endblock %}

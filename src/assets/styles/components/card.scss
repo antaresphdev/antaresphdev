@@ -312,6 +312,66 @@
       }
     }
   }
+
+  &--social {
+    background-color: hsl(var(--bg-contrast));
+    border          : 1px solid hsl(var(--fg-default) / 25%);
+    border-radius   : var(--radius-4);
+    flex-direction  : column;
+    margin: 0;
+    outline         : 3px solid hsl(var(--primary-500) / 0%);
+    outline-offset  : 0;
+    overflow        : hidden;
+    position        : relative;
+    transition      : outline 300ms, outline-offset 300ms;
+
+    &:focus-within {
+      outline       : 3px solid hsl(var(--primary-500));
+      outline-offset: 5px;
+    }
+
+    & .card {
+      &__image {
+        aspect-ratio: 1920/1080;
+        width       : 100%;
+        height      : auto;
+      }
+
+      &__body {
+        padding  : var(--space-s);
+        font-size: var(--type-size);
+      }
+
+      &__title {
+        font-size: var(--type-size-5);
+        margin   : 0;
+      }
+
+      &__link {
+        text-decoration: none;
+
+        &:focus-visible {
+          outline: none;
+        }
+
+        &::before {
+          content : '';
+          position: absolute;
+          inset   : 0;
+          z-index : 99;
+        }
+      }
+
+      &__description,
+      &__link {
+        display           : -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow     : ellipsis;
+        overflow          : hidden;
+      }
+    }
+  }
 }
 
 .card-list {
@@ -342,5 +402,18 @@
         }
       }
     }
+  }
+}
+
+.link-grid {
+  display              : grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(25ch, 100%), 1fr));
+  justify-content      : stretch;
+  align-items          : stretch;
+  gap                  : 1ch;
+
+  .card {
+    height: 100%;
+    width : 100%;
   }
 }
