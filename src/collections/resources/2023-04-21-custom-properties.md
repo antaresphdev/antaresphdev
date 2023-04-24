@@ -10,4 +10,6 @@ urls:
   - https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
   - https://www.smashingmagazine.com/2018/05/css-custom-properties-strategy-guide/
   - https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
+  - https://developer.mozilla.org/en-US/docs/Web/CSS/@property
+  - https://developer.mozilla.org/en-US/docs/Web/CSS/@property/syntax/
 ---
