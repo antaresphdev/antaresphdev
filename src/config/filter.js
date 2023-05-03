@@ -52,7 +52,7 @@ module.exports = {
   metatags: {
     isAsync: true,
     function: async function (url) {
-      const html = await fetch(url, { duration: '0s', type: 'text' })
+      const html = await fetch(url, { duration: '0s', type: 'text' }).catch(e => console.error('[ERROR]', e))
       const document = parse(html)
       const rawMeta = {}
       rawMeta.title = document.querySelector('title').innerText;
@@ -69,8 +69,14 @@ module.exports = {
       })
 
       metadata = {
-        title: rawMeta.title,
-        description: rawMeta.description,
+        title: rawMeta.title ? rawMeta.title : null,
+        description: rawMeta.description
+          ? rawMeta.description
+          : rawMeta['og:description']
+            ? rawMeta['og:description']
+            : rawMeta['twitter:description']
+              ? rawMeta['twitter:description']
+              : null,
         url,
         image: rawMeta['og:image']
           ? rawMeta['og:image']

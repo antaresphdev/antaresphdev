@@ -47,13 +47,20 @@
         </ul>
       </div>
     </header>
-    <div class="article__content e-content">
-      <section class="article__body link-grid">
-        {% for url in urls %}
-          {% setAsync "meta" %}{{ url | metatags | dump | safe }}{% endsetAsync %}
-          {% set metadata = utils.jsonify(meta) %}
-          {% include 'ui/social-share-card.njk' %}
-        {% endfor %}
+    <div class="article__content e-content" style="flex-direction: column">
+      <section class="article__body">
+        <h2>Links</h2>
+        <div class="link-grid" style="width: 90%">
+          {% for url in urls %}
+            {% setAsync "meta" %}{{ url | metatags | dump | safe }}{% endsetAsync %}
+            {% set metadata = utils.jsonify(meta) %}
+            {% include 'ui/social-share-card.njk' %}
+          {% endfor %}
+        </div>
+
+      </section>
+      <section class="article__body">
+        {{ content | safe }}
       </section>
     </div>
     <footer class="article__footer">
