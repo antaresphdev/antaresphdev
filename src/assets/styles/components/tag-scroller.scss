@@ -24,3 +24,14 @@
     }
   }
 }
+
+.badge {
+  background-color       : hsl(var(--primary-100));
+  border-radius          : var(--radius-2);
+  color                  : hsl(var(--primary-900));
+  display                : inline-block;
+  font-family            : var(--font-sans);
+  font-variation-settings: 'wght'400;
+  padding                : var(--space-xxxs) var(--space-xs);
+  text-transform         : uppercase;
+}

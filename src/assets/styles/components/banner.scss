@@ -1,11 +1,12 @@
 .banner {
 
   &--video {
-    overflow     : hidden;
     border-radius: var(--radius-3);
     display      : grid;
     height       : 80vh;
     margin-bottom: var(--space);
+    overflow     : hidden;
+    position     : relative;
 
     .banner {
 
@@ -20,27 +21,28 @@
         position        : relative;
 
         img {
+          background-color: hsl(var(--d-contrast));
           filter          : brightness(50%);
+          height          : 100%;
           inset           : 0;
           object-fit      : cover;
           object-position : center;
           position        : absolute;
-          height          : 100%;
           width           : 100%;
-          background-color: hsl(var(--d-contrast));
         }
 
         &::after {
           content         : '';
-          position        : absolute;
-          inset           : 0;
           background-image: radial-gradient(circle at bottom left, black 35%, transparent);
+          inset           : 0;
+          position        : absolute;
         }
       }
 
       &__header {
         @extend .theme-light;
 
+        align-items  : start;
         align-self   : end;
         font-family  : var(--font-serif);
         justify-self : start;
@@ -50,6 +52,12 @@
 
         @media (max-width: 980px) {
           width: 75%;
+        }
+
+        .new.badge {
+          position: absolute;
+          z-index : 3;
+          top     : clamp(var(--space-l), 3vw, var(--space-xxl));
         }
       }
 
