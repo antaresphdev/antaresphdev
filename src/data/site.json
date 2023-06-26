@@ -38,10 +38,10 @@
       "url": "https://github.com/antaresphdev"
     },
     "mastodon": {
-      "name": "",
-      "identifier": "",
-      "url": "",
-      "hidden": true
+      "name": "Mastodon",
+      "identifier": "@antaresphdev@tambayan.us",
+      "url": "https://tambayan.us/@antaresphdev",
+      "rel": "me"
     },
     "youtube": {
       "name": "Youtube",
