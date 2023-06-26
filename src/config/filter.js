@@ -55,7 +55,7 @@ module.exports = {
       const html = await fetch(url, { duration: '0s', type: 'text' }).catch(e => console.error('[ERROR]', e))
       const document = parse(html)
       const rawMeta = {}
-      rawMeta.title = document.querySelector('title').innerText;
+      rawMeta.title = document.querySelector('title')?.innerText;
 
       const metaTags = [...document.querySelectorAll('meta')]
       metaTags.forEach(meta => {
